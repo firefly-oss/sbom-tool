@@ -320,21 +320,62 @@ def scan_org(
         console.print(repo_table)
         console.print()
 
-        # Start parallel scanning
+        # Start parallel scanning with progress tracking
         console.print(
             f"[bold green]🚀 Starting parallel scan with {parallel} workers...[/bold green]\n"
         )
 
-        # Use the new scan_organization method
-        org_summary = generator.scan_organization(
-            org=org,
-            output_dir=Path(output_dir),
-            audit=audit,
-            include_dev=include_dev,
-            parallel=parallel,
-            formats=list(format) if format else ["html", "json", "markdown"],
-            combined_report=combined,
-        )
+        # Create progress tracking
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            "•",
+            TextColumn("[bold blue]{task.completed}/{task.total} repositories"),
+            console=console,
+        ) as progress:
+            # Add main scanning task
+            scan_task = progress.add_task(
+                "🔍 Scanning repositories...", 
+                total=len(repos)
+            )
+            
+            # Use enhanced organization scan method with progress callback
+            def progress_callback(current_repo, completed, total):
+                try:
+                    # Handle None repo name safely
+                    repo_name = str(current_repo) if current_repo is not None else "unknown"
+                    description = f"🔍 Scanning {repo_name}..."
+                    
+                    progress.update(
+                        scan_task, 
+                        completed=completed,
+                        description=description
+                    )
+                except Exception as e:
+                    # Print error for debugging and fallback
+                    console.print(f"[yellow]Progress callback error: {e}[/yellow]")
+                    try:
+                        progress.update(scan_task, completed=completed)
+                    except Exception:
+                        pass  # Silently ignore if even basic update fails
+            
+            org_summary = generator.scan_organization(
+                org=org,
+                output_dir=Path(output_dir),
+                audit=audit,
+                include_dev=include_dev,
+                parallel=parallel,
+                formats=list(format) if format else ["html", "json", "markdown"],
+                combined_report=combined,
+                progress_callback=progress_callback,
+            )
+            
+            # Final update
+            progress.update(
+                scan_task,
+                completed=len(repos),
+                description="✅ Scan completed!"
+            )
 
         # Display results summary
         _display_org_scan_results(org_summary)
@@ -381,8 +422,17 @@ def detect(path):
     console.print(f"\n[bold green]Detecting technology stack in:[/bold green] {path}")
 
     try:
-        generator = SBOMGenerator(Config())
-        tech_stack = generator.detect_technology_stack(Path(path))
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            console=console,
+        ) as progress:
+            task = progress.add_task("Scanning for technology stack files...", total=None)
+            
+            generator = SBOMGenerator(Config())
+            tech_stack = generator.detect_technology_stack(Path(path))
+            
+            progress.update(task, description="Analysis complete!", completed=True)
 
         table = Table(title="Detected Technologies")
         table.add_column("Technology", style="cyan")

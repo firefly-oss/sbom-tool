@@ -419,6 +419,7 @@ class SBOMGenerator:
         parallel: int = 4,
         formats: List[str] = None,
         combined_report: bool = True,
+        progress_callback: callable = None,
     ) -> Dict[str, Any]:
         """Scan entire GitHub organization with parallel cloning and processing"""
         from .generators import MarkdownGenerator, TextGenerator
@@ -445,9 +446,9 @@ class SBOMGenerator:
         # Use parallel scanner for efficient processing
         parallel_scanner = ParallelScanner(config=self.config, max_workers=parallel)
 
-        # Scan all repositories in parallel
+        # Scan all repositories in parallel with progress callback
         scan_results = parallel_scanner.scan_repositories(
-            repos=repos, audit=audit, include_dev=include_dev
+            repos=repos, audit=audit, include_dev=include_dev, progress_callback=progress_callback
         )
 
         # Generate individual reports for each repository

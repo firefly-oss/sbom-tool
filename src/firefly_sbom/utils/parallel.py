@@ -33,6 +33,7 @@ class ParallelScanner:
         repos: List[Dict[str, str]],
         audit: bool = False,
         include_dev: bool = False,
+        progress_callback: callable = None,
     ) -> Dict[str, Dict[str, Any]]:
         """
         Scan multiple repositories in parallel with temporary cloning
@@ -62,6 +63,11 @@ class ParallelScanner:
 
             for future in as_completed(futures):
                 repo_name = futures[future]
+                
+                # Call progress callback with current repository
+                if progress_callback:
+                    progress_callback(repo_name, completed, total)
+                
                 completed += 1
 
                 try:
