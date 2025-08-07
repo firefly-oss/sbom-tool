@@ -144,34 +144,52 @@ class Config:
     
     def _parse_scan_config(self, scan_dict: Dict[str, Any]) -> ScanConfig:
         """Parse scan configuration"""
+        default_ignore_patterns = [
+            '*.test.*',
+            '*.spec.*',
+            'node_modules/',
+            'venv/',
+            '.git/',
+            '__pycache__/',
+            '.pytest_cache/',
+            'target/',
+            'build/',
+            'dist/'
+        ]
         return ScanConfig(
             include_dev_dependencies=scan_dict.get('include_dev_dependencies', False),
             max_depth=scan_dict.get('max_depth', 5),
             parallel_workers=scan_dict.get('parallel_workers', 4),
-            ignore_patterns=scan_dict.get('ignore_patterns', ScanConfig.ignore_patterns.default_factory()),
+            ignore_patterns=scan_dict.get('ignore_patterns', default_ignore_patterns),
             follow_symlinks=scan_dict.get('follow_symlinks', False),
             scan_archives=scan_dict.get('scan_archives', False)
         )
     
     def _parse_audit_config(self, audit_dict: Dict[str, Any]) -> AuditConfig:
         """Parse audit configuration"""
+        default_vuln_dbs = ['nvd', 'osv', 'ghsa']
+        default_allowed_licenses = [
+            'Apache-2.0', 'MIT', 'BSD-3-Clause', 'BSD-2-Clause',
+            'ISC', 'LGPL-3.0', 'MPL-2.0'
+        ]
+        default_denied_licenses = ['GPL-3.0', 'AGPL-3.0', 'Commercial']
+        
         return AuditConfig(
-            vulnerability_databases=audit_dict.get('vulnerability_databases', 
-                                                  AuditConfig.vulnerability_databases.default_factory()),
+            vulnerability_databases=audit_dict.get('vulnerability_databases', default_vuln_dbs),
             fail_on_critical=audit_dict.get('fail_on_critical', True),
             severity_threshold=audit_dict.get('severity_threshold', 'medium'),
             ignore_vulnerabilities=audit_dict.get('ignore_vulnerabilities', []),
             check_licenses=audit_dict.get('check_licenses', True),
-            allowed_licenses=audit_dict.get('allowed_licenses', 
-                                           AuditConfig.allowed_licenses.default_factory()),
-            denied_licenses=audit_dict.get('denied_licenses',
-                                         AuditConfig.denied_licenses.default_factory())
+            allowed_licenses=audit_dict.get('allowed_licenses', default_allowed_licenses),
+            denied_licenses=audit_dict.get('denied_licenses', default_denied_licenses)
         )
     
     def _parse_output_config(self, output_dict: Dict[str, Any]) -> OutputConfig:
         """Parse output configuration"""
+        default_formats = ['cyclonedx-json', 'html']
+        
         return OutputConfig(
-            formats=output_dict.get('formats', OutputConfig.formats.default_factory()),
+            formats=output_dict.get('formats', default_formats),
             include_metadata=output_dict.get('include_metadata', True),
             timestamp=output_dict.get('timestamp', True),
             pretty_print=output_dict.get('pretty_print', True),

@@ -4,9 +4,10 @@ import json
 import yaml
 from typing import Dict, Any, List
 from datetime import datetime
-from cyclonedx.output import get_instance as get_cyclonedx_output
+from cyclonedx.output import make_outputter, OutputFormat
 from cyclonedx.model.bom import Bom
 from cyclonedx.model.component import Component
+from cyclonedx.schema import SchemaVersion
 
 class CycloneDXGenerator:
     def __init__(self, format_type):
@@ -18,9 +19,10 @@ class CycloneDXGenerator:
             component = Component(name=comp['name'], version=comp.get('version'))
             bom.components.add(component)
         
-        output = get_cyclonedx_output(bom, output_format=self.format_type)
+        output_format = OutputFormat.JSON if self.format_type == 'json' else OutputFormat.XML
+        outputter = make_outputter(bom, output_format=output_format, schema_version=SchemaVersion.V1_6)
         with open(output_path, 'w') as f:
-            f.write(output.output_as_string())
+            f.write(outputter.output_as_string())
 
 class SPDXGenerator:
     def __init__(self, format_type):
