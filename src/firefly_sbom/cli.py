@@ -132,6 +132,17 @@ def scan(ctx, path, format, output, audit, include_dev):
     help="Output directory for reports",
 )
 @click.option(
+    "--repos",
+    "-r",
+    multiple=True,
+    help="Specific repositories to scan (can specify multiple). If not provided, scans all repositories",
+)
+@click.option(
+    "--repos-file",
+    type=click.Path(exists=True),
+    help="File containing list of repositories to scan (one per line)",
+)
+@click.option(
     "--format",
     "-f",
     multiple=True,
@@ -153,6 +164,35 @@ def scan(ctx, path, format, output, audit, include_dev):
 @click.option("--audit", is_flag=True, help="Enable security audit")
 @click.option("--include-dev", is_flag=True, help="Include development dependencies")
 @click.option(
+    "--include-private/--no-private",
+    default=True,
+    help="Include private repositories (requires GitHub token with appropriate permissions)",
+)
+@click.option(
+    "--include-forks/--no-forks",
+    default=False,
+    help="Include forked repositories",
+)
+@click.option(
+    "--include-archived/--no-archived",
+    default=False,
+    help="Include archived repositories",
+)
+@click.option(
+    "--languages",
+    multiple=True,
+    help="Filter repositories by programming language (can specify multiple)",
+)
+@click.option(
+    "--topics",
+    multiple=True,
+    help="Filter repositories by topic/tag (can specify multiple)",
+)
+@click.option(
+    "--github-token",
+    help="GitHub personal access token (can also be set via GITHUB_TOKEN env var)",
+)
+@click.option(
     "--parallel", "-p", type=int, default=4, help="Number of parallel workers"
 )
 @click.option(
@@ -165,16 +205,62 @@ def scan(ctx, path, format, output, audit, include_dev):
 )
 @click.pass_context
 def scan_org(
-    ctx, org, output_dir, format, audit, include_dev, parallel, combined, batch_size
+    ctx, 
+    org, 
+    output_dir, 
+    repos, 
+    repos_file, 
+    format, 
+    audit, 
+    include_dev, 
+    include_private, 
+    include_forks, 
+    include_archived, 
+    languages, 
+    topics, 
+    github_token, 
+    parallel, 
+    combined, 
+    batch_size
 ):
     """🏢 Scan all repositories in a GitHub organization with parallel processing"""
     config = ctx.obj["config"]
     verbose = ctx.obj["verbose"]
-
+    
+    # Override GitHub token if provided via CLI
+    if github_token:
+        config.github_token = github_token
+    
+    # Prepare repository filter list
+    repo_filter = None
+    if repos:
+        repo_filter = list(repos)
+    elif repos_file:
+        # Read repositories from file
+        with open(repos_file, 'r') as f:
+            repo_filter = [line.strip() for line in f if line.strip() and not line.startswith('#')]
+        console.print(f"[cyan]📄 Loaded {len(repo_filter)} repositories from file[/cyan]")
+    
+    # Build filter description for display
+    filter_desc = []
+    if repo_filter:
+        filter_desc.append(f"Specific repos: {len(repo_filter)} selected")
+    else:
+        filter_desc.append("All repositories")
+    
+    if not include_private:
+        filter_desc.append("Public only")
+    if include_forks:
+        filter_desc.append("Including forks")
+    if include_archived:
+        filter_desc.append("Including archived")
+    if languages:
+        filter_desc.append(f"Languages: {', '.join(languages)}")
+    if topics:
+        filter_desc.append(f"Topics: {', '.join(topics)}")
+    
     # Show scan configuration
-    console.print(
-        Panel.fit(
-            f"""[bold cyan]Organization Scan Configuration[/bold cyan]
+    config_text = f"""[bold cyan]Organization Scan Configuration[/bold cyan]
         
 🏢 Organization: [bold]{org}[/bold]
 📂 Output Directory: [bold]{output_dir}[/bold]
@@ -182,7 +268,13 @@ def scan_org(
 🔍 Security Audit: [bold]{'Enabled' if audit else 'Disabled'}[/bold]
 ⚡ Parallel Workers: [bold]{parallel}[/bold]
 📦 Include Dev Dependencies: [bold]{'Yes' if include_dev else 'No'}[/bold]
-📊 Combined Report: [bold]{'Yes' if combined else 'No'}[/bold]""",
+📊 Combined Report: [bold]{'Yes' if combined else 'No'}[/bold]
+🔒 Authentication: [bold]{'GitHub Token' if (github_token or config.github_token) else 'Public Access'}[/bold]
+🎯 Repository Filter: [bold]{'; '.join(filter_desc)}[/bold]"""
+    
+    console.print(
+        Panel.fit(
+            config_text,
             title="Scan Settings",
             border_style="bright_blue",
         )
@@ -195,7 +287,15 @@ def scan_org(
 
             # Fetch repositories
             status.update("[bold yellow]Fetching organization repositories...")
-            repos = generator.list_org_repositories(org)
+            repos = generator.list_org_repositories(
+                org=org,
+                repo_filter=repo_filter,
+                include_private=include_private,
+                include_forks=include_forks,
+                include_archived=include_archived,
+                languages=list(languages) if languages else None,
+                topics=list(topics) if topics else None
+            )
 
             if not repos:
                 console.print("[red]✗[/red] No repositories found in organization")

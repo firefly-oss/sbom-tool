@@ -30,6 +30,7 @@ from .scanners import (
     RustScanner,
     Scanner,
 )
+from .utils.github import GitHubAPI, GitHubAPIError
 from .utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -242,38 +243,91 @@ class SBOMGenerator:
             # Scan the cloned repository
             return self.scan_repository(repo_path, audit=audit)
 
-    def list_org_repositories(self, org: str) -> List[Dict[str, str]]:
-        """List all repositories in a GitHub organization"""
-        repos = []
-        page = 1
-
-        while True:
-            response = requests.get(
-                f"https://api.github.com/orgs/{org}/repos",
-                params={"page": page, "per_page": 100},
-                headers={"Accept": "application/vnd.github.v3+json"},
+    def list_org_repositories(
+        self, 
+        org: str, 
+        repo_filter: Optional[List[str]] = None,
+        include_private: bool = True,
+        include_forks: bool = False,
+        include_archived: bool = False,
+        languages: Optional[List[str]] = None,
+        topics: Optional[List[str]] = None
+    ) -> List[Dict[str, str]]:
+        """List repositories in a GitHub organization with filtering options
+        
+        Args:
+            org: Organization name
+            repo_filter: Optional list of specific repository names to scan
+            include_private: Whether to include private repositories
+            include_forks: Whether to include forked repositories
+            include_archived: Whether to include archived repositories
+            languages: Optional list of programming languages to filter by
+            topics: Optional list of topics to filter by
+            
+        Returns:
+            List of repository information dictionaries
+        """
+        github_api = GitHubAPI(token=self.config.github_token)
+        
+        try:
+            # Validate access to organization
+            capabilities = github_api.validate_access(org)
+            if not capabilities["org_access"]:
+                raise GitHubAPIError(f"Unable to access organization: {org}")
+            
+            # Log access capabilities
+            if capabilities["private_repos"]:
+                logger.info("✓ Private repository access available")
+            else:
+                logger.warning("⚠️  Private repository access not available - only public repos will be scanned")
+                include_private = False
+                
+            # Get all organization repositories
+            all_repos = github_api.get_organization_repositories(
+                org=org,
+                include_private=include_private,
+                include_forks=include_forks,
+                include_archived=include_archived
             )
-
-            if response.status_code != 200:
-                raise Exception(f"Failed to fetch repositories: {response.text}")
-
-            data = response.json()
-            if not data:
-                break
-
-            for repo in data:
-                repos.append(
-                    {
-                        "name": repo["name"],
-                        "url": repo["clone_url"],
-                        "description": repo.get("description", ""),
-                        "language": repo.get("language", "Unknown"),
-                    }
-                )
-
-            page += 1
-
-        return repos
+            
+            # Filter by specific repository names if provided
+            if repo_filter:
+                repo_names = set(repo_filter)
+                all_repos = [repo for repo in all_repos if repo["name"] in repo_names]
+                logger.info(f"Filtered to {len(all_repos)} specific repositories")
+            
+            # Apply additional filters
+            filtered_repos = github_api.filter_repositories(
+                repos=all_repos,
+                languages=languages,
+                topics=topics
+            )
+            
+            # Convert to expected format for backwards compatibility
+            repos = []
+            for repo in filtered_repos:
+                # Get appropriate clone URL (handles private repo authentication)
+                clone_url = github_api.get_clone_url(repo)
+                
+                repos.append({
+                    "name": repo["name"],
+                    "url": clone_url,
+                    "description": repo.get("description", ""),
+                    "language": repo.get("language", "Unknown"),
+                    "private": repo.get("private", False),
+                    "fork": repo.get("fork", False),
+                    "archived": repo.get("archived", False),
+                    "topics": repo.get("topics", []),
+                    "full_name": repo.get("full_name", f"{org}/{repo['name']}"),
+                    "size": repo.get("size", 0),
+                    "updated_at": repo.get("updated_at", "")
+                })
+            
+            return repos
+            
+        except GitHubAPIError as e:
+            logger.error(f"GitHub API error: {e}")
+            raise Exception(f"Failed to fetch repositories: {e}")
 
     def generate_report(
         self, sbom_data: Dict[str, Any], format: str, output_path: Optional[Path] = None
