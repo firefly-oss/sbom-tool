@@ -60,11 +60,12 @@ def cli(ctx, config, verbose):
 @click.option(
     "--format",
     "-f",
+    multiple=True,
     type=click.Choice(
         ["cyclonedx-json", "cyclonedx-xml", "spdx-json", "spdx-yaml", "html", "all"]
     ),
-    default="cyclonedx-json",
-    help="Output format for SBOM",
+    default=["cyclonedx-json"],
+    help="Output format for SBOM (can specify multiple)",
 )
 @click.option("--output", "-o", type=click.Path(), help="Output file path")
 @click.option("--audit", is_flag=True, help="Enable security audit")
@@ -92,7 +93,7 @@ def scan(ctx, path, format, output, audit, include_dev):
 
             progress.update(task, description="Generating SBOM report...")
 
-            if format == "all":
+            if "all" in format:
                 formats = [
                     "cyclonedx-json",
                     "cyclonedx-xml",
@@ -101,7 +102,7 @@ def scan(ctx, path, format, output, audit, include_dev):
                     "html",
                 ]
             else:
-                formats = [format]
+                formats = list(format)
 
             for fmt in formats:
                 output_path = generator.generate_report(

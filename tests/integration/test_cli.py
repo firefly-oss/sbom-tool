@@ -58,9 +58,9 @@ class TestCLICommands:
     def test_init_command_custom_template(self):
         """Test init command with custom template"""
         with self.runner.isolated_filesystem():
-            result = self.runner.invoke(cli, ['init', '--template', 'comprehensive'])
+            result = self.runner.invoke(cli, ['init', '--template', 'github-actions'])
             assert result.exit_code == 0
-            assert 'comprehensive' in result.output
+            assert 'github-actions' in result.output
     
     def test_detect_command(self, temp_dir):
         """Test detect command"""
@@ -108,7 +108,7 @@ class TestCLICommands:
                 '--path', '.',
                 '--output', 'test',
                 '--format', 'html',
-                '--format', 'json'
+                '--format', 'cyclonedx-json'
             ])
             assert result.exit_code == 0
             
@@ -164,10 +164,10 @@ class TestCLICommands:
             Path('requirements.txt').write_text('requests==2.28.1')
             
             result = self.runner.invoke(cli, [
+                '-v',
                 'scan',
                 '--path', '.',
-                '--output', 'verbose_test.json',
-                '-v'
+                '--output', 'verbose_test.json'
             ])
             assert result.exit_code == 0
             # Verbose mode should show more details
@@ -207,10 +207,10 @@ class TestCLICommands:
             Path('requirements.txt').write_text('requests==2.28.1')
             
             result = self.runner.invoke(cli, [
+                '-v',
                 'scan',
                 '--path', '.',
-                '--output', 'test.json',
-                '-v'
+                '--output', 'test.json'
             ])
             # Should still work but may show warnings
             assert result.exit_code == 0
@@ -265,7 +265,7 @@ class TestCLIConfigIntegration:
                 'scan',
                 '--path', '.',
                 '--output', 'test.json',
-                '--format', 'json'
+                '--format', 'cyclonedx-json'
             ])
             assert result.exit_code == 0
             assert Path('test.json').exists()

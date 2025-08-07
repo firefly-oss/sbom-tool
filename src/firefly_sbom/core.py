@@ -284,17 +284,40 @@ class SBOMGenerator:
 
         generator = self.generators[format]
 
-        # Determine output path
+        # Determine output path with format-specific extension
         if output_path is None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             ext = format.split("-")[-1]
-            output_path = Path(f"sbom_{timestamp}.{ext}")
+            final_output_path = Path(f"sbom_{timestamp}.{ext}")
+        else:
+            # Map format to appropriate file extension
+            ext_map = {
+                "cyclonedx-json": "json",
+                "cyclonedx-xml": "xml", 
+                "spdx-json": "json",
+                "spdx-yaml": "yaml",
+                "html": "html",
+                "markdown": "md",
+                "text": "txt",
+                "json": "json",
+            }
+            
+            # Get base name and add appropriate extension
+            base_path = Path(output_path)
+            ext = ext_map.get(format, format.split("-")[-1])
+            
+            if base_path.suffix:
+                # If user provided extension, use it
+                final_output_path = base_path
+            else:
+                # Add format-appropriate extension
+                final_output_path = base_path.with_suffix(f".{ext}")
 
         # Generate report
-        generator.generate(sbom_data, output_path)
-        logger.info(f"Generated {format} report: {output_path}")
+        generator.generate(sbom_data, final_output_path)
+        logger.info(f"Generated {format} report: {final_output_path}")
 
-        return output_path
+        return final_output_path
 
     def _deduplicate_components(
         self, components: List[Dict[str, Any]]
