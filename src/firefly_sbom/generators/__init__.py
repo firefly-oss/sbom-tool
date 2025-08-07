@@ -470,9 +470,14 @@ class HTMLGenerator:
                                     </td>
                                     <td><strong>{repo.get('components', 0):,}</strong></td>
                                     <td>
-                                        <span style="color: {'var(--danger-red)' if repo.get('vulnerabilities', 0) > 0 else 'var(--success-green)'}; font-weight: 600;">
-                                            {repo.get('vulnerabilities', 0):,}
-                                        </span>
+                                        <div>
+                                            <span style="color: {'var(--danger-red)' if repo.get('vulnerabilities', 0) > 0 else 'var(--success-green)'}; font-weight: 600;">
+                                                {repo.get('vulnerabilities', 0):,} Total
+                                            </span>
+                                        </div>
+                                        <div style="margin-top: 0.25rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                            {self._generate_repo_vulnerability_badges(repo.get('vulnerability_breakdown', {}))}
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="tech-badges">
@@ -700,8 +705,17 @@ class HTMLGenerator:
         """Process vulnerability statistics for display"""
         total_vulns = org_summary.get('total_vulnerabilities', 0)
         
-        # Count by severity (this would need to be calculated during scanning)
-        severity_counts = {'critical': 0, 'high': 0, 'medium': 0, 'low': 0}
+        # Get actual vulnerability breakdown from organization data
+        vuln_breakdown = org_summary.get('vulnerability_breakdown', {
+            'critical': 0, 'high': 0, 'medium': 0, 'low': 0, 'unknown': 0
+        })
+        severity_counts = {
+            'critical': vuln_breakdown.get('critical', 0),
+            'high': vuln_breakdown.get('high', 0),
+            'medium': vuln_breakdown.get('medium', 0),
+            'low': vuln_breakdown.get('low', 0),
+            'unknown': vuln_breakdown.get('unknown', 0)
+        }
         
         # Generate summary text
         if total_vulns == 0:
@@ -860,7 +874,7 @@ class HTMLGenerator:
                 </div>
                 
                 <!-- Action Items -->
-                <div style="background: var(--gray-50); border-radius: var(--border-radius); padding: 1.5rem;">
+                <div style="background: var(--gray-50); border-radius: var(--border-radius); padding: 1.5rem; margin-bottom: 2rem;">
                     <h4 style="margin: 0 0 1rem 0; color: var(--gray-800); display: flex; align-items: center; gap: 0.5rem;">
                         <i class="fas fa-tasks"></i>
                         Recommended Actions
@@ -872,10 +886,16 @@ class HTMLGenerator:
                         <li><strong>Monitoring:</strong> Set up alerts for new vulnerabilities in production dependencies</li>
                     </ul>
                     <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.875rem; color: var(--gray-600);">
-                        💡 <strong>Tip:</strong> Use the <code>--audit</code> flag for detailed component-level vulnerability analysis with remediation guidance.
+                        💡 Use filters above to narrow down vulnerabilities by repository, severity, or component name
                     </div>
                 </div>
-            </div>
+                
+        <!-- Comprehensive Vulnerability List -->
+        {self._generate_comprehensive_vulnerability_list(org_summary)}
+        
+        <!-- Vulnerability Filtering Controls -->
+        {self._generate_vulnerability_filter_controls()}
+    </div>
         </div>
         """
     
@@ -893,6 +913,39 @@ class HTMLGenerator:
             css_class = tech.lower().replace('/', '').replace(' ', '').replace('.', '')
             badges.append(f'<span class="tech-badge {css_class}">{tech}</span>')
         return '\n'.join(badges)
+    
+    def _generate_repo_vulnerability_badges(self, vulnerability_breakdown: Dict[str, int]) -> str:
+        """Generate vulnerability severity badges for repository table"""
+        if not vulnerability_breakdown:
+            return '<span style="color: var(--gray-500); font-size: 0.75rem;">No breakdown available</span>'
+        
+        badges = []
+        severity_config = {
+            'critical': {'color': '#dc2626', 'label': 'C'},
+            'high': {'color': '#ea580c', 'label': 'H'},
+            'medium': {'color': '#d97706', 'label': 'M'},
+            'low': {'color': '#0284c7', 'label': 'L'},
+            'unknown': {'color': '#6b7280', 'label': 'U'}
+        }
+        
+        for severity, count in vulnerability_breakdown.items():
+            if count > 0:
+                config = severity_config.get(severity, {'color': '#6b7280', 'label': severity[:1].upper()})
+                badges.append(f'''
+                <span style="
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 0.125rem 0.375rem;
+                    background: {config['color']};
+                    color: white;
+                    border-radius: 4px;
+                    font-size: 0.625rem;
+                    font-weight: 600;
+                    line-height: 1;
+                ">{config['label']}: {count}</span>
+                ''')
+        
+        return ''.join(badges) if badges else '<span style="color: var(--success-green); font-size: 0.75rem;">✅ Clean</span>'
     
     def _generate_interactive_scripts(self, tech_chart_data: str, org_summary: Dict[str, Any]) -> str:
         """Generate JavaScript for interactivity"""
@@ -1824,15 +1877,51 @@ class HTMLGenerator:
         """
     
     def _get_enhanced_single_css_styles(self) -> str:
-        """Get enhanced CSS styles for single repository reports"""
+        """Get enhanced CSS styles for single repository reports with professional design"""
         return """
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #1e40af;
+            --secondary-indigo: #6366f1;
+            --success-green: #10b981;
+            --warning-amber: #f59e0b;
+            --danger-red: #ef4444;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --border-radius: 12px;
+            --border-radius-sm: 6px;
+            --border-radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #1a202c;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-800);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-indigo) 100%);
             min-height: 100vh;
         }
         
@@ -2550,6 +2639,214 @@ class HTMLGenerator:
         
         return '\n'.join(cards)
     
+    def _generate_vulnerability_filter_controls(self) -> str:
+        """Generate vulnerability filtering controls for interactive filtering"""
+        # This method is no longer needed as filtering controls are now integrated into the main table
+        return ""
+    
+    def _generate_comprehensive_vulnerability_list(self, org_summary: Dict[str, Any]) -> str:
+        """Generate comprehensive vulnerability list aggregated from all repositories"""
+        # Get repositories list for counting repos with vulnerabilities
+        repositories = org_summary.get('repositories', [])
+        
+        # Extract all vulnerabilities from the organization summary - these are already aggregated by the core
+        all_vulnerabilities = org_summary.get('vulnerabilities', [])
+        
+        # Always collect vulnerabilities from individual repositories to ensure repository names are included
+        repo_vulnerabilities = []
+        for repo in repositories:
+            repo_vulns = repo.get('vulnerabilities', [])
+            for vuln in repo_vulns:
+                vuln_with_repo = vuln.copy()
+                vuln_with_repo['repository'] = repo.get('name', 'Unknown')
+                repo_vulnerabilities.append(vuln_with_repo)
+        
+        # Use repository-level vulnerabilities if available, otherwise fall back to org-level
+        if repo_vulnerabilities:
+            all_vulnerabilities = repo_vulnerabilities
+        elif not all_vulnerabilities:
+            # Last resort: try to match org-level vulnerabilities to repositories
+            for vuln in all_vulnerabilities:
+                if 'repository' not in vuln:
+                    # Try to find matching repository based on component
+                    component_name = vuln.get('component', '')
+                    matched_repo = None
+                    for repo in repositories:
+                        repo_components = repo.get('component_names', [])
+                        if component_name in repo_components:
+                            matched_repo = repo.get('name', 'Unknown')
+                            break
+                    vuln['repository'] = matched_repo or 'Multiple Repositories'
+        
+        if not all_vulnerabilities:
+            return f"""
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--border-radius); padding: 2rem; text-align: center; color: var(--success-green);">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h3 style="color: var(--success-green); margin-bottom: 1rem;">🎉 No vulnerabilities detected!</h3>
+                <p style="color: var(--gray-600); font-size: 1.125rem;">All {org_summary.get('successful_scans', 0)} scanned repositories are secure.</p>
+            </div>
+            """
+        
+        # Sort vulnerabilities by severity (critical first)
+        severity_order = {'critical': 0, 'high': 1, 'medium': 2, 'low': 3, 'unknown': 4}
+        all_vulnerabilities.sort(key=lambda v: (severity_order.get(v.get('severity', 'unknown'), 4), v.get('component', '')))
+        
+        # Generate vulnerability table
+        vulnerability_rows = ""
+        for vuln in all_vulnerabilities:
+            severity = vuln.get('severity', 'unknown').lower()
+            severity_colors = {
+                'critical': '#dc2626',
+                'high': '#ea580c',
+                'medium': '#d97706',
+                'low': '#0284c7',
+                'unknown': '#6b7280'
+            }
+            severity_color = severity_colors.get(severity, '#6b7280')
+            
+            # Truncate description for table display
+            description = vuln.get('description', 'No description available')[:150]
+            if len(vuln.get('description', '')) > 150:
+                description += '...'
+            
+            # Format references
+            references_html = ""
+            if vuln.get('references'):
+                ref_links = []
+                for ref in vuln.get('references', [])[:2]:  # Show first 2 references
+                    ref_links.append(f'<a href="{ref}" target="_blank" style="color: {severity_color}; text-decoration: none; margin-right: 0.5rem;"><i class="fas fa-external-link-alt"></i></a>')
+                references_html = ''.join(ref_links)
+            
+            cvss_score = vuln.get('cvss_score', '')
+            cvss_display = f" (CVSS: {cvss_score})" if cvss_score else ""
+            
+            vulnerability_rows += f"""
+            <tr class="vuln-row" data-repository="{vuln.get('repository', 'Unknown').lower()}" data-severity="{severity}" data-component="{vuln.get('component', 'Unknown').lower()}" style="border-bottom: 1px solid var(--gray-200);">
+                <td style="padding: 1rem; vertical-align: top;">
+                    <div style="font-weight: 600; color: var(--gray-900); margin-bottom: 0.25rem;">{vuln.get('repository', 'Unknown')}</div>
+                    <div style="font-size: 0.875rem; color: var(--gray-600);">{vuln.get('component', 'Unknown')}</div>
+                    <div style="font-size: 0.75rem; color: var(--gray-500); font-family: monospace;">{vuln.get('component_version', '')}</div>
+                </td>
+                <td style="padding: 1rem; vertical-align: top;">
+                    <code style="background: var(--gray-100); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">{vuln.get('id', 'Unknown')}</code>
+                </td>
+                <td style="padding: 1rem; vertical-align: top;">
+                    <span style="display: inline-block; padding: 0.375rem 0.75rem; background: {severity_color}; color: white; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        {severity}{cvss_display}
+                    </span>
+                </td>
+                <td style="padding: 1rem; vertical-align: top; max-width: 300px;">
+                    <div style="margin-bottom: 0.5rem;">
+                        <strong style="color: var(--gray-900);">{vuln.get('title', vuln.get('summary', 'Vulnerability'))}</strong>
+                    </div>
+                    <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.4;">{description}</div>
+                    <div style="margin-top: 0.5rem;">{references_html}</div>
+                </td>
+                <td style="padding: 1rem; vertical-align: top; text-align: center;">
+                    <div style="font-size: 0.875rem; color: var(--gray-600);">{vuln.get('published', '')[:10] if vuln.get('published') else 'N/A'}</div>
+                </td>
+            </tr>
+            """
+        
+        return f"""
+        <div style="background: var(--white); border-radius: var(--border-radius); border: 1px solid var(--gray-200); margin-top: 2rem;">
+            <div style="background: var(--gray-50); padding: 1.5rem; border-bottom: 1px solid var(--gray-200); border-radius: var(--border-radius) var(--border-radius) 0 0;">
+                <h3 style="margin: 0; color: var(--gray-900); font-size: 1.25rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-list-alt"></i>
+                    Complete Vulnerability Inventory ({len(all_vulnerabilities)} total)
+                </h3>
+                <p style="margin: 0.5rem 0 0 0; color: var(--gray-600); font-size: 0.875rem;">
+                    Detailed list of all security vulnerabilities found across {len([r for r in repositories if r.get('vulnerabilities', 0) > 0])} repositories
+                </p>
+            </div>
+            
+            <!-- Vulnerability Filtering Controls -->
+            <div style="padding: 1rem 1.5rem; background: var(--gray-50); border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.05em;">Filter by Repository</label>
+                    <select id="vulnerabilityRepoFilter" onchange="filterVulnerabilityTable()" style="padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px; font-size: 0.875rem; background: white;">
+                        <option value="all">All Repositories</option>
+                        {self._generate_vulnerability_repo_filter_options(repositories)}
+                    </select>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.05em;">Filter by Severity</label>
+                    <select id="vulnerabilitySeverityFilter" onchange="filterVulnerabilityTable()" style="padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px; font-size: 0.875rem; background: white;">
+                        <option value="all">All Severities</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                    <label style="font-size: 0.75rem; font-weight: 600; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.05em;">Search Components</label>
+                    <input type="text" id="vulnerabilityComponentSearch" placeholder="Component name..." onkeyup="filterVulnerabilityTable()" style="padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px; font-size: 0.875rem; min-width: 200px;">
+                </div>
+                <div style="margin-left: auto; display: flex; align-items: end;">
+                    <button onclick="resetVulnerabilityFilters()" style="padding: 0.5rem 1rem; background: var(--gray-600); color: white; border: none; border-radius: 4px; font-size: 0.875rem; cursor: pointer;">Reset Filters</button>
+                </div>
+            </div>
+            
+            <div style="overflow-x: auto;">
+                <table id="vulnerabilityTable" style="width: 100%; border-collapse: collapse; margin: 0;">
+                    <thead>
+                        <tr style="background: var(--gray-50);">
+                            <th onclick="sortVulnerabilityTable(0)" style="padding: 1rem; text-align: left; font-weight: 600; color: var(--gray-700); border-bottom: 2px solid var(--gray-200); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer;">Repository / Component <i class="fas fa-sort"></i></th>
+                            <th onclick="sortVulnerabilityTable(1)" style="padding: 1rem; text-align: left; font-weight: 600; color: var(--gray-700); border-bottom: 2px solid var(--gray-200); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer;">Vulnerability ID <i class="fas fa-sort"></i></th>
+                            <th onclick="sortVulnerabilityTable(2)" style="padding: 1rem; text-align: left; font-weight: 600; color: var(--gray-700); border-bottom: 2px solid var(--gray-200); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer;">Severity <i class="fas fa-sort"></i></th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: var(--gray-700); border-bottom: 2px solid var(--gray-200); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">Description & References</th>
+                            <th onclick="sortVulnerabilityTable(4)" style="padding: 1rem; text-align: left; font-weight: 600; color: var(--gray-700); border-bottom: 2px solid var(--gray-200); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer;">Published <i class="fas fa-sort"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {vulnerability_rows}
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="padding: 1.5rem; background: var(--gray-50); border-top: 1px solid var(--gray-200); border-radius: 0 0 var(--border-radius) var(--border-radius);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="font-size: 0.875rem; color: var(--gray-600);">Legend:</div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="width: 12px; height: 12px; background: #dc2626; border-radius: 2px;"></span>
+                            <span style="font-size: 0.75rem; color: var(--gray-600);">Critical</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="width: 12px; height: 12px; background: #ea580c; border-radius: 2px;"></span>
+                            <span style="font-size: 0.75rem; color: var(--gray-600);">High</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="width: 12px; height: 12px; background: #d97706; border-radius: 2px;"></span>
+                            <span style="font-size: 0.75rem; color: var(--gray-600);">Medium</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="width: 12px; height: 12px; background: #0284c7; border-radius: 2px;"></span>
+                            <span style="font-size: 0.75rem; color: var(--gray-600);">Low</span>
+                        </div>
+                    </div>
+                    <div style="font-size: 0.875rem; color: var(--gray-600);">
+                        💡 Click on vulnerability IDs to view detailed information from security databases
+                    </div>
+                </div>
+            </div>
+        </div>
+        """
+    
+    def _generate_vulnerability_repo_filter_options(self, repositories: List[Dict[str, Any]]) -> str:
+        """Generate repository filter options for vulnerability table"""
+        options = []
+        for repo in repositories:
+            repo_name = repo.get('name', 'Unknown')
+            vuln_count = repo.get('vulnerabilities', 0)
+            if vuln_count > 0:
+                options.append(f'<option value="{repo_name.lower()}">{repo_name} ({vuln_count} vulnerabilities)</option>')
+        return '\n'.join(options)
+    
     def _generate_enhanced_interactive_scripts(self, tech_chart_data: str, org_summary: Dict[str, Any]) -> str:
         """Generate enhanced JavaScript for organization dashboard interactivity"""
         org_summary_json = json.dumps(org_summary, default=str)
@@ -2812,6 +3109,20 @@ class HTMLGenerator:
             // Initialize with overview tab
             showTab('overview');
             
+            // Initialize vulnerability filtering when security tab is first shown
+            const securityTab = document.querySelector('.nav-tab[onclick="showTab(\'security\')"]');
+            if (securityTab) {
+                securityTab.addEventListener('click', function() {
+                    setTimeout(() => {
+                        // Initialize filters if they exist
+                        const vulnTable = document.getElementById('vulnerabilityTable');
+                        if (vulnTable && typeof filterVulnerabilityTable === 'function') {
+                            filterVulnerabilityTable();
+                        }
+                    }, 100);
+                });
+            }
+            
             // Add loading animation
             document.body.style.opacity = '0';
             setTimeout(() => {{
@@ -2832,16 +3143,95 @@ class HTMLGenerator:
             }});
         }});
         
+        // Vulnerability table filtering functionality
+        function filterVulnerabilityTable() {
+            const repoFilter = document.getElementById('vulnerabilityRepoFilter').value;
+            const severityFilter = document.getElementById('vulnerabilitySeverityFilter').value;
+            const componentSearch = document.getElementById('vulnerabilityComponentSearch').value.toLowerCase();
+            const rows = document.querySelectorAll('#vulnerabilityTable tbody tr.vuln-row');
+            
+            let visibleCount = 0;
+            
+            rows.forEach(row => {
+                const repository = row.dataset.repository;
+                const severity = row.dataset.severity;
+                const component = row.dataset.component;
+                
+                let visible = true;
+                
+                if (repoFilter !== 'all' && repository !== repoFilter) visible = false;
+                if (severityFilter !== 'all' && severity !== severityFilter) visible = false;
+                if (componentSearch && !component.includes(componentSearch)) visible = false;
+                
+                row.style.display = visible ? '' : 'none';
+                if (visible) visibleCount++;
+            });
+            
+            // Update count display if needed
+            console.log(`Showing ${visibleCount} vulnerabilities`);
+        }
+        
+        function resetVulnerabilityFilters() {
+            document.getElementById('vulnerabilityRepoFilter').value = 'all';
+            document.getElementById('vulnerabilitySeverityFilter').value = 'all';
+            document.getElementById('vulnerabilityComponentSearch').value = '';
+            filterVulnerabilityTable();
+        }
+        
+        // Vulnerability table sorting
+        let vulnSortDirection = {};
+        function sortVulnerabilityTable(columnIndex) {
+            const table = document.getElementById('vulnerabilityTable');
+            if (!table) return;
+            
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr.vuln-row')).filter(row => row.style.display !== 'none');
+            
+            const direction = vulnSortDirection[columnIndex] = !vulnSortDirection[columnIndex];
+            
+            rows.sort((a, b) => {
+                const aVal = a.cells[columnIndex].textContent.trim();
+                const bVal = b.cells[columnIndex].textContent.trim();
+                
+                // Handle severity column with special ordering
+                if (columnIndex === 2) {
+                    const severityOrder = { 'CRITICAL': 0, 'HIGH': 1, 'MEDIUM': 2, 'LOW': 3, 'UNKNOWN': 4 };
+                    const aOrder = severityOrder[aVal.split(' ')[0]] || 4;
+                    const bOrder = severityOrder[bVal.split(' ')[0]] || 4;
+                    return direction ? bOrder - aOrder : aOrder - bOrder;
+                } else {
+                    // Text columns
+                    return direction ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
+                }
+            });
+            
+            // Update sort indicators
+            const headers = table.querySelectorAll('th');
+            headers.forEach((header, index) => {
+                const icon = header.querySelector('i');
+                if (icon) {
+                    if (index === columnIndex) {
+                        icon.className = direction ? 'fas fa-sort-down' : 'fas fa-sort-up';
+                    } else {
+                        icon.className = 'fas fa-sort';
+                    }
+                }
+            });
+            
+            // Re-append sorted rows
+            rows.forEach(row => tbody.appendChild(row));
+        }
+        
         // Handle window resize for charts
-        window.addEventListener('resize', function() {{
+        window.addEventListener('resize', function() {
             if (techChart) techChart.resize();
             if (techDetailsChart) techDetailsChart.resize();
-        }});
+        });
         
         // Add keyboard navigation
-        document.addEventListener('keydown', function(e) {{
-            if (e.ctrlKey || e.metaKey) {{
-                switch (e.key) {{
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch (e.key) {
                     case 'p':
                         e.preventDefault();
                         printReport();
@@ -2850,9 +3240,14 @@ class HTMLGenerator:
                         e.preventDefault();
                         exportData();
                         break;
-                }}
-            }}
-        }});
+                }
+            }
+            
+            // ESC to reset vulnerability filters
+            if (e.key === 'Escape' && activeTab === 'security') {
+                resetVulnerabilityFilters();
+            }
+        });
         """
     
     def showTab(self, tab_name: str) -> None:
