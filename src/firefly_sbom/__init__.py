@@ -20,7 +20,7 @@ __version__ = "1.0.0"
 __author__ = "Firefly OSS"
 __license__ = "Apache-2.0"
 
-from .core import SBOMGenerator
 from .config import Config
+from .core import SBOMGenerator
 
 __all__ = ["SBOMGenerator", "Config", "__version__"]

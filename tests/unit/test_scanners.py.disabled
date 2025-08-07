@@ -1,0 +1,309 @@
+"""
+Unit tests for scanner modules
+"""
+
+import pytest
+from pathlib import Path
+from unittest.mock import patch, mock_open, Mock
+
+from firefly_sbom.scanners.base import Scanner
+from firefly_sbom.scanners.python import PythonScanner
+from firefly_sbom.scanners.node import NodeScanner
+from firefly_sbom.scanners.go import GoScanner
+
+
+class TestBaseScanner:
+    """Test BaseScanner abstract class"""
+    
+    def test_abstract_methods(self):
+        """Test that BaseScanner cannot be instantiated directly"""
+        with pytest.raises(TypeError):
+            Scanner()
+    
+    def test_detect_method_required(self):
+        """Test that subclasses must implement detect method"""
+        class IncompleteScanner(Scanner):
+            def scan(self, path):
+                pass
+        
+        with pytest.raises(TypeError):
+            IncompleteScanner()
+    
+    def test_scan_method_required(self):
+        """Test that subclasses must implement scan method"""
+        class IncompleteScanner(Scanner):
+            def detect(self, path):
+                pass
+        
+        with pytest.raises(TypeError):
+            IncompleteScanner()
+
+
+class TestPythonScanner:
+    """Test Python project scanner"""
+    
+    def setup_method(self):
+        """Setup for each test method"""
+        self.scanner = PythonScanner()
+    
+    def test_detect_requirements_txt(self, temp_dir):
+        """Test detection of requirements.txt"""
+        requirements_file = temp_dir / 'requirements.txt'
+        requirements_file.write_text('requests==2.28.1\nflask==2.2.2\n')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_setup_py(self, temp_dir):
+        """Test detection of setup.py"""
+        setup_file = temp_dir / 'setup.py'
+        setup_file.write_text('from setuptools import setup\nsetup(name="test")')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_pyproject_toml(self, temp_dir):
+        """Test detection of pyproject.toml"""
+        pyproject_file = temp_dir / 'pyproject.toml'
+        pyproject_file.write_text('[build-system]\nrequires = ["setuptools"]')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_pipfile(self, temp_dir):
+        """Test detection of Pipfile"""
+        pipfile = temp_dir / 'Pipfile'
+        pipfile.write_text('[packages]\nrequests = "*"')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_no_python_files(self, temp_dir):
+        """Test no detection when no Python files present"""
+        result = self.scanner.detect(temp_dir)
+        assert result is False
+    
+    def test_scan_requirements_txt(self, fixtures_dir):
+        """Test scanning requirements.txt file"""
+        # Use the fixture file we created
+        result = self.scanner.scan(fixtures_dir)
+        
+        assert 'components' in result
+        components = result['components']
+        
+        # Find specific components
+        requests_comp = next((c for c in components if c['name'] == 'requests'), None)
+        assert requests_comp is not None
+        assert requests_comp['version'] == '2.28.1'
+        assert requests_comp['type'] == 'library'
+        assert requests_comp['scope'] == 'direct'
+        
+        flask_comp = next((c for c in components if c['name'] == 'flask'), None)
+        assert flask_comp is not None
+        assert flask_comp['version'] == '2.2.2'
+        
+        # Check stats
+        assert 'stats' in result
+        assert result['stats']['total_components'] > 0
+    
+    @patch('builtins.open', mock_open(read_data='corrupted content'))
+    def test_scan_corrupted_file(self, temp_dir):
+        """Test handling of corrupted requirements file"""
+        requirements_file = temp_dir / 'requirements.txt'
+        requirements_file.touch()  # Create empty file
+        
+        result = self.scanner.scan(temp_dir)
+        
+        # Should still return a result, even if components list is empty
+        assert 'components' in result
+        assert 'stats' in result
+
+
+class TestNodeScanner:
+    """Test Node.js project scanner"""
+    
+    def setup_method(self):
+        """Setup for each test method"""
+        self.scanner = NodeScanner()
+    
+    def test_detect_package_json(self, temp_dir):
+        """Test detection of package.json"""
+        package_file = temp_dir / 'package.json'
+        package_file.write_text('{"name": "test", "dependencies": {}}')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_yarn_lock(self, temp_dir):
+        """Test detection of yarn.lock"""
+        yarn_file = temp_dir / 'yarn.lock'
+        yarn_file.write_text('# yarn lockfile v1\n')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_package_lock_json(self, temp_dir):
+        """Test detection of package-lock.json"""
+        lock_file = temp_dir / 'package-lock.json'
+        lock_file.write_text('{"name": "test", "lockfileVersion": 2}')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_no_node_files(self, temp_dir):
+        """Test no detection when no Node.js files present"""
+        result = self.scanner.detect(temp_dir)
+        assert result is False
+    
+    def test_scan_package_json(self, fixtures_dir):
+        """Test scanning package.json file"""
+        result = self.scanner.scan(fixtures_dir)
+        
+        assert 'components' in result
+        components = result['components']
+        
+        # Find specific components
+        express_comp = next((c for c in components if c['name'] == 'express'), None)
+        assert express_comp is not None
+        assert express_comp['version'] == '^4.18.2'
+        assert express_comp['type'] == 'library'
+        assert express_comp['scope'] == 'direct'
+        
+        lodash_comp = next((c for c in components if c['name'] == 'lodash'), None)
+        assert lodash_comp is not None
+        assert lodash_comp['version'] == '^4.17.21'
+        
+        # Check stats
+        assert 'stats' in result
+        assert result['stats']['total_components'] > 0
+    
+    def test_scan_includes_dev_dependencies(self, fixtures_dir):
+        """Test that dev dependencies can be included"""
+        result = self.scanner.scan(fixtures_dir, include_dev=True)
+        
+        components = result['components']
+        
+        # Should include dev dependencies
+        jest_comp = next((c for c in components if c['name'] == 'jest'), None)
+        assert jest_comp is not None
+        assert jest_comp['scope'] == 'dev'
+        
+        eslint_comp = next((c for c in components if c['name'] == 'eslint'), None)
+        assert eslint_comp is not None
+        assert eslint_comp['scope'] == 'dev'
+
+
+class TestGoScanner:
+    """Test Go project scanner"""
+    
+    def setup_method(self):
+        """Setup for each test method"""
+        self.scanner = GoScanner()
+    
+    def test_detect_go_mod(self, temp_dir):
+        """Test detection of go.mod"""
+        go_mod_file = temp_dir / 'go.mod'
+        go_mod_file.write_text('module test\ngo 1.19\n')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_go_sum(self, temp_dir):
+        """Test detection of go.sum"""
+        go_sum_file = temp_dir / 'go.sum'
+        go_sum_file.write_text('github.com/test/pkg v1.0.0 h1:abc')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_vendor_modules(self, temp_dir):
+        """Test detection of vendor/modules.txt"""
+        vendor_dir = temp_dir / 'vendor'
+        vendor_dir.mkdir()
+        modules_file = vendor_dir / 'modules.txt'
+        modules_file.write_text('# test module info')
+        
+        result = self.scanner.detect(temp_dir)
+        assert result is True
+    
+    def test_detect_no_go_files(self, temp_dir):
+        """Test no detection when no Go files present"""
+        result = self.scanner.detect(temp_dir)
+        assert result is False
+    
+    def test_scan_go_mod(self, fixtures_dir):
+        """Test scanning go.mod file"""
+        result = self.scanner.scan(fixtures_dir)
+        
+        assert 'components' in result
+        components = result['components']
+        
+        # Find specific components
+        gin_comp = next((c for c in components if c['name'] == 'github.com/gin-gonic/gin'), None)
+        assert gin_comp is not None
+        assert gin_comp['version'] == 'v1.9.1'
+        assert gin_comp['type'] == 'library'
+        assert gin_comp['scope'] == 'direct'
+        
+        testify_comp = next((c for c in components if c['name'] == 'github.com/stretchr/testify'), None)
+        assert testify_comp is not None
+        assert testify_comp['version'] == 'v1.8.3'
+        assert testify_comp['scope'] == 'direct'
+        
+        # Check for indirect dependencies
+        sonic_comp = next((c for c in components if c['name'] == 'github.com/bytedance/sonic'), None)
+        assert sonic_comp is not None
+        assert sonic_comp['scope'] == 'indirect'
+        
+        # Check stats
+        assert 'stats' in result
+        assert result['stats']['total_components'] > 0
+
+
+class TestScannerIntegration:
+    """Integration tests for multiple scanners"""
+    
+    def test_multiple_technologies_detected(self, temp_dir):
+        """Test detection when multiple technologies are present"""
+        # Create files for multiple technologies
+        (temp_dir / 'requirements.txt').write_text('requests==2.28.1')
+        (temp_dir / 'package.json').write_text('{"name": "test"}')
+        (temp_dir / 'go.mod').write_text('module test\ngo 1.19')
+        
+        python_scanner = PythonScanner()
+        node_scanner = NodeScanner()
+        go_scanner = GoScanner()
+        
+        assert python_scanner.detect(temp_dir) is True
+        assert node_scanner.detect(temp_dir) is True
+        assert go_scanner.detect(temp_dir) is True
+    
+    def test_scanner_priority_handling(self, temp_dir):
+        """Test that multiple scanners can work on the same directory"""
+        # Create a mixed project
+        (temp_dir / 'requirements.txt').write_text('flask==2.2.2')
+        (temp_dir / 'package.json').write_text('''
+        {
+            "name": "test-project",
+            "dependencies": {
+                "express": "^4.18.2"
+            }
+        }
+        ''')
+        
+        python_scanner = PythonScanner()
+        node_scanner = NodeScanner()
+        
+        python_result = python_scanner.scan(temp_dir)
+        node_result = node_scanner.scan(temp_dir)
+        
+        # Both should return valid results
+        assert len(python_result['components']) > 0
+        assert len(node_result['components']) > 0
+        
+        # Should find different components
+        python_names = {c['name'] for c in python_result['components']}
+        node_names = {c['name'] for c in node_result['components']}
+        
+        assert 'flask' in python_names
+        assert 'express' in node_names

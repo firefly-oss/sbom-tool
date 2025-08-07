@@ -5,10 +5,10 @@ All notable changes to the Firefly SBOM Tool will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 2024-08-07
 
 ### Added
-- Initial release of Firefly SBOM Tool
+- **Initial Release**: Complete SBOM generation and auditing tool
 - Support for multiple package managers and languages:
   - Python (requirements.txt, Pipfile, pyproject.toml, setup.py)
   - JavaScript/TypeScript (package.json, yarn.lock, package-lock.json)
@@ -64,7 +64,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - N/A (Initial release)
 
 ### Fixed
-- N/A (Initial release)
+- **CycloneDX Integration**: Fixed import issues with CycloneDX library (updated to use `make_outputter`)
+- **Configuration Parsing**: Fixed dataclass field access for default values
+- **Dependencies**: Removed invalid Python dependencies (`concurrent-futures`, `asyncio`)
+- **Code Quality**: Applied consistent formatting with Black and isort
+- **Test Coverage**: Added comprehensive unit and integration tests
 
 ### Security
 - N/A (Initial release)

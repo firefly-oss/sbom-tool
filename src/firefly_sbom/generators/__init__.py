@@ -1,77 +1,86 @@
 """Report generators - Copyright 2024 Firefly OSS"""
-from pathlib import Path
+
 import json
-import yaml
-from typing import Dict, Any, List
 from datetime import datetime
-from cyclonedx.output import make_outputter, OutputFormat
+from pathlib import Path
+from typing import Any, Dict, List
+
+import yaml
 from cyclonedx.model.bom import Bom
 from cyclonedx.model.component import Component
+from cyclonedx.output import OutputFormat, make_outputter
 from cyclonedx.schema import SchemaVersion
+
 
 class CycloneDXGenerator:
     def __init__(self, format_type):
         self.format_type = format_type
-    
+
     def generate(self, sbom_data: Dict[str, Any], output_path: Path):
         bom = Bom()
-        for comp in sbom_data.get('components', []):
-            component = Component(name=comp['name'], version=comp.get('version'))
+        for comp in sbom_data.get("components", []):
+            component = Component(name=comp["name"], version=comp.get("version"))
             bom.components.add(component)
-        
-        output_format = OutputFormat.JSON if self.format_type == 'json' else OutputFormat.XML
-        outputter = make_outputter(bom, output_format=output_format, schema_version=SchemaVersion.V1_6)
-        with open(output_path, 'w') as f:
+
+        output_format = (
+            OutputFormat.JSON if self.format_type == "json" else OutputFormat.XML
+        )
+        outputter = make_outputter(
+            bom, output_format=output_format, schema_version=SchemaVersion.V1_6
+        )
+        with open(output_path, "w") as f:
             f.write(outputter.output_as_string())
+
 
 class SPDXGenerator:
     def __init__(self, format_type):
         self.format_type = format_type
-    
+
     def generate(self, sbom_data: Dict[str, Any], output_path: Path):
         spdx_doc = {
             "spdxVersion": "SPDX-2.3",
             "name": "SBOM Document",
             "packages": [
-                {"name": c['name'], "version": c.get('version', '')}
-                for c in sbom_data.get('components', [])
-            ]
+                {"name": c["name"], "version": c.get("version", "")}
+                for c in sbom_data.get("components", [])
+            ],
         }
-        
-        with open(output_path, 'w') as f:
-            if self.format_type == 'json':
+
+        with open(output_path, "w") as f:
+            if self.format_type == "json":
                 json.dump(spdx_doc, f, indent=2)
             else:
                 yaml.dump(spdx_doc, f)
+
 
 class HTMLGenerator:
     def generate(self, sbom_data: Dict[str, Any], output_path: Path):
         """Generate pretty HTML report"""
         html = self._generate_html_report(sbom_data)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(html)
-    
+
     def generate_org_summary(self, org_summary: Dict[str, Any], output_path: Path):
         """Generate organization summary HTML report"""
         html = self._generate_org_html_report(org_summary)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(html)
-    
+
     def _generate_html_report(self, sbom_data: Dict[str, Any]) -> str:
         """Generate HTML content for SBOM report"""
-        metadata = sbom_data.get('metadata', {})
-        components = sbom_data.get('components', [])
-        stats = sbom_data.get('stats', {})
-        vulnerabilities = sbom_data.get('vulnerabilities', [])
-        
+        metadata = sbom_data.get("metadata", {})
+        components = sbom_data.get("components", [])
+        stats = sbom_data.get("stats", {})
+        vulnerabilities = sbom_data.get("vulnerabilities", [])
+
         # Group components by type
         components_by_type = {}
         for comp in components:
-            comp_type = comp.get('type', 'library')
+            comp_type = comp.get("type", "library")
             if comp_type not in components_by_type:
                 components_by_type[comp_type] = []
             components_by_type[comp_type].append(comp)
-        
+
         # Generate vulnerability section if present
         vuln_html = ""
         if vulnerabilities:
@@ -99,7 +108,7 @@ class HTMLGenerator:
                 </table>
             </div>
             """
-        
+
         return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,7 +163,7 @@ class HTMLGenerator:
     </div>
 </body>
 </html>"""
-    
+
     def _generate_component_tables(self, components_by_type: Dict[str, List]) -> str:
         """Generate HTML tables for components grouped by type"""
         html = ""
@@ -184,7 +193,7 @@ class HTMLGenerator:
             </div>
             """
         return html
-    
+
     def _generate_org_html_report(self, org_summary: Dict[str, Any]) -> str:
         """Generate HTML content for organization summary"""
         return f"""<!DOCTYPE html>
@@ -254,7 +263,7 @@ class HTMLGenerator:
     </div>
 </body>
 </html>"""
-    
+
     def _get_css_styles(self) -> str:
         """Get CSS styles for HTML reports"""
         return """
@@ -290,28 +299,29 @@ class HTMLGenerator:
         .component-group { margin: 20px 0; }
         """
 
+
 class MarkdownGenerator:
     """Generate Markdown format reports"""
-    
+
     def generate(self, sbom_data: Dict[str, Any], output_path: Path):
         """Generate Markdown SBOM report"""
         content = self._generate_markdown_report(sbom_data)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(content)
-    
+
     def generate_org_summary(self, org_summary: Dict[str, Any], output_path: Path):
         """Generate organization summary Markdown report"""
         content = self._generate_org_markdown_report(org_summary)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(content)
-    
+
     def _generate_markdown_report(self, sbom_data: Dict[str, Any]) -> str:
         """Generate Markdown content for SBOM report"""
-        metadata = sbom_data.get('metadata', {})
-        components = sbom_data.get('components', [])
-        stats = sbom_data.get('stats', {})
-        vulnerabilities = sbom_data.get('vulnerabilities', [])
-        
+        metadata = sbom_data.get("metadata", {})
+        components = sbom_data.get("components", [])
+        stats = sbom_data.get("stats", {})
+        vulnerabilities = sbom_data.get("vulnerabilities", [])
+
         content = f"""# Software Bill of Materials
 
 ## 📋 Metadata
@@ -331,7 +341,7 @@ class MarkdownGenerator:
 {f"| Vulnerabilities | {stats.get('vulnerabilities', 0)} |" if 'vulnerabilities' in stats else ''}
 
 """
-        
+
         # Add vulnerabilities section if present
         if vulnerabilities:
             content += """## 🔒 Security Vulnerabilities
@@ -342,22 +352,22 @@ class MarkdownGenerator:
             for vuln in vulnerabilities:
                 content += f"| {vuln.get('component', 'Unknown')} | {vuln.get('id', 'Unknown')} | {vuln.get('severity', 'Unknown').upper()} | {vuln.get('description', '')} |\n"
             content += "\n"
-        
+
         # Add components section
         content += """## 📦 Components
 
 | Name | Version | Type | License | Scope |
 |------|---------|------|---------|-------|
 """
-        for comp in sorted(components, key=lambda x: x.get('name', '')):
+        for comp in sorted(components, key=lambda x: x.get("name", "")):
             content += f"| {comp.get('name', 'Unknown')} | {comp.get('version', 'Unknown')} | {comp.get('type', 'library')} | {comp.get('license', 'Unknown')} | {comp.get('scope', 'Unknown')} |\n"
-        
+
         content += """\n---
 *Generated by Firefly SBOM Tool v1.0.0 | Apache License 2.0*
 """
-        
+
         return content
-    
+
     def _generate_org_markdown_report(self, org_summary: Dict[str, Any]) -> str:
         """Generate Markdown content for organization summary"""
         content = f"""# Organization SBOM Summary
@@ -381,37 +391,38 @@ class MarkdownGenerator:
 | Repository | Status | Components | Vulnerabilities | Technologies |
 |------------|--------|------------|-----------------|-------------|
 """
-        
-        for repo in org_summary.get('repositories', []):
+
+        for repo in org_summary.get("repositories", []):
             content += f"| {repo.get('name', 'Unknown')} | {repo.get('status', 'Unknown').upper()} | {repo.get('components', 0)} | {repo.get('vulnerabilities', 0)} | {', '.join(repo.get('technologies', []))} |\n"
-        
+
         content += """\n---
 *Generated by Firefly SBOM Tool v1.0.0 | Apache License 2.0*
 """
-        
+
         return content
+
 
 class TextGenerator:
     """Generate plain text format reports"""
-    
+
     def generate(self, sbom_data: Dict[str, Any], output_path: Path):
         """Generate text SBOM report"""
         content = self._generate_text_report(sbom_data)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(content)
-    
+
     def generate_org_summary(self, org_summary: Dict[str, Any], output_path: Path):
         """Generate organization summary text report"""
         content = self._generate_org_text_report(org_summary)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w") as f:
             f.write(content)
-    
+
     def _generate_text_report(self, sbom_data: Dict[str, Any]) -> str:
         """Generate plain text content for SBOM report"""
-        metadata = sbom_data.get('metadata', {})
-        components = sbom_data.get('components', [])
-        stats = sbom_data.get('stats', {})
-        
+        metadata = sbom_data.get("metadata", {})
+        components = sbom_data.get("components", [])
+        stats = sbom_data.get("stats", {})
+
         content = f"""SOFTWARE BILL OF MATERIALS
 {'=' * 60}
 
@@ -429,16 +440,16 @@ Transitive Dependencies: {stats.get('transitive_deps', 0)}
 COMPONENTS:
 -----------
 """
-        
-        for comp in sorted(components, key=lambda x: x.get('name', '')):
+
+        for comp in sorted(components, key=lambda x: x.get("name", "")):
             content += f"{comp.get('name', 'Unknown')} @ {comp.get('version', 'Unknown')} [{comp.get('type', 'library')}] - {comp.get('license', 'Unknown')} ({comp.get('scope', 'Unknown')})\n"
-        
+
         content += f"""\n{'=' * 60}
 Generated by Firefly SBOM Tool v1.0.0 | Apache License 2.0
 """
-        
+
         return content
-    
+
     def _generate_org_text_report(self, org_summary: Dict[str, Any]) -> str:
         """Generate plain text content for organization summary"""
         content = f"""ORGANIZATION SBOM SUMMARY
@@ -458,14 +469,21 @@ Total Vulnerabilities: {org_summary.get('total_vulnerabilities', 0)}
 REPOSITORIES:
 -------------
 """
-        
-        for repo in org_summary.get('repositories', []):
+
+        for repo in org_summary.get("repositories", []):
             content += f"{repo.get('name', 'Unknown')}: {repo.get('status', 'Unknown').upper()} - {repo.get('components', 0)} components, {repo.get('vulnerabilities', 0)} vulnerabilities\n"
-        
+
         content += f"""\n{'=' * 60}
 Generated by Firefly SBOM Tool v1.0.0 | Apache License 2.0
 """
-        
+
         return content
 
-__all__ = ['CycloneDXGenerator', 'SPDXGenerator', 'HTMLGenerator', 'MarkdownGenerator', 'TextGenerator']
+
+__all__ = [
+    "CycloneDXGenerator",
+    "SPDXGenerator",
+    "HTMLGenerator",
+    "MarkdownGenerator",
+    "TextGenerator",
+]
