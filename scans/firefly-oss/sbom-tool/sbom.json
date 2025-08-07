@@ -1,0 +1,1483 @@
+{
+  "metadata": {
+    "repository": "/var/folders/jg/_c1c86nj7ms0_kqg0hyty3zw0000gn/T/sbom_sbom-tool_mgp3syyu/sbom-tool",
+    "timestamp": "2025-08-07T22:19:57.465108",
+    "technologies": [
+      "Python"
+    ],
+    "tool": {
+      "name": "Firefly SBOM Tool",
+      "version": "1.0.0"
+    },
+    "repository_name": "sbom-tool",
+    "repository_url": "https://github.com/firefly-oss/sbom-tool.git",
+    "description": "The Firefly SBOM Tool is an enterprise-grade solution for generating Software Bill of Materials (SBOM) documents and performing comprehensive security audits across multiple programming languages and frameworks.",
+    "primary_language": "Python"
+  },
+  "components": [
+    {
+      "name": "click",
+      "version": "8.0.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:076bedb5a4221fd7",
+      "purl": "pkg:pypi/click@8.0.0",
+      "license": "Unknown"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:c9706375d048937f",
+      "purl": "pkg:pypi/pyyaml@6.0",
+      "license": "MIT"
+    },
+    {
+      "name": "requests",
+      "version": "2.28.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:94b9eb20fae4d1e3",
+      "purl": "pkg:pypi/requests@2.28.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "packaging",
+      "version": "21.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:ef034ca9c091bf3d",
+      "purl": "pkg:pypi/packaging@21.0",
+      "license": "Unknown"
+    },
+    {
+      "name": "rich",
+      "version": "12.0.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:419a072f0936aa45",
+      "purl": "pkg:pypi/rich@12.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.0.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:7cc4f955a26021ca",
+      "purl": "pkg:pypi/jinja2@3.0.0",
+      "license": "Unknown"
+    },
+    {
+      "name": "cyclonedx-bom",
+      "version": "4.0.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:83e746951ee2e2cd",
+      "purl": "pkg:pypi/cyclonedx-bom@4.0.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "spdx-tools",
+      "version": "0.8.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:d972c867927fd1b2",
+      "purl": "pkg:pypi/spdx-tools@0.8.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "packageurl-python",
+      "version": "0.11.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:d9a72b1e95c00de7",
+      "purl": "pkg:pypi/packageurl-python@0.11.0",
+      "license": "MIT"
+    },
+    {
+      "name": "safety",
+      "version": "2.3.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:baa02fbd0d9d25d1",
+      "purl": "pkg:pypi/safety@2.3.0",
+      "license": "MIT"
+    },
+    {
+      "name": "pip-audit",
+      "version": "2.4.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:d02751ca9ebe09d8",
+      "purl": "pkg:pypi/pip-audit@2.4.0",
+      "license": "Unknown"
+    },
+    {
+      "name": "toml",
+      "version": "0.10.2",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:0a2c26ccefa508cb",
+      "purl": "pkg:pypi/toml@0.10.2",
+      "license": "MIT"
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:2a943510e12b2fab",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "license": "Unknown"
+    },
+    {
+      "name": "lxml",
+      "version": "4.9.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:5cfa227319c76ea7",
+      "purl": "pkg:pypi/lxml@4.9.0",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.8.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:171ef59906c03916",
+      "purl": "pkg:pypi/aiohttp@3.8.0",
+      "license": "MIT"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.5.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:75a952115527f859",
+      "purl": "pkg:pypi/matplotlib@3.5.0",
+      "license": "MIT"
+    },
+    {
+      "name": "pandas",
+      "version": "1.4.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:86e86f7ef5dd082c",
+      "purl": "pkg:pypi/pandas@1.4.0",
+      "license": "MIT"
+    },
+    {
+      "name": "tabulate",
+      "version": "0.9.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:67731d41ee374587",
+      "purl": "pkg:pypi/tabulate@0.9.0",
+      "license": "MIT"
+    },
+    {
+      "name": "gitpython",
+      "version": "3.1.0",
+      "type": "library",
+      "scope": "direct",
+      "bom-ref": "pkg:9cc0ce7fd17330c7",
+      "purl": "pkg:pypi/gitpython@3.1.0",
+      "license": "BSD-3-Clause"
+    }
+  ],
+  "stats": {
+    "total_components": 19,
+    "direct_deps": 19,
+    "transitive_deps": 0,
+    "vulnerabilities": 38,
+    "vulnerability_breakdown": {
+      "critical": 3,
+      "high": 7,
+      "medium": 28,
+      "low": 0,
+      "unknown": 0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "id": "PYSEC-2022-42992",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "critical",
+      "cvss_score": null,
+      "title": "",
+      "description": "All versions of package gitpython are vulnerable to Remote Code Execution (RCE) due to improper user input validation, which makes it possible to inject a maliciously crafted remote URL into the clone command. Exploiting this vulnerability is possible because the library makes external calls to git without sufficient sanitization of input arguments.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.30"
+        }
+      ],
+      "published": "2022-12-06T05:15:00Z",
+      "modified": "2023-11-08T04:08:31.421285Z",
+      "references": [
+        "https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-3113858",
+        "https://github.com/gitpython-developers/GitPython/blob/bec61576ae75803bc4e60d8de7a629c194313d1c/git/repo/base.py%23L1249",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IKMVYKLWX62UEYKAN64RUZMOIAMZM5JN/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJHN3QUXPJIMM6SULIR3PR34UFWRAE7X/"
+      ],
+      "aliases": [
+        "CVE-2022-24439",
+        "GHSA-hcpj-qp55-gfph"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-161",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "critical",
+      "cvss_score": 10.0,
+      "title": "",
+      "description": " GitPython is a python library used to interact with Git repositories. When resolving a program, Python/Windows look for the current working directory, and after that the PATH environment. GitPython defaults to use the `git` command, if a user runs GitPython from a repo has a `git.exe` or `git` executable, that program will be run instead of the one in the user's `PATH`. This is more of a problem on how Python interacts with Windows systems, Linux and any other OS aren't affected by this. But probably people using GitPython usually run it from the CWD of a repo. An attacker can trick a user to download a repository with a malicious `git` executable, if the user runs/imports GitPython from that directory, it allows the attacker to run any arbitrary commands. There is no fix currently available for windows users, however there are a few mitigations. 1: Default to an absolute path for the git program on Windows, like `C:\\\\Program Files\\\\Git\\\\cmd\\\\git.EXE` (default git path installation). 2: Require users to set the `GIT_PYTHON_GIT_EXECUTABLE` environment variable on Windows systems. 3: Make this problem prominent in the documentation and advise users to never run GitPython from an untrusted repo, or set the `GIT_PYTHON_GIT_EXECUTABLE` env var to an absolute path. 4: Resolve the executable manually by only looking into the `PATH` environment variable.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.33"
+        }
+      ],
+      "published": "2023-08-28T18:15:00Z",
+      "modified": "2023-11-08T04:13:22.478104Z",
+      "references": [
+        "https://docs.python.org/3/library/subprocess.html#popen-constructor",
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-wfm5-v35h-vwf4"
+      ],
+      "aliases": [
+        "CVE-2023-40590",
+        "GHSA-wfm5-v35h-vwf4"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2024-4",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "critical",
+      "cvss_score": 10.0,
+      "title": "",
+      "description": "GitPython is a python library used to interact with Git repositories. There is an incomplete fix for CVE-2023-40590. On Windows, GitPython uses an untrusted search path if it uses a shell to run `git`, as well as when it runs `bash.exe` to interpret hooks. If either of those features are used on Windows, a malicious `git.exe` or `bash.exe` may be run from an untrusted repository. This issue has been patched in version 3.1.41.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "ef3192cc414f2fd9978908454f6fd95243784c7f"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.41"
+        }
+      ],
+      "published": "2024-01-11T02:15:00Z",
+      "modified": "2024-01-18T16:56:49.522045Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-2mqj-m65w-jghx",
+        "https://github.com/gitpython-developers/GitPython/pull/1792",
+        "https://github.com/gitpython-developers/GitPython/commit/ef3192cc414f2fd9978908454f6fd95243784c7f"
+      ],
+      "aliases": [
+        "CVE-2024-22190",
+        "GHSA-2mqj-m65w-jghx"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-5m98-qgg9-wh84",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
+      "description": "### Summary\nAn attacker can send a specially crafted POST (multipart/form-data) request. When the aiohttp server processes it, the server will enter an infinite loop and be unable to process any further requests.\n\n### Impact\nAn attacker can stop the application from serving requests after sending a single request.\n\n-------\n\nFor anyone needing to patch older versions of aiohttp, the minimum diff needed to resolve the issue is (located in `_read_chunk_from_length()`):\n\n```diff\ndiff --git a/aiohttp/multipart.py b/aiohttp/multipart.py\nindex 227be605c..71fc2654a 100644\n--- a/aiohttp/multipart.py\n+++ b/aiohttp/multipart.py\n@@ -338,6 +338,8 @@ class BodyPartReader:\n         assert self._length is not None, \"Content-Length required for chunked read\"\n         chunk_size = min(size, self._length - self._read_bytes)\n         chunk = await self._content.read(chunk_size)\n+        if self._content.at_eof():\n+            self._at_eof = True\n         return chunk\n \n     async def _read_chunk_from_stream(self, size: int) -> bytes:\n```\n\nThis does however introduce some very minor issues with handling form data. So, if possible, it would be recommended to also backport the changes in:\nhttps://github.com/aio-libs/aiohttp/commit/cebe526b9c34dc3a3da9140409db63014bc4cf19\nhttps://github.com/aio-libs/aiohttp/commit/7eecdff163ccf029fbb1ddc9de4169d4aaeb6597\nhttps://github.com/aio-libs/aiohttp/commit/f21c6f2ca512a026ce7f0f6c6311f62d6a638866",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.4"
+        }
+      ],
+      "published": "2024-05-03T17:29:54Z",
+      "modified": "2024-05-03T18:02:59.170557Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5m98-qgg9-wh84",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-30251",
+        "https://github.com/aio-libs/aiohttp/commit/7eecdff163ccf029fbb1ddc9de4169d4aaeb6597",
+        "https://github.com/aio-libs/aiohttp/commit/cebe526b9c34dc3a3da9140409db63014bc4cf19",
+        "https://github.com/aio-libs/aiohttp/commit/f21c6f2ca512a026ce7f0f6c6311f62d6a638866",
+        "https://github.com/aio-libs/aiohttp",
+        "http://www.openwall.com/lists/oss-security/2024/05/02/4"
+      ],
+      "aliases": [
+        "CVE-2024-30251"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-246",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "",
+      "description": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. The HTTP parser in AIOHTTP has numerous problems with header parsing, which could lead to request smuggling. This parser is only used when AIOHTTP_NO_EXTENSIONS is enabled (or not using a prebuilt wheel). These bugs have been addressed in commit `d5c12ba89` which has been included in release version 3.8.6. Users are advised to upgrade. There are no known workarounds for these issues.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "d5c12ba890557a575c313bb3017910d7616fce3d"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.8.6"
+        }
+      ],
+      "published": "2023-11-14T21:15:00Z",
+      "modified": "2023-11-22T23:41:28.136683Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg",
+        "https://github.com/aio-libs/aiohttp/commit/d5c12ba890557a575c313bb3017910d7616fce3d"
+      ],
+      "aliases": [
+        "CVE-2023-47627",
+        "GHSA-gfw2-4jvh-wgfg"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2024-24",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "",
+      "description": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. When using aiohttp as a web server and configuring static routes, it is necessary to specify the root path for static files. Additionally, the option 'follow_symlinks' can be used to determine whether to follow symbolic links outside the static root directory. When 'follow_symlinks' is set to True, there is no validation to check if reading a file is within the root directory. This can lead to directory traversal vulnerabilities, resulting in unauthorized access to arbitrary files on the system, even when symlinks are not present.  Disabling follow_symlinks and using a reverse proxy are encouraged mitigations.  Version 3.9.2 fixes this issue.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1c335944d6a8b1298baf179b7c0b3069f10c514b"
+        },
+        {
+          "introduced": "1.0.5"
+        },
+        {
+          "fixed": "3.9.2"
+        }
+      ],
+      "published": "2024-01-29T23:15:00Z",
+      "modified": "2024-02-05T20:43:19.143053Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5h86-8mv2-jq9f",
+        "https://github.com/aio-libs/aiohttp/pull/8079",
+        "https://github.com/aio-libs/aiohttp/commit/1c335944d6a8b1298baf179b7c0b3069f10c514b",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7/"
+      ],
+      "aliases": [
+        "CVE-2024-23334",
+        "GHSA-5h86-8mv2-jq9f"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-2mqj-m65w-jghx",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Untrusted search path under some conditions on Windows allows arbitrary code execution",
+      "description": "### Summary\n\nThis issue exists because of an incomplete fix for CVE-2023-40590. On Windows, GitPython uses an untrusted search path if it uses a shell to run `git`, as well as when it runs `bash.exe` to interpret hooks. If either of those features are used on Windows, a malicious `git.exe` or `bash.exe` may be run from an untrusted repository.\n\n### Details\n\nAlthough GitPython often avoids executing programs found in an untrusted search path since 3.1.33, two situations remain where this still occurs. Either can allow arbitrary code execution under some circumstances.\n\n#### When a shell is used\n\nGitPython can be told to run `git` commands through a shell rather than as direct subprocesses, by passing `shell=True` to any method that accepts it, or by both setting `Git.USE_SHELL = True` and not passing `shell=False`. Then the Windows `cmd.exe` shell process performs the path search, and GitPython does not prevent that shell from finding and running `git` in the current directory.\n\nWhen GitPython runs `git` directly rather than through a shell, the GitPython process performs the path search, and currently omits the current directory by setting `NoDefaultCurrentDirectoryInExePath` in its own environment during the `Popen` call. Although the `cmd.exe` shell will honor this environment variable when present, GitPython does not currently pass it into the shell subprocess's environment.\n\nFurthermore, because GitPython sets the subprocess CWD to the root of a repository's working tree, using a shell will run a malicious `git.exe` in an untrusted repository even if GitPython itself is run from a trusted location.\n\nThis also applies if `Git.execute` is called directly with `shell=True` (or after `Git.USE_SHELL = True`) to run any command.\n\n#### When hook scripts are run\n\nOn Windows, GitPython uses `bash.exe` to run hooks that appear to be scripts. However, unlike when running `git`, no steps are taken to avoid finding and running `bash.exe` in the current directory.\n\nThis allows the author of an untrusted fork or branch to cause a malicious `bash.exe` to be run in some otherwise safe workflows. An example of such a scenario is if the user installs a trusted hook while on a trusted branch, then switches to an untrusted feature branch (possibly from a fork) to review proposed changes. If the untrusted feature branch contains a malicious `bash.exe` and the user's current working directory is the working tree, and the user performs an action that runs the hook, then although the hook itself is uncorrupted, it runs with the malicious `bash.exe`.\n\nNote that, while `bash.exe` is a shell, this is a separate scenario from when `git` is run using the unrelated Windows `cmd.exe` shell.\n\n### PoC\n\nOn Windows, create a `git.exe` file in a repository. Then create a `Repo` object, and call any method through it (directly or indirectly) that supports the `shell` keyword argument with `shell=True`:\n\n```powershell\nmkdir testrepo\ngit init testrepo\ncp ... testrepo git.exe # Replace \"...\" with any executable of choice.\npython -c \"import git; print(git.Repo('testrepo').git.version(shell=True))\"\n```\n\nThe `git.exe` executable in the repository directory will be run.\n\nOr use no `Repo` object, but do it from the location with the `git.exe`:\n\n```powershell\ncd testrepo\npython -c \"import git; print(git.Git().version(shell=True))\"\n```\n\nThe `git.exe` executable in the current directory will be run.\n\nFor the scenario with hooks, install a hook in a repository, create a `bash.exe` file in the current directory, and perform an operation that causes GitPython to attempt to run the hook:\n\n```powershell\nmkdir testrepo\ncd testrepo\ngit init\nmv .git/hooks/pre-commit.sample .git/hooks/pre-commit\ncp ... bash.exe # Replace \"...\" with any executable of choice.\necho \"Some text\" >file.txt\ngit add file.txt\npython -c \"import git; git.Repo().index.commit('Some message')\"\n```\n\nThe `bash.exe` executable in the current directory will be run.\n\n### Impact\n\nThe greatest impact is probably in applications that set `Git.USE_SHELL = True` for historical reasons. (Undesired console windows had, in the past, been created in some kinds of applications, when it was not used.) Such an application may be vulnerable to arbitrary code execution from a malicious repository, even with no other exacerbating conditions. This is to say that, if a shell is used to run `git`, the full effect of CVE-2023-40590 is still present. Furthermore, as noted above, running the application itself from a trusted directory is not a sufficient mitigation.\n\nAn application that does not direct GitPython to use a shell to run `git` subprocesses thus avoids most of the risk. However, there is no such straightforward way to prevent GitPython from running `bash.exe` to interpret hooks. So while the conditions needed for that to be exploited are more involved, it may be harder to mitigate decisively prior to patching.\n\n### Possible solutions\n\nA straightforward approach would be to address each bug directly:\n\n- When a shell is used, pass `NoDefaultCurrentDirectoryInExePath` into the subprocess environment, because in that scenario the subprocess is the `cmd.exe` shell that itself performs the path search.\n- Set `NoDefaultCurrentDirectoryInExePath` in the GitPython process environment during the `Popen` call made to run hooks with a `bash.exe` subprocess.\n\nThese need only be done on Windows.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.41"
+        }
+      ],
+      "published": "2024-01-10T15:46:00Z",
+      "modified": "2024-09-20T21:23:27.145989Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-2mqj-m65w-jghx",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22190",
+        "https://github.com/gitpython-developers/GitPython/pull/1792",
+        "https://github.com/gitpython-developers/GitPython/commit/ef3192cc414f2fd9978908454f6fd95243784c7f",
+        "https://github.com/gitpython-developers/GitPython",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/gitpython/PYSEC-2024-4.yaml"
+      ],
+      "aliases": [
+        "CVE-2024-22190",
+        "PYSEC-2024-4"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-hcpj-qp55-gfph",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "GitPython vulnerable to Remote Code Execution due to improper user input validation",
+      "description": "All versions of package gitpython are vulnerable to Remote Code Execution (RCE) due to improper user input validation, which makes it possible to inject a maliciously crafted remote URL into the clone command. Exploiting this vulnerability is possible because the library makes external calls to git without sufficient sanitization of input arguments.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.30"
+        }
+      ],
+      "published": "2022-12-06T06:30:17Z",
+      "modified": "2025-02-21T05:31:17.585655Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-24439",
+        "https://github.com/gitpython-developers/GitPython/issues/1515",
+        "https://github.com/gitpython-developers/GitPython/commit/2625ed9fc074091c531c27ffcba7902771130261",
+        "https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-3113858",
+        "https://security.gentoo.org/glsa/202311-01",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJHN3QUXPJIMM6SULIR3PR34UFWRAE7X",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF6AXUTC5BO7L2SBJMCVKJSPKWY52I5R",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IKMVYKLWX62UEYKAN64RUZMOIAMZM5JN",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AV5DV7GBLMOZT7U3Q4TDOJO5R6G3V6GH",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SJHN3QUXPJIMM6SULIR3PR34UFWRAE7X",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PF6AXUTC5BO7L2SBJMCVKJSPKWY52I5R",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IKMVYKLWX62UEYKAN64RUZMOIAMZM5JN",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AV5DV7GBLMOZT7U3Q4TDOJO5R6G3V6GH",
+        "https://lists.debian.org/debian-lts-announce/2023/07/msg00024.html",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/gitpython/PYSEC-2022-42992.yaml",
+        "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.30",
+        "https://github.com/gitpython-developers/GitPython/blob/bec61576ae75803bc4e60d8de7a629c194313d1c/git/repo/base.py%23L1249",
+        "https://github.com/gitpython-developers/GitPython/blob/bec61576ae75803bc4e60d8de7a629c194313d1c/git/repo/base.py#L1249",
+        "https://github.com/gitpython-developers/GitPython"
+      ],
+      "aliases": [
+        "CVE-2022-24439",
+        "PYSEC-2022-42992"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-pr76-5cm5-w9cj",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "GitPython vulnerable to remote code execution due to insufficient sanitization of input arguments",
+      "description": "GitPython before 3.1.32 does not block insecure non-multi options in `clone` and `clone_from`, making it vulnerable to Remote Code Execution (RCE) due to improper user input validation, which makes it possible to inject a maliciously crafted remote URL into the clone command. Exploiting this vulnerability is possible because the library makes external calls to git without sufficient sanitization of input arguments. NOTE: this issue exists because of an incomplete fix for CVE-2022-24439.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.32"
+        }
+      ],
+      "published": "2023-08-11T09:30:36Z",
+      "modified": "2025-02-21T05:50:25.826189Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-40267",
+        "https://github.com/gitpython-developers/GitPython/pull/1609",
+        "https://github.com/gitpython-developers/GitPython/commit/ca965ecc81853bca7675261729143f54e5bf4cdd",
+        "https://github.com/gitpython-developers/GitPython",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/gitpython/PYSEC-2023-137.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AV5DV7GBLMOZT7U3Q4TDOJO5R6G3V6GH",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PF6AXUTC5BO7L2SBJMCVKJSPKWY52I5R"
+      ],
+      "aliases": [
+        "CVE-2023-40267",
+        "PYSEC-2023-137"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-wfm5-v35h-vwf4",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "GitPython untrusted search path on Windows systems leading to arbitrary code execution",
+      "description": "### Summary\n\nWhen resolving a program, Python/Windows look for the current working directory, and after that the PATH environment (see big warning in https://docs.python.org/3/library/subprocess.html#popen-constructor). GitPython defaults to use the `git` command, if a user runs GitPython from a repo has a `git.exe` or `git` executable, that program will be run instead of the one in the user's `PATH`.\n\n### Details\n\nThis is more of a problem on how Python interacts with Windows systems, Linux and any other OS aren't affected by this. But probably people using GitPython usually run it from the CWD of a repo.\n\nThe execution of the `git` command happens in\n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/cmd.py#L277 \n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/cmd.py#L983-L996\n\nAnd there are other commands executed that should probably be aware of this problem.\n\n### PoC\n\nOn a Windows system, create a `git.exe` or `git` executable in any directory, and import or run GitPython from that directory\n\n```\npython -c \"import git\"\n```\n\nThe git executable from the current directory will be run.\n\n### Impact\n\nAn attacker can trick a user to download a repository with a malicious `git` executable, if the user runs/imports GitPython from that directory, it allows the attacker to run any arbitrary commands.\n\n### Possible solutions\n \n- Default to an absolute path for the git program on Windows, like `C:\\\\Program Files\\\\Git\\\\cmd\\\\git.EXE` (default git path installation).\n- Require users to set the `GIT_PYTHON_GIT_EXECUTABLE` environment variable on Windows systems.\n- Make this problem prominent in the documentation and advise users to never run GitPython from an untrusted repo, or set the `GIT_PYTHON_GIT_EXECUTABLE` env var to an absolute path.\n- Resolve the executable manually by only looking into the `PATH` environment variable (suggested by @Byron)\n\n---\n\n> [!NOTE]\n> This vulnerability was reported via email, and it was decided to publish it here and make it public, so the community is aware of it, and a fix can be provided.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.33"
+        }
+      ],
+      "published": "2023-08-29T23:33:53Z",
+      "modified": "2024-09-20T20:23:24.894744Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-wfm5-v35h-vwf4",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-40590",
+        "https://github.com/gitpython-developers/GitPython/issues/1635",
+        "https://github.com/gitpython-developers/GitPython/pull/1636",
+        "https://github.com/gitpython-developers/GitPython/commit/8b75434e2c8a082cdeb4971cc6f0ee2bafec45bc",
+        "https://docs.python.org/3/library/subprocess.html#popen-constructor",
+        "https://github.com/gitpython-developers/GitPython",
+        "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.33",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/gitpython/PYSEC-2023-161.yaml"
+      ],
+      "aliases": [
+        "CVE-2023-40590",
+        "PYSEC-2023-161"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-9hjg-9r4m-mvj7",
+      "component": "requests",
+      "component_version": "2.28.0",
+      "severity": "medium",
+      "cvss_score": 6.0,
+      "title": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "description": "### Impact\n\nDue to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs.\n\n### Workarounds\nFor older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on your Requests Session ([docs](https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env)).\n\n### References\nhttps://github.com/psf/requests/pull/6965\nhttps://seclists.org/fulldisclosure/2025/Jun/2",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.32.4"
+        }
+      ],
+      "published": "2025-06-09T19:06:08Z",
+      "modified": "2025-06-09T19:27:13.389930Z",
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-47081",
+        "https://github.com/psf/requests/pull/6965",
+        "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef",
+        "https://github.com/psf/requests",
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env",
+        "https://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/11",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/9",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/1",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/6"
+      ],
+      "aliases": [
+        "CVE-2024-47081"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-9wx4-h78v-vm56",
+      "component": "requests",
+      "component_version": "2.28.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "description": "When making requests through a Requests `Session`, if the first request is made with `verify=False` to disable cert verification, all subsequent requests to the same origin will continue to ignore cert verification regardless of changes to the value of `verify`. This behavior will continue for the lifecycle of the connection in the connection pool.\n\n### Remediation\nAny of these options can be used to remediate the current issue, we highly recommend upgrading as the preferred mitigation.\n\n* Upgrade to `requests>=2.32.0`.\n* For `requests<2.32.0`, avoid setting `verify=False` for the first request to a host while using a Requests Session.\n* For `requests<2.32.0`, call `close()` on `Session` objects to clear existing connections if `verify=False` is used.\n\n### Related Links\n* https://github.com/psf/requests/pull/6655",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.32.0"
+        }
+      ],
+      "published": "2024-05-20T20:15:00Z",
+      "modified": "2024-07-15T22:12:27.987373Z",
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-9wx4-h78v-vm56",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-35195",
+        "https://github.com/psf/requests/pull/6655",
+        "https://github.com/psf/requests/commit/a58d7f2ffb4d00b46dca2d70a3932a0b37e22fac",
+        "https://github.com/psf/requests",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IYLSNK5TL46Q6XPRVMHVWS63MVJQOK4Q",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N7WP6EYDSUOCOJYHDK5NX43PYZ4SNHGZ"
+      ],
+      "aliases": [
+        "CVE-2024-35195"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-j8r2-6x86-q33q",
+      "component": "requests",
+      "component_version": "2.28.0",
+      "severity": "medium",
+      "cvss_score": 6.0,
+      "title": "Unintended leak of Proxy-Authorization header in requests",
+      "description": "### Impact\n\nSince Requests v2.3.0, Requests has been vulnerable to potentially leaking `Proxy-Authorization` headers to destination servers, specifically during redirects to an HTTPS origin. This is a product of how `rebuild_proxies` is used to recompute and [reattach the `Proxy-Authorization` header](https://github.com/psf/requests/blob/f2629e9e3c7ce3c3c8c025bcd8db551101cbc773/requests/sessions.py#L319-L328) to requests when redirected. Note this behavior has _only_ been observed to affect proxied requests when credentials are supplied in the URL user information component (e.g. `https://username:password@proxy:8080`).\n\n**Current vulnerable behavior(s):**\n\n1. HTTP \u2192 HTTPS: **leak**\n2. HTTPS \u2192 HTTP: **no leak**\n3. HTTPS \u2192 HTTPS: **leak**\n4. HTTP \u2192 HTTP: **no leak**\n\nFor HTTP connections sent through the proxy, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into further tunneled requests. This results in Requests forwarding the header to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate those credentials.\n\nThe reason this currently works for HTTPS connections in Requests is the `Proxy-Authorization` header is also handled by urllib3 with our usage of the ProxyManager in adapters.py with [`proxy_manager_for`](https://github.com/psf/requests/blob/f2629e9e3c7ce3c3c8c025bcd8db551101cbc773/requests/adapters.py#L199-L235). This will compute the required proxy headers in `proxy_headers` and pass them to the Proxy Manager, avoiding attaching them directly to the Request object. This will be our preferred option going forward for default usage.\n\n### Patches\nStarting in Requests v2.31.0, Requests will no longer attach this header to redirects with an HTTPS destination. This should have no negative impacts on the default behavior of the library as the proxy credentials are already properly being handled by urllib3's ProxyManager.\n\nFor users with custom adapters, this _may_ be potentially breaking if you were already working around this behavior. The previous functionality of `rebuild_proxies` doesn't make sense in any case, so we would encourage any users impacted to migrate any handling of Proxy-Authorization directly into their custom adapter.\n\n### Workarounds\nFor users who are not able to update Requests immediately, there is one potential workaround.\n\nYou may disable redirects by setting `allow_redirects` to `False` on all calls through Requests top-level APIs. Note that if you're currently relying on redirect behaviors, you will need to capture the 3xx response codes and ensure a new request is made to the redirect destination.\n```\nimport requests\nr = requests.get('http://github.com/', allow_redirects=False)\n```\n\n### Credits\n\nThis vulnerability was discovered and disclosed by the following individuals.\n\nDennis Brinkrolf, Haxolot (https://haxolot.com/)\nTobias Funke, (tobiasfunke93@gmail.com)",
+      "affected_versions": [
+        {
+          "introduced": "2.3.0"
+        },
+        {
+          "fixed": "2.31.0"
+        }
+      ],
+      "published": "2023-05-22T20:36:32Z",
+      "modified": "2025-02-13T19:20:45.182158Z",
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-32681",
+        "https://github.com/psf/requests/commit/74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5",
+        "https://github.com/psf/requests",
+        "https://github.com/psf/requests/releases/tag/v2.31.0",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/requests/PYSEC-2023-74.yaml",
+        "https://lists.debian.org/debian-lts-announce/2023/06/msg00018.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AW7HNFGYP44RT3DUDQXG2QT3OEV2PJ7Y",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KOYASTZDGQG2BWLSNBPL3TQRL2G7QYNZ",
+        "https://security.gentoo.org/glsa/202309-08"
+      ],
+      "aliases": [
+        "CVE-2023-32681",
+        "PYSEC-2023-74"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-74",
+      "component": "requests",
+      "component_version": "2.28.0",
+      "severity": "medium",
+      "cvss_score": null,
+      "title": "",
+      "description": "Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint. This is a product of how we use `rebuild_proxies` to reattach the `Proxy-Authorization` header to requests. For HTTP connections sent through the tunnel, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into the tunneled request. This results in Requests forwarding proxy credentials to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate sensitive information. This issue has been patched in version 2.31.0.\n\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+        },
+        {
+          "introduced": "2.3.0"
+        },
+        {
+          "fixed": "2.31.0"
+        }
+      ],
+      "published": "2023-05-26T18:15:00Z",
+      "modified": "2023-11-08T04:12:35.436175Z",
+      "references": [
+        "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q",
+        "https://github.com/psf/requests/releases/tag/v2.31.0",
+        "https://github.com/psf/requests/commit/74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AW7HNFGYP44RT3DUDQXG2QT3OEV2PJ7Y/"
+      ],
+      "aliases": [
+        "CVE-2023-32681",
+        "GHSA-j8r2-6x86-q33q"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-cpwx-vrp4-4pq7",
+      "component": "jinja2",
+      "component_version": "3.0.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "description": "An oversight in how the Jinja sandboxed environment interacts with the `|attr` filter allows an attacker that controls the content of a template to execute arbitrary Python code.\n\nTo exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates.\n\nJinja's sandbox does catch calls to `str.format` and ensures they don't escape the sandbox. However, it's possible to use the `|attr` filter to get a reference to a string's plain format method, bypassing the sandbox. After the fix, the `|attr` filter no longer bypasses the environment's attribute lookup.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.6"
+        }
+      ],
+      "published": "2025-03-05T20:40:14Z",
+      "modified": "2025-05-01T04:08:20.224875Z",
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-27516",
+        "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403",
+        "https://github.com/pallets/jinja",
+        "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html"
+      ],
+      "aliases": [
+        "CVE-2025-27516"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-gmj6-6f8f-6699",
+      "component": "jinja2",
+      "component_version": "3.0.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Jinja has a sandbox breakout through malicious filenames",
+      "description": "A bug in the Jinja compiler allows an attacker that controls both the content and filename of a template to execute arbitrary Python code, regardless of if Jinja's sandbox is used.\n\nTo exploit the vulnerability, an attacker needs to control both the filename and the contents of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates where the template author can also choose the template filename.",
+      "affected_versions": [
+        {
+          "introduced": "3.0.0"
+        },
+        {
+          "fixed": "3.1.5"
+        }
+      ],
+      "published": "2024-12-23T17:54:12Z",
+      "modified": "2025-01-08T16:26:10.957556Z",
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-gmj6-6f8f-6699",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-56201",
+        "https://github.com/pallets/jinja/issues/1792",
+        "https://github.com/pallets/jinja/commit/767b23617628419ae3709ccfb02f9602ae9fe51f",
+        "https://github.com/pallets/jinja",
+        "https://github.com/pallets/jinja/releases/tag/3.1.5"
+      ],
+      "aliases": [
+        "CVE-2024-56201"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-h5c8-rqwp-cp95",
+      "component": "jinja2",
+      "component_version": "3.0.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "description": "The `xmlattr` filter in affected versions of Jinja accepts keys containing spaces. XML/HTML attributes cannot contain spaces, as each would then be interpreted as a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. Note that accepting keys as user input is not common or a particularly intended use case of the `xmlattr` filter, and an application doing so should already be verifying what keys are provided regardless of this fix.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.3"
+        }
+      ],
+      "published": "2024-01-11T15:20:48Z",
+      "modified": "2025-02-13T19:36:34.298590Z",
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22195",
+        "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7",
+        "https://github.com/pallets/jinja",
+        "https://github.com/pallets/jinja/releases/tag/3.1.3",
+        "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3"
+      ],
+      "aliases": [
+        "CVE-2024-22195"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-h75v-3vvj-5mfj",
+      "component": "jinja2",
+      "component_version": "3.0.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "description": "The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `>`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for the previous GHSA-h5c8-rqwp-cp95 CVE-2024-22195 only addressed spaces but not other characters.\n\nAccepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.4"
+        }
+      ],
+      "published": "2024-05-06T14:20:59Z",
+      "modified": "2024-10-22T05:28:58.900249Z",
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-34064",
+        "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb",
+        "https://github.com/pallets/jinja",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+      ],
+      "aliases": [
+        "CGA-g5xx-83xq-8g5j",
+        "CVE-2024-34064"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-q2x7-8rv6-6q7h",
+      "component": "jinja2",
+      "component_version": "3.0.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Jinja has a sandbox breakout through indirect reference to format method",
+      "description": "An oversight in how the Jinja sandboxed environment detects calls to `str.format` allows an attacker that controls the content of a template to execute arbitrary Python code.\n\nTo exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates.\n\nJinja's sandbox does catch calls to `str.format` and ensures they don't escape the sandbox. However, it's possible to store a reference to a malicious string's `format` method, then pass that to a filter that calls it. No such filters are built-in to Jinja, but could be present through custom filters in an application. After the fix, such indirect calls are also handled by the sandbox.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.5"
+        }
+      ],
+      "published": "2024-12-23T17:56:08Z",
+      "modified": "2024-12-27T19:24:19.224818Z",
+      "references": [
+        "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-56326",
+        "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4",
+        "https://github.com/pallets/jinja",
+        "https://github.com/pallets/jinja/releases/tag/3.1.5"
+      ],
+      "aliases": [
+        "CVE-2024-56326"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-wrxv-2j5q-m38w",
+      "component": "lxml",
+      "component_version": "4.9.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "lxml NULL Pointer Dereference allows attackers to cause a denial of service",
+      "description": "NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.9.1"
+        }
+      ],
+      "published": "2022-07-06T00:00:30Z",
+      "modified": "2024-09-30T20:25:53.619764Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-2309",
+        "https://github.com/lxml/lxml/commit/86368e9cf70a0ad23cccd5ee32de847149af0c6f",
+        "https://github.com/advisories/GHSA-wrxv-2j5q-m38w",
+        "https://github.com/lxml/lxml",
+        "https://github.com/lxml/lxml/blob/master/CHANGES.txt",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/lxml/PYSEC-2022-230.yaml",
+        "https://huntr.dev/bounties/8264e74f-edda-4c40-9956-49de635105ba",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HGYC6L7ENH5VEGN3YWFBYMGKX6WNS7HZ",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/URHHSIBTPTALXMECRLAC2EVDNAFSR5NO",
+        "https://security.gentoo.org/glsa/202208-06",
+        "https://security.netapp.com/advisory/ntap-20220915-0006"
+      ],
+      "aliases": [
+        "CVE-2022-2309",
+        "PYSEC-2022-230"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2022-230",
+      "component": "lxml",
+      "component_version": "4.9.0",
+      "severity": "medium",
+      "cvss_score": null,
+      "title": "",
+      "description": "NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "86368e9cf70a0ad23cccd5ee32de847149af0c6f"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.9.1"
+        }
+      ],
+      "published": "2022-07-05T10:15:00Z",
+      "modified": "2023-11-08T04:08:16.338038Z",
+      "references": [
+        "https://huntr.dev/bounties/8264e74f-edda-4c40-9956-49de635105ba",
+        "https://github.com/lxml/lxml/commit/86368e9cf70a0ad23cccd5ee32de847149af0c6f",
+        "https://github.com/advisories/GHSA-wrxv-2j5q-m38w"
+      ],
+      "aliases": [
+        "CVE-2022-2309",
+        "GHSA-wrxv-2j5q-m38w"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-45c4-8wx5-qw6w",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
+      "description": "### Impact\n\naiohttp v3.8.4 and earlier are [bundled with llhttp v6.0.6](https://github.com/aio-libs/aiohttp/blob/v3.8.4/.gitmodules) which is vulnerable to CVE-2023-30589. The vulnerable code is used by aiohttp for its HTTP request parser when available which is the default case when installing from a wheel.\n\nThis vulnerability only affects users of aiohttp as an HTTP server (ie `aiohttp.Application`), you are not affected by this vulnerability if you are using aiohttp as an HTTP client library (ie `aiohttp.ClientSession`).\n\n### Reproducer\n\n```python\nfrom aiohttp import web\n\nasync def example(request: web.Request):\n    headers = dict(request.headers)\n    body = await request.content.read()\n    return web.Response(text=f\"headers: {headers} body: {body}\")\n\napp = web.Application()\napp.add_routes([web.post('/', example)])\nweb.run_app(app)\n```\n\nSending a crafted HTTP request will cause the server to misinterpret one of the HTTP header values leading to HTTP request smuggling.\n\n```console\n$ printf \"POST / HTTP/1.1\\r\\nHost: localhost:8080\\r\\nX-Abc: \\rxTransfer-Encoding: chunked\\r\\n\\r\\n1\\r\\nA\\r\\n0\\r\\n\\r\\n\" \\\n  | nc localhost 8080\n\nExpected output:\n  headers: {'Host': 'localhost:8080', 'X-Abc': '\\rxTransfer-Encoding: chunked'} body: b''\n\nActual output (note that 'Transfer-Encoding: chunked' is an HTTP header now and body is treated differently)\n  headers: {'Host': 'localhost:8080', 'X-Abc': '', 'Transfer-Encoding': 'chunked'} body: b'A'\n```\n\n### Patches\n\nUpgrade to the latest version of aiohttp to resolve this vulnerability. It has been fixed in v3.8.5: [`pip install aiohttp >= 3.8.5`](https://pypi.org/project/aiohttp/3.8.5/)\n\n### Workarounds\n\nIf you aren't able to upgrade you can reinstall aiohttp using `AIOHTTP_NO_EXTENSIONS=1` as an environment variable to disable the llhttp HTTP request parser implementation. The pure Python implementation isn't vulnerable to request smuggling:\n\n```console\n$ python -m pip uninstall --yes aiohttp\n$ AIOHTTP_NO_EXTENSIONS=1 python -m pip install --no-binary=aiohttp --no-cache aiohttp\n```\n\n### References\n\n* https://nvd.nist.gov/vuln/detail/CVE-2023-30589\n* https://hackerone.com/reports/2001873\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.8.5"
+        }
+      ],
+      "published": "2023-07-20T14:52:00Z",
+      "modified": "2024-09-03T21:46:08.134663Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-45c4-8wx5-qw6w",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-37276",
+        "https://github.com/aio-libs/aiohttp/commit/9337fb3f2ab2b5f38d7e98a194bde6f7e3d16c40",
+        "https://github.com/aio-libs/aiohttp/commit/9c13a52c21c23dfdb49ed89418d28a5b116d0681",
+        "https://hackerone.com/reports/2001873",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/aio-libs/aiohttp/blob/v3.8.4/.gitmodules",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-120.yaml"
+      ],
+      "aliases": [
+        "CVE-2023-37276",
+        "PYSEC-2023-120"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-5h86-8mv2-jq9f",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "aiohttp is vulnerable to directory traversal",
+      "description": "### Summary\nImproperly configuring static resource resolution in aiohttp when used as a web server can result in the unauthorized reading of arbitrary files on the system.\n\n### Details\nWhen using aiohttp as a web server and configuring static routes, it is necessary to specify the root path for static files. Additionally, the option 'follow_symlinks' can be used to determine whether to follow symbolic links outside the static root directory. When 'follow_symlinks' is set to True, there is no validation to check if a given file path is within the root directory.This can lead to directory traversal vulnerabilities, resulting in unauthorized access to arbitrary files on the system, even when symlinks are not present.\n\ni.e. An application is only vulnerable with setup code like:\n```\napp.router.add_routes([\n    web.static(\"/static\", \"static/\", follow_symlinks=True),  # Remove follow_symlinks to avoid the vulnerability\n])\n```\n\n### Impact\nThis is a directory traversal vulnerability with CWE ID 22. When using aiohttp as a web server and enabling static resource resolution with `follow_symlinks` set to True, it can lead to this vulnerability. This vulnerability has been present since the introduction of the `follow_symlinks` parameter.\n\n### Workaround\nEven if upgrading to a patched version of aiohttp, we recommend following these steps regardless.\n\nIf using `follow_symlinks=True` outside of a restricted local development environment, disable the option immediately. This option is NOT needed to follow symlinks which point to a location _within_ the static root directory, it is _only_ intended to allow a symlink to break out of the static directory. Even with this CVE fixed, there is still a substantial risk of misconfiguration when using this option on a server that accepts requests from remote users.\n\nAdditionally, aiohttp has always recommended using a reverse proxy server (such as nginx) to handle static resources and _not_ to use these static resources in aiohttp for production environments. Doing so also protects against this vulnerability, and is why we expect the number of affected users to be very low.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8079/files",
+      "affected_versions": [
+        {
+          "introduced": "1.0.5"
+        },
+        {
+          "fixed": "3.9.2"
+        }
+      ],
+      "published": "2024-01-29T22:31:03Z",
+      "modified": "2024-11-26T05:24:40.828112Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5h86-8mv2-jq9f",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-23334",
+        "https://github.com/aio-libs/aiohttp/pull/8079",
+        "https://github.com/aio-libs/aiohttp/pull/8079/files",
+        "https://github.com/aio-libs/aiohttp/commit/1c335944d6a8b1298baf179b7c0b3069f10c514b",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-24.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+      ],
+      "aliases": [
+        "CVE-2024-23334",
+        "PYSEC-2024-24"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-7gpw-8wmc-pm8g",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
+      "description": "### Summary\n\nA XSS vulnerability exists on index pages for static file handling.\n\n### Details\n\nWhen using `web.static(..., show_index=True)`, the resulting index pages do not escape file names.\n\nIf users can upload files with arbitrary filenames to the static directory, the server is vulnerable to XSS attacks.\n\n### Workaround\n\nWe have always recommended using a reverse proxy server (e.g. nginx) for serving static files. Users following the recommendation are unaffected.\n\nOther users can disable `show_index` if unable to upgrade.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8319/files",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.4"
+        }
+      ],
+      "published": "2024-04-18T13:45:21Z",
+      "modified": "2024-05-02T03:49:07.951042Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-7gpw-8wmc-pm8g",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-27306",
+        "https://github.com/aio-libs/aiohttp/pull/8319",
+        "https://github.com/aio-libs/aiohttp/pull/8319/files",
+        "https://github.com/aio-libs/aiohttp/commit/28335525d1eac015a7e7584137678cbb6ff19397",
+        "https://github.com/aio-libs/aiohttp",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2EXRGTN2WG7VZLUZ7WOXU5GQJKCPPHKP",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NWEI6NIHZ3G7DURDZVMRK7ZEFC2BTD3U",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZIVBMPEY7WWOFMC3CWXFBRQPFECV4SW3"
+      ],
+      "aliases": [
+        "CVE-2024-27306"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-8495-4g3g-x7pr",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "aiohttp allows request smuggling due to incorrect parsing of chunk extensions",
+      "description": "### Summary\nThe Python parser parses newlines in chunk extensions incorrectly which can lead to request smuggling vulnerabilities under certain conditions.\n\n### Impact\nIf a pure Python version of aiohttp is installed (i.e. without the usual C extensions) or `AIOHTTP_NO_EXTENSIONS` is enabled, then an attacker may be able to execute a request smuggling attack to bypass certain firewalls or proxy protections.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/259edc369075de63e6f3a4eaade058c62af0df71",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.10.11"
+        }
+      ],
+      "published": "2024-11-18T21:02:32Z",
+      "modified": "2024-11-30T05:27:01.654079Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8495-4g3g-x7pr",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-52304",
+        "https://github.com/aio-libs/aiohttp/commit/259edc369075de63e6f3a4eaade058c62af0df71",
+        "https://github.com/aio-libs/aiohttp"
+      ],
+      "aliases": [
+        "CVE-2024-52304"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-8qpw-xqxj-h4r2",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
+      "description": "### Summary\nSecurity-sensitive parts of the *Python HTTP parser* retained minor differences in allowable character sets, that must trigger error handling to robustly match frame boundaries of proxies in order to protect against injection of additional requests. Additionally, validation could trigger exceptions that were not handled consistently with processing of other malformed input.\n\n### Details\nThese problems are rooted in pattern matching protocol elements, previously improved by PR #3235 and GHSA-gfw2-4jvh-wgfg:\n\n1. The expression `HTTP/(\\d).(\\d)` lacked another backslash to clarify that the separator should be a literal dot, not just *any* Unicode code point (result: `HTTP/(\\d)\\.(\\d)`).\n\n2. The HTTP version was permitting Unicode digits, where only ASCII digits are standards-compliant.\n\n3. Distinct regular expressions for validating HTTP Method and Header field names were used - though both should (at least) apply the common restrictions of rfc9110 `token`.\n\n### PoC\n`GET / HTTP/1\u00f61`\n`GET / HTTP/1.\ud835\udfd9`\n`GET/: HTTP/1.1`\n`Content-Encoding?: chunked`\n\n### Impact\nPrimarily concerns running an aiohttp server without llhttp:\n 1. **behind a proxy**: Being more lenient than internet standards require could, depending on deployment environment, assist in request smuggling.\n 2. **directly accessible** or exposed behind proxies relaying malformed input: the unhandled exception could cause excessive resource consumption on the application server and/or its logging facilities.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8074/files",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.2"
+        }
+      ],
+      "published": "2024-01-29T22:30:07Z",
+      "modified": "2024-09-04T20:05:21.242565Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8qpw-xqxj-h4r2",
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-23829",
+        "https://github.com/aio-libs/aiohttp/pull/3235",
+        "https://github.com/aio-libs/aiohttp/pull/8074",
+        "https://github.com/aio-libs/aiohttp/pull/8074/files",
+        "https://github.com/aio-libs/aiohttp/commit/33ccdfb0a12690af5bb49bda2319ec0907fa7827",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-26.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+      ],
+      "aliases": [
+        "CVE-2024-23829",
+        "PYSEC-2024-26"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-9548-qrrj-x5pj",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": " AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+      "description": "### Summary\nThe Python parser is vulnerable to a request smuggling vulnerability due to not parsing trailer sections of an HTTP request.\n\n### Impact\nIf a pure Python version of aiohttp is installed (i.e. without the usual C extensions) or AIOHTTP_NO_EXTENSIONS is enabled, then an attacker may be able to execute a request smuggling attack to bypass certain firewalls or proxy protections.\n\n----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/e8d774f635dc6d1cd3174d0e38891da5de0e2b6a",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.12.14"
+        }
+      ],
+      "published": "2025-07-14T19:33:31Z",
+      "modified": "2025-07-15T01:17:07.184086Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9548-qrrj-x5pj",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-53643",
+        "https://github.com/aio-libs/aiohttp/commit/e8d774f635dc6d1cd3174d0e38891da5de0e2b6a",
+        "https://github.com/aio-libs/aiohttp"
+      ],
+      "aliases": [
+        "CVE-2025-53643"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-gfw2-4jvh-wgfg",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "AIOHTTP has problems in HTTP parser (the python one, not llhttp)",
+      "description": "# Summary\nThe HTTP parser in AIOHTTP has numerous problems with header parsing, which could lead to request smuggling.\nThis parser is only used when `AIOHTTP_NO_EXTENSIONS` is enabled (or not using a prebuilt wheel).\n \n# Details\n\n## Bug 1: Bad parsing of `Content-Length` values\n\n### Description\nRFC 9110 says this:\n> `Content-Length = 1*DIGIT`\n\nAIOHTTP does not enforce this rule, presumably because of an incorrect usage of the builtin `int` constructor. Because the `int` constructor accepts `+` and `-` prefixes, and digit-separating underscores, using `int` to parse CL values leads AIOHTTP to significant misinterpretation.\n\n### Examples\n```\nGET / HTTP/1.1\\r\\n\nContent-Length: -0\\r\\n\n\\r\\n\nX\n```\n```\nGET / HTTP/1.1\\r\\n\nContent-Length: +0_1\\r\\n\n\\r\\n\nX\n```\n\n### Suggested action\nVerify that a `Content-Length` value consists only of ASCII digits before parsing, as the standard requires.\n\n## Bug 2: Improper handling of NUL, CR, and LF in header values\n\n### Description\nRFC 9110 says this:\n> Field values containing CR, LF, or NUL characters are invalid and dangerous, due to the varying ways that implementations might parse and interpret those characters; a recipient of CR, LF, or NUL within a field value MUST either reject the message or replace each of those characters with SP before further processing or forwarding of that message.\n\nAIOHTTP's HTTP parser does not enforce this rule, and will happily process header values containing these three forbidden characters without replacing them with SP.\n### Examples\n```\nGET / HTTP/1.1\\r\\n\nHeader: v\\x00alue\\r\\n\n\\r\\n\n```\n```\nGET / HTTP/1.1\\r\\n\nHeader: v\\ralue\\r\\n\n\\r\\n\n```\n```\nGET / HTTP/1.1\\r\\n\nHeader: v\\nalue\\r\\n\n\\r\\n\n```\n### Suggested action\nReject all messages with NUL, CR, or LF in a header value. The translation to space thing, while technically allowed, does not seem like a good idea to me.\n\n## Bug 3: Improper stripping of whitespace before colon in HTTP headers\n\n### Description\nRFC 9112 says this:\n> No whitespace is allowed between the field name and colon. In the past, differences in the handling of such whitespace have led to security vulnerabilities in request routing and response handling. A server MUST reject, with a response status code of 400 (Bad Request), any received request message that contains whitespace between a header field name and colon.\n\nAIOHTTP does not enforce this rule, and will simply strip any whitespace before the colon in an HTTP header.\n\n### Example\n```\nGET / HTTP/1.1\\r\\n\nContent-Length : 1\\r\\n\n\\r\\n\nX\n```\n\n### Suggested action\nReject all messages with whitespace before a colon in a header field, as the standard requires.\n\n# PoC\nExample requests are embedded in the previous section. To reproduce these bugs, start an AIOHTTP server without llhttp (i.e. `AIOHTTP_NO_EXTENSIONS=1`) and send the requests given in the previous section. (e.g. by `printf`ing into `nc`)\n\n# Impact\nEach of these bugs can be used for request smuggling.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.8.6"
+        }
+      ],
+      "published": "2023-11-14T22:20:59Z",
+      "modified": "2024-09-04T20:20:38.385847Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-47627",
+        "https://github.com/aio-libs/aiohttp/commit/d5c12ba890557a575c313bb3017910d7616fce3d",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/aio-libs/aiohttp/releases/tag/v3.8.6",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-246.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FUSJVQ7OQ55RWL4XAX2F5EZ73N4ZSH6U",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VDKQ6HM3KNDU4OQI476ZWT4O7DMSIT35",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WQYQL6WV535EEKSNH7KRARLLMOW5WXDM"
+      ],
+      "aliases": [
+        "CVE-2023-47627",
+        "PYSEC-2023-246"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-pjjw-qhg8-p2p9",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": null,
+      "title": "aiohttp has vulnerable dependency that is vulnerable to request smuggling",
+      "description": "### Summary\nllhttp 8.1.1 is vulnerable to two request smuggling vulnerabilities.\nDetails have not been disclosed yet, so refer to llhttp for future information.\nThe issue is resolved by using llhttp 9+ (which is included in aiohttp 3.8.6+).",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.8.6"
+        }
+      ],
+      "published": "2023-11-27T23:15:38Z",
+      "modified": "2024-12-02T05:36:03.769392Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pjjw-qhg8-p2p9",
+        "https://github.com/aio-libs/aiohttp/commit/996de2629ef6b4c2934a7c04dfd49d0950d4c43b",
+        "https://github.com/aio-libs/aiohttp/commit/bcc416e533796d04fb8124ef1e7686b1f338767a",
+        "https://github.com/aio-libs/aiohttp"
+      ],
+      "aliases": [],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-q3qx-c6g2-7pw2",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "aiohttp's ClientSession is vulnerable to CRLF injection via version",
+      "description": "### Summary\nImproper validation make it possible for an attacker to modify the HTTP request (e.g. to insert a new header) or even create a new HTTP request if the attacker controls the HTTP version.\n\n### Details\nThe vulnerability only occurs if the attacker can control the HTTP version of the request (including its type).\nFor example if an unvalidated JSON value is used as a version and the attacker is then able to pass an array as the `version` parameter.\nFurthermore, the vulnerability only occurs when the `Connection` header is passed to the `headers` parameter.\n\nAt this point, the library will use the parsed value to create the request. If a list is passed, then it bypasses validation and it is possible to perform CRLF injection.\n\n### PoC\nThe POC below shows an example of providing an unvalidated array as a version:\nhttps://gist.github.com/jnovikov/184afb593d9c2114d77f508e0ccd508e\n\n### Impact\nCRLF injection leading to Request Smuggling.\n\n### Workaround\nIf these specific conditions are met and you are unable to upgrade, then validate the user input to the `version` parameter to ensure it is a `str`.\n\nPatch: https://github.com/aio-libs/aiohttp/pull/7835/files",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.0"
+        }
+      ],
+      "published": "2023-11-27T23:17:42Z",
+      "modified": "2024-09-04T19:10:50.184449Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-q3qx-c6g2-7pw2",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-49081",
+        "https://github.com/aio-libs/aiohttp/pull/7835/files",
+        "https://github.com/aio-libs/aiohttp/commit/1e86b777e61cf4eefc7d92fa57fa19dcc676013b",
+        "https://gist.github.com/jnovikov/184afb593d9c2114d77f508e0ccd508e",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-250.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TY5SI6NK5243DEEDQUFKQKW5GQNKQUMA",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSYWMP64ZFCTC3VO6RY6EC6VSSMV6I3A"
+      ],
+      "aliases": [
+        "CVE-2023-49081",
+        "PYSEC-2023-250"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-qvrw-v9rv-5rjx",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "aiohttp's ClientSession is vulnerable to CRLF injection via method",
+      "description": "### Summary\nImproper validation makes it possible for an attacker to modify the HTTP request (e.g. insert a new header) or even create a new HTTP request if the attacker controls the HTTP method.\n\n### Details\nThe vulnerability occurs only if the attacker can control the HTTP method (GET, POST etc.) of the request.\n\nPrevious releases performed no validation on the provided value. If an attacker controls the HTTP method it will be used as is and can lead to HTTP request smuggling.\n\n### PoC\nA minimal example can be found here:\nhttps://gist.github.com/jnovikov/7f411ae9fe6a9a7804cf162a3bdbb44b\n\n### Impact\nIf the attacker can control the HTTP version of the request it will be able to modify the request (request smuggling).\n\n### Workaround\nIf unable to upgrade and using user-provided values for the request method, perform manual validation of the user value (e.g. by restricting it to a few known values like GET, POST etc.).\n\nPatch: https://github.com/aio-libs/aiohttp/pull/7806/files",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.0"
+        }
+      ],
+      "published": "2023-11-27T23:17:24Z",
+      "modified": "2024-09-03T21:46:24.519134Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-qvrw-v9rv-5rjx",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-49082",
+        "https://github.com/aio-libs/aiohttp/pull/7806/files",
+        "https://github.com/aio-libs/aiohttp/commit/e4ae01c2077d2cfa116aa82e4ff6866857f7c466",
+        "https://gist.github.com/jnovikov/7f411ae9fe6a9a7804cf162a3bdbb44b",
+        "https://github.com/aio-libs/aiohttp",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2023-251.yaml",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TY5SI6NK5243DEEDQUFKQKW5GQNKQUMA",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSYWMP64ZFCTC3VO6RY6EC6VSSMV6I3A"
+      ],
+      "aliases": [
+        "CVE-2023-49082",
+        "PYSEC-2023-251"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-120",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": null,
+      "title": "aiohttp.web.Application vulnerable to HTTP request smuggling via llhttp HTTP request parser",
+      "description": "### Impact\n\naiohttp v3.8.4 and earlier are [bundled with llhttp v6.0.6](https://github.com/aio-libs/aiohttp/blob/v3.8.4/.gitmodules) which is vulnerable to CVE-2023-30589. The vulnerable code is used by aiohttp for its HTTP request parser when available which is the default case when installing from a wheel.\n\nThis vulnerability only affects users of aiohttp as an HTTP server (ie `aiohttp.Application`), you are not affected by this vulnerability if you are using aiohttp as an HTTP client library (ie `aiohttp.ClientSession`).\n\n### Reproducer\n\n```python\nfrom aiohttp import web\n\nasync def example(request: web.Request):\n    headers = dict(request.headers)\n    body = await request.content.read()\n    return web.Response(text=f\"headers: {headers} body: {body}\")\n\napp = web.Application()\napp.add_routes([web.post('/', example)])\nweb.run_app(app)\n```\n\nSending a crafted HTTP request will cause the server to misinterpret one of the HTTP header values leading to HTTP request smuggling.\n\n```console\n$ printf \"POST / HTTP/1.1\\r\\nHost: localhost:8080\\r\\nX-Abc: \\rxTransfer-Encoding: chunked\\r\\n\\r\\n1\\r\\nA\\r\\n0\\r\\n\\r\\n\" \\\n  | nc localhost 8080\n\nExpected output:\n  headers: {'Host': 'localhost:8080', 'X-Abc': '\\rxTransfer-Encoding: chunked'} body: b''\n\nActual output (note that 'Transfer-Encoding: chunked' is an HTTP header now and body is treated differently)\n  headers: {'Host': 'localhost:8080', 'X-Abc': '', 'Transfer-Encoding': 'chunked'} body: b'A'\n```\n\n### Patches\n\nUpgrade to the latest version of aiohttp to resolve this vulnerability. It has been fixed in v3.8.5: [`pip install aiohttp >= 3.8.5`](https://pypi.org/project/aiohttp/3.8.5/)\n\n### Workarounds\n\nIf you aren't able to upgrade you can reinstall aiohttp using `AIOHTTP_NO_EXTENSIONS=1` as an environment variable to disable the llhttp HTTP request parser implementation. The pure Python implementation isn't vulnerable to request smuggling:\n\n```console\n$ python -m pip uninstall --yes aiohttp\n$ AIOHTTP_NO_EXTENSIONS=1 python -m pip install --no-binary=aiohttp --no-cache aiohttp\n```\n\n### References\n\n* https://nvd.nist.gov/vuln/detail/CVE-2023-30589\n* https://hackerone.com/reports/2001873\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.8.5"
+        }
+      ],
+      "published": "2023-07-20T14:52:00Z",
+      "modified": "2023-11-08T04:13:00.855432Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-45c4-8wx5-qw6w",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-37276",
+        "https://github.com/aio-libs/aiohttp",
+        "https://hackerone.com/reports/2001873"
+      ],
+      "aliases": [
+        "CVE-2023-37276",
+        "GHSA-45c4-8wx5-qw6w"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-250",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "",
+      "description": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. Improper validation made it possible for an attacker to modify the HTTP request (e.g. to insert a new header) or create a new HTTP request if the attacker controls the HTTP version. The vulnerability only occurs if the attacker can control the HTTP version of the request. This issue has been patched in version 3.9.0.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1e86b777e61cf4eefc7d92fa57fa19dcc676013b"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.0"
+        }
+      ],
+      "published": "2023-11-30T07:15:00Z",
+      "modified": "2024-01-29T16:41:42.718733Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-q3qx-c6g2-7pw2",
+        "https://gist.github.com/jnovikov/184afb593d9c2114d77f508e0ccd508e",
+        "https://github.com/aio-libs/aiohttp/pull/7835/files",
+        "https://github.com/aio-libs/aiohttp/commit/1e86b777e61cf4eefc7d92fa57fa19dcc676013b"
+      ],
+      "aliases": [
+        "CVE-2023-49081",
+        "GHSA-q3qx-c6g2-7pw2"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-251",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "",
+      "description": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. Improper validation makes it possible for an attacker to modify the HTTP request (e.g. insert a new header) or even create a new HTTP request if the attacker controls the HTTP method. The vulnerability occurs only if the attacker can control the HTTP method (GET, POST etc.) of the request. If the attacker can control the HTTP version of the request it will be able to modify the request (request smuggling). This issue has been patched in version 3.9.0.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "e4ae01c2077d2cfa116aa82e4ff6866857f7c466"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.0"
+        }
+      ],
+      "published": "2023-11-29T20:15:00Z",
+      "modified": "2024-01-29T16:41:42.479153Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-qvrw-v9rv-5rjx",
+        "https://gist.github.com/jnovikov/7f411ae9fe6a9a7804cf162a3bdbb44b",
+        "https://github.com/aio-libs/aiohttp/pull/7806/files",
+        "https://github.com/aio-libs/aiohttp/commit/e4ae01c2077d2cfa116aa82e4ff6866857f7c466"
+      ],
+      "aliases": [
+        "CVE-2023-49082",
+        "GHSA-qvrw-v9rv-5rjx"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2024-26",
+      "component": "aiohttp",
+      "component_version": "3.8.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "",
+      "description": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. Security-sensitive parts of the Python HTTP parser retained minor differences in allowable character sets, that must trigger error handling to robustly match frame boundaries of proxies in order to protect against injection of additional requests. Additionally, validation could trigger exceptions that were not handled consistently with processing of other malformed input.  Being more lenient than internet standards require could, depending on deployment environment, assist in request smuggling. The unhandled exception could cause excessive resource consumption on the application server and/or its logging facilities. This vulnerability exists due to an incomplete fix for CVE-2023-47627. Version 3.9.2 fixes this vulnerability.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "33ccdfb0a12690af5bb49bda2319ec0907fa7827"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.9.2"
+        }
+      ],
+      "published": "2024-01-29T23:15:00Z",
+      "modified": "2024-02-06T20:41:46.176337Z",
+      "references": [
+        "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8qpw-xqxj-h4r2",
+        "https://github.com/aio-libs/aiohttp/pull/8074",
+        "https://github.com/aio-libs/aiohttp/commit/33ccdfb0a12690af5bb49bda2319ec0907fa7827",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7/"
+      ],
+      "aliases": [
+        "CVE-2024-23829",
+        "GHSA-8qpw-xqxj-h4r2"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "GHSA-cwvm-v4w8-q58c",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "GitPython blind local file inclusion",
+      "description": "### Summary\n\nIn order to resolve some git references, GitPython reads files from the `.git` directory, in some places the name of the file being read is provided by the user, GitPython doesn't check if this file is located outside the `.git` directory. This allows an attacker to make GitPython read any file from the system.\n\n### Details\n\nThis vulnerability is present in\n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/refs/symbolic.py#L174-L175\n\nThat code joins the base directory with a user given string without checking if the final path is located outside the base directory.\n\nI was able to exploit it from three places, but there may be more code paths that lead to it:\n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/repo/base.py#L605\n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/repo/base.py#L620\n\nhttps://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/index/base.py#L1353\n\n### PoC\n\nRunning GitPython within any repo should work, here is an example with the GitPython repo.\n\n```python\nimport git\n\nr = git.Repo(\".\")\n\n# This will make GitPython read the README.md file from the root of the repo\nr.commit(\"../README.md\")\nr.tree(\"../README.md\")\nr.index.diff(\"../README.md\")\n\n# Reading /etc/random\n# WARNING: this will probably halt your system, run with caution\n# r.commit(\"../../../../../../../../../dev/random\")\n```\n\n### Impact\n\nI wasn't able to show the contents of the files (that's why \"blind\" local file inclusion), depending on how GitPython is being used, this can be used by an attacker for something _inoffensive_ as checking if a file exits, or cause a DoS by making GitPython read a big/infinite file (like `/dev/random` on Linux systems).\n\n### Possible solutions\n\nA solution would be to check that the final path isn't located outside the `repodir` path (maybe even after resolving symlinks). Maybe there could be other checks in place to make sure that the reference names are valid.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.37"
+        }
+      ],
+      "published": "2023-08-30T20:09:36Z",
+      "modified": "2024-11-19T19:45:51.524156Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-cwvm-v4w8-q58c",
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-41040",
+        "https://github.com/gitpython-developers/GitPython/pull/1672",
+        "https://github.com/gitpython-developers/GitPython/commit/74e55ee4544867e1bd976b7df5a45869ee397b0b",
+        "https://github.com/gitpython-developers/GitPython/commit/e98f57b81f792f0f5e18d33ee658ae395f9aa3c4",
+        "https://github.com/gitpython-developers/GitPython",
+        "https://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/refs/symbolic.py#L174-L175",
+        "https://github.com/gitpython-developers/GitPython/releases/tag/3.1.37",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/gitpython/PYSEC-2023-165.yaml",
+        "https://lists.debian.org/debian-lts-announce/2023/09/msg00036.html"
+      ],
+      "aliases": [
+        "CVE-2023-41040",
+        "PYSEC-2023-165"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-137",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "medium",
+      "cvss_score": null,
+      "title": "",
+      "description": "GitPython before 3.1.32 does not block insecure non-multi options in clone and clone_from. NOTE: this issue exists because of an incomplete fix for CVE-2022-24439.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "ca965ecc81853bca7675261729143f54e5bf4cdd"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.32"
+        }
+      ],
+      "published": "2023-08-11T07:15:00Z",
+      "modified": "2023-11-08T04:13:20.148850Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/commit/ca965ecc81853bca7675261729143f54e5bf4cdd",
+        "https://github.com/gitpython-developers/GitPython/pull/1609"
+      ],
+      "aliases": [
+        "CVE-2023-40267",
+        "GHSA-pr76-5cm5-w9cj"
+      ],
+      "ecosystem": "PyPI"
+    },
+    {
+      "id": "PYSEC-2023-165",
+      "component": "gitpython",
+      "component_version": "3.1.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "",
+      "description": " GitPython is a python library used to interact with Git repositories. In order to resolve some git references, GitPython reads files from the `.git` directory, in some places the name of the file being read is provided by the user, GitPython doesn't check if this file is located outside the `.git` directory. This allows an attacker to make GitPython read any file from the system. This vulnerability is present in https://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/refs/symbolic.py#L174-L175. That code joins the base directory with a user given string without checking if the final path is located outside the base directory. This vulnerability cannot be used to read the contents of files but could in theory be used to trigger a denial of service for the program. This issue has not yet been addressed.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.1.35"
+        }
+      ],
+      "published": "2023-08-30T22:15:00Z",
+      "modified": "2023-11-08T04:13:23.455909Z",
+      "references": [
+        "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-cwvm-v4w8-q58c",
+        "https://github.com/gitpython-developers/GitPython/blob/1c8310d7cae144f74a671cbe17e51f63a830adbf/git/refs/symbolic.py#L174-L175"
+      ],
+      "aliases": [
+        "CVE-2023-41040",
+        "GHSA-cwvm-v4w8-q58c"
+      ],
+      "ecosystem": "PyPI"
+    }
+  ]
+}

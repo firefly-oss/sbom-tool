@@ -225,9 +225,17 @@ class SBOMGenerator:
         # Perform security audit if requested
         if audit:
             logger.info("Performing security audit...")
-            vulnerabilities = self.auditor.audit(unique_components)
+            vulnerabilities, enhanced_components = self.auditor.audit(unique_components)
             sbom_data["vulnerabilities"] = vulnerabilities
+            sbom_data["components"] = enhanced_components  # Use enhanced components with licenses
             sbom_data["stats"]["vulnerabilities"] = len(vulnerabilities)
+            
+            # Add vulnerability severity breakdown
+            severity_counts = {'critical': 0, 'high': 0, 'medium': 0, 'low': 0, 'unknown': 0}
+            for vuln in vulnerabilities:
+                severity = vuln.get('severity', 'unknown')
+                severity_counts[severity] = severity_counts.get(severity, 0) + 1
+            sbom_data["stats"]["vulnerability_breakdown"] = severity_counts
 
         return sbom_data
 
@@ -519,11 +527,15 @@ class SBOMGenerator:
     def _create_org_summary(
         self, org: str, scan_results: Dict[str, Dict]
     ) -> Dict[str, Any]:
-        """Create organization-wide summary"""
+        """Create organization-wide summary with comprehensive vulnerability analysis"""
         total_components = 0
         total_vulnerabilities = 0
         tech_stats = {}
         license_stats = {}
+        
+        # Initialize vulnerability severity aggregation
+        org_vuln_breakdown = {'critical': 0, 'high': 0, 'medium': 0, 'low': 0, 'unknown': 0}
+        all_vulnerabilities = []  # Store all vulnerabilities for detailed analysis
 
         repo_summaries = []
 
@@ -535,6 +547,26 @@ class SBOMGenerator:
                 # Aggregate statistics
                 total_components += len(components)
                 total_vulnerabilities += len(vulnerabilities)
+                
+                # Aggregate vulnerabilities for organization-level analysis
+                all_vulnerabilities.extend(vulnerabilities)
+                
+                # Aggregate vulnerability severity breakdown
+                repo_breakdown = sbom_data.get("stats", {}).get("vulnerability_breakdown", {})
+                for severity, count in repo_breakdown.items():
+                    if severity in org_vuln_breakdown:
+                        org_vuln_breakdown[severity] += count
+                    else:
+                        org_vuln_breakdown['unknown'] += count
+                
+                # Alternative: if breakdown not available, analyze vulnerabilities directly
+                if not repo_breakdown and vulnerabilities:
+                    for vuln in vulnerabilities:
+                        severity = vuln.get('severity', 'unknown').lower()
+                        if severity in org_vuln_breakdown:
+                            org_vuln_breakdown[severity] += 1
+                        else:
+                            org_vuln_breakdown['unknown'] += 1
 
                 # Technology statistics
                 for tech in sbom_data.get("metadata", {}).get("technologies", []):
@@ -545,16 +577,26 @@ class SBOMGenerator:
                     license_name = comp.get("license", "Unknown")
                     license_stats[license_name] = license_stats.get(license_name, 0) + 1
 
-                # Repository summary
+                # Repository summary with vulnerability breakdown
+                repo_vuln_breakdown = {'critical': 0, 'high': 0, 'medium': 0, 'low': 0, 'unknown': 0}
+                for vuln in vulnerabilities:
+                    severity = vuln.get('severity', 'unknown').lower()
+                    if severity in repo_vuln_breakdown:
+                        repo_vuln_breakdown[severity] += 1
+                    else:
+                        repo_vuln_breakdown['unknown'] += 1
+                
                 repo_summaries.append(
                     {
                         "name": repo_name,
                         "components": len(components),
                         "vulnerabilities": len(vulnerabilities),
+                        "vulnerability_breakdown": repo_vuln_breakdown,
                         "technologies": sbom_data.get("metadata", {}).get(
                             "technologies", []
                         ),
                         "status": "success",
+                        "description": sbom_data.get("metadata", {}).get("description", "No description available")
                     }
                 )
             else:
@@ -563,11 +605,29 @@ class SBOMGenerator:
                         "name": repo_name,
                         "components": 0,
                         "vulnerabilities": 0,
+                        "vulnerability_breakdown": {'critical': 0, 'high': 0, 'medium': 0, 'low': 0, 'unknown': 0},
                         "technologies": [],
                         "status": "failed",
+                        "description": "Scan failed - no description available"
                     }
                 )
 
+        # Calculate additional statistics
+        total_critical = org_vuln_breakdown['critical']
+        total_high = org_vuln_breakdown['high']
+        total_medium = org_vuln_breakdown['medium']
+        total_low = org_vuln_breakdown['low']
+        total_unknown = org_vuln_breakdown['unknown']
+        
+        # Risk assessment
+        risk_level = "low"
+        if total_critical > 0:
+            risk_level = "critical"
+        elif total_high > 0:
+            risk_level = "high"
+        elif total_medium > 0:
+            risk_level = "medium"
+        
         return {
             "organization": org,
             "scan_date": datetime.now().isoformat(),
@@ -578,6 +638,9 @@ class SBOMGenerator:
             "failed_scans": sum(1 for r in repo_summaries if r["status"] == "failed"),
             "total_components": total_components,
             "total_vulnerabilities": total_vulnerabilities,
+            "vulnerability_breakdown": org_vuln_breakdown,
+            "risk_level": risk_level,
+            "vulnerabilities": all_vulnerabilities,  # Include all vulnerabilities for detailed reporting
             "technology_distribution": tech_stats,
             "license_distribution": license_stats,
             "repositories": repo_summaries,

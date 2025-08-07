@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "repository": "/var/folders/jg/_c1c86nj7ms0_kqg0hyty3zw0000gn/T/sbom_lib-parent-pom_eu30k8f3/lib-parent-pom",
+    "timestamp": "2025-08-07T22:19:57.316902",
+    "technologies": [
+      "Java/Maven"
+    ],
+    "tool": {
+      "name": "Firefly SBOM Tool",
+      "version": "1.0.0"
+    },
+    "repository_name": "lib-parent-pom",
+    "repository_url": "https://github.com/firefly-oss/lib-parent-pom.git",
+    "description": "This repository contains the parent POM for all Firefly platform libraries. ",
+    "primary_language": null
+  },
+  "components": [],
+  "stats": {
+    "total_components": 0,
+    "direct_deps": 0,
+    "transitive_deps": 0,
+    "vulnerabilities": 0,
+    "vulnerability_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "unknown": 0
+    }
+  },
+  "vulnerabilities": []
+}

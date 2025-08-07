@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "repository": "/var/folders/jg/_c1c86nj7ms0_kqg0hyty3zw0000gn/T/sbom_lib-utils_cwaabhov/lib-utils",
+    "timestamp": "2025-08-07T22:22:14.252984",
+    "technologies": [
+      "Java/Maven"
+    ],
+    "tool": {
+      "name": "Firefly SBOM Tool",
+      "version": "1.0.0"
+    },
+    "repository_name": "lib-utils",
+    "repository_url": "https://github.com/firefly-oss/lib-utils.git",
+    "description": null,
+    "primary_language": "Java"
+  },
+  "components": [
+    {
+      "name": "freemarker",
+      "version": "2.3.32",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:27bb924a9642469b",
+      "purl": "pkg:maven/org.freemarker/freemarker@2.3.32",
+      "group": "org.freemarker",
+      "license": "Unknown"
+    },
+    {
+      "name": "flying-saucer-pdf-openpdf",
+      "version": "9.3.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dc4f1621fcc325b0",
+      "purl": "pkg:maven/org.xhtmlrenderer/flying-saucer-pdf-openpdf@9.3.1",
+      "group": "org.xhtmlrenderer",
+      "license": "Unknown"
+    },
+    {
+      "name": "openpdf",
+      "version": "1.3.30",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c5e5903ff218787f",
+      "purl": "pkg:maven/com.github.librepdf/openpdf@1.3.30",
+      "group": "com.github.librepdf",
+      "license": "Unknown"
+    },
+    {
+      "name": "jsr305",
+      "version": "3.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:db8ded8ff8c6b72d",
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "group": "com.google.code.findbugs",
+      "license": "Unknown"
+    },
+    {
+      "name": "flying-saucer-core",
+      "version": "9.3.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d5efd8539baa1ddb",
+      "purl": "pkg:maven/org.xhtmlrenderer/flying-saucer-core@9.3.1",
+      "group": "org.xhtmlrenderer",
+      "license": "Unknown"
+    },
+    {
+      "name": "slf4j-api",
+      "version": "2.0.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b68d76fdcbf0820d",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.11",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "slf4j-api",
+      "version": "2.0.9",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9f9960407bde2183",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.9",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    }
+  ],
+  "stats": {
+    "total_components": 7,
+    "direct_deps": 0,
+    "transitive_deps": 7,
+    "vulnerabilities": 0,
+    "vulnerability_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "unknown": 0
+    }
+  },
+  "vulnerabilities": []
+}

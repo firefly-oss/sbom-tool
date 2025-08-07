@@ -1,0 +1,4723 @@
+{
+  "metadata": {
+    "repository": "/var/folders/jg/_c1c86nj7ms0_kqg0hyty3zw0000gn/T/sbom_common-platform-notification-services_79_jlgdd/common-platform-notification-services",
+    "timestamp": "2025-08-07T22:23:59.189585",
+    "technologies": [
+      "Java/Maven"
+    ],
+    "tool": {
+      "name": "Firefly SBOM Tool",
+      "version": "1.0.0"
+    },
+    "repository_name": "common-platform-notification-services",
+    "repository_url": "https://github.com/firefly-oss/common-platform-notification-services.git",
+    "description": "A microservice component of the Firefly platform that provides unified notification capabilities through multiple channels: Email, SMS, and Push Notifications.",
+    "primary_language": "Java"
+  },
+  "components": [
+    {
+      "name": "netty-resolver-dns-native-macos",
+      "version": "osx-aarch_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b43cde66be86197d",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-native-macos@osx-aarch_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns-classes-macos",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:afb45ad558cc5d9e",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-classes-macos@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-common",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:66d4546c55d39fee",
+      "purl": "pkg:maven/io.netty/netty-common@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d06ed1518317268b",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-buffer",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c584c64d8a85ca7",
+      "purl": "pkg:maven/io.netty/netty-buffer@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:24445b59419408f2",
+      "purl": "pkg:maven/io.netty/netty-resolver@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:472cde11a6a03c05",
+      "purl": "pkg:maven/io.netty/netty-transport@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:66e4956ba52a892e",
+      "purl": "pkg:maven/io.netty/netty-codec@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-dns",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b25d2ac6d75dca27",
+      "purl": "pkg:maven/io.netty/netty-codec-dns@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-handler",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1e50c87d18934129",
+      "purl": "pkg:maven/io.netty/netty-handler@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-unix-common",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:96c197a08db2ab54",
+      "purl": "pkg:maven/io.netty/netty-transport-native-unix-common@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-validation",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:96d25ac9569ea8a2",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6d9cc90f469dae6b",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c4afb52656772d61",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-core",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6054249bbecba0fd",
+      "purl": "pkg:maven/org.springframework/spring-core@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-context",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6830fde6fac98ac7",
+      "purl": "pkg:maven/org.springframework/spring-context@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-aop",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:178eba1d8800822e",
+      "purl": "pkg:maven/org.springframework/spring-aop@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-beans",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d95682fe793e077c",
+      "purl": "pkg:maven/org.springframework/spring-beans@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-expression",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:276fd54954c1f051",
+      "purl": "pkg:maven/org.springframework/spring-expression@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-observation",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a97befe81c5cc22e",
+      "purl": "pkg:maven/io.micrometer/micrometer-observation@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-autoconfigure",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e6683ff160f3203a",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-logging",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bda541527d5f5b0c",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "logback-classic",
+      "version": "1.4.14",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:787f4eaf156fdc74",
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.4.14",
+      "group": "ch.qos.logback",
+      "license": "Unknown"
+    },
+    {
+      "name": "logback-core",
+      "version": "1.4.14",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:62be3755b9896082",
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.4.14",
+      "group": "ch.qos.logback",
+      "license": "Unknown"
+    },
+    {
+      "name": "slf4j-api",
+      "version": "2.0.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b68d76fdcbf0820d",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.11",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "log4j-to-slf4j",
+      "version": "2.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d57b0dc7e5d44d10",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.21.1",
+      "group": "org.apache.logging.log4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "log4j-api",
+      "version": "2.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b3374768c56d154d",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.21.1",
+      "group": "org.apache.logging.log4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "jul-to-slf4j",
+      "version": "2.0.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c3b55257379282ef",
+      "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.11",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.annotation-api",
+      "version": "2.1.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:45df7a38266277a5",
+      "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+      "group": "jakarta.annotation",
+      "license": "Unknown"
+    },
+    {
+      "name": "snakeyaml",
+      "version": "2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:df0bf7cc4ec5df4d",
+      "purl": "pkg:maven/org.yaml/snakeyaml@2.2",
+      "group": "org.yaml",
+      "license": "Unknown"
+    },
+    {
+      "name": "tomcat-embed-el",
+      "version": "10.1.18",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d9b4b7c2ef94055f",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@10.1.18",
+      "group": "org.apache.tomcat.embed",
+      "license": "Unknown"
+    },
+    {
+      "name": "hibernate-validator",
+      "version": "8.0.1.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f1d1930d6cc7a7a1",
+      "purl": "pkg:maven/org.hibernate.validator/hibernate-validator@8.0.1.Final",
+      "group": "org.hibernate.validator",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.validation-api",
+      "version": "3.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5818111a60f874e3",
+      "purl": "pkg:maven/jakarta.validation/jakarta.validation-api@3.0.2",
+      "group": "jakarta.validation",
+      "license": "Unknown"
+    },
+    {
+      "name": "jboss-logging",
+      "version": "3.5.3.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4fb1447c30fd2e72",
+      "purl": "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final",
+      "group": "org.jboss.logging",
+      "license": "Unknown"
+    },
+    {
+      "name": "classmate",
+      "version": "1.6.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:efa67e4ea3af0f76",
+      "purl": "pkg:maven/com.fasterxml/classmate@1.6.0",
+      "group": "com.fasterxml",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-webflux",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:74266cb4748313d5",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-json",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e014fc9107b0c2c2",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-web",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:09345b4d854cccd8",
+      "purl": "pkg:maven/org.springframework/spring-web@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-databind",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f9219dbe7c6a9562",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-datatype-jdk8",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:327d8d450960361d",
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.15.3",
+      "group": "com.fasterxml.jackson.datatype",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-core",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5fa2936d6e9c49a4",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-datatype-jsr310",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3cba93c13f5af85b",
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.3",
+      "group": "com.fasterxml.jackson.datatype",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-module-parameter-names",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:34a37ed22a532d1e",
+      "purl": "pkg:maven/com.fasterxml.jackson.module/jackson-module-parameter-names@2.15.3",
+      "group": "com.fasterxml.jackson.module",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-reactor-netty",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1bf1365dfbf2058c",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty-http",
+      "version": "1.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0fced9d4d27e374d",
+      "purl": "pkg:maven/io.projectreactor.netty/reactor-netty-http@1.1.15",
+      "group": "io.projectreactor.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-http",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:16082a9be23b1df1",
+      "purl": "pkg:maven/io.netty/netty-codec-http@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-http2",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:67224d491e884b1f",
+      "purl": "pkg:maven/io.netty/netty-codec-http2@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns-native-macos",
+      "version": "osx-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:86c3fe64d0c70b8b",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-native-macos@osx-x86_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-epoll",
+      "version": "linux-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7934b0103eee144e",
+      "purl": "pkg:maven/io.netty/netty-transport-native-epoll@linux-x86_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-classes-epoll",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:42986f4b768a0aa2",
+      "purl": "pkg:maven/io.netty/netty-transport-classes-epoll@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty-core",
+      "version": "1.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:980cb298ff6ee66b",
+      "purl": "pkg:maven/io.projectreactor.netty/reactor-netty-core@1.1.15",
+      "group": "io.projectreactor.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-handler-proxy",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c81557e02c09a50",
+      "purl": "pkg:maven/io.netty/netty-handler-proxy@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-socks",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a21b89ef1093a08d",
+      "purl": "pkg:maven/io.netty/netty-codec-socks@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-core",
+      "version": "3.6.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:00bf5a37b6a85592",
+      "purl": "pkg:maven/io.projectreactor/reactor-core@3.6.2",
+      "group": "io.projectreactor",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-commons",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9f2d9794687c4346",
+      "purl": "pkg:maven/io.micrometer/micrometer-commons@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-webflux",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fa4cc17f12a10762",
+      "purl": "pkg:maven/org.springframework/spring-webflux@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "mapstruct",
+      "version": "1.5.5.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3e247643acf34ebd",
+      "purl": "pkg:maven/org.mapstruct/mapstruct@1.5.5.Final",
+      "group": "org.mapstruct",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-jcl",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f41e50fb18eab5f4",
+      "purl": "pkg:maven/org.springframework/spring-jcl@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactive-streams",
+      "version": "1.0.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f9783dd954c4638e",
+      "purl": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4",
+      "group": "org.reactivestreams",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-annotations",
+      "version": "2.2.20",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:22b98b235432957c",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations@2.2.20",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-annotations",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:156a0a19eb3318c4",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "twilio",
+      "version": "9.14.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c4c4d47c5eb320f",
+      "purl": "pkg:maven/com.twilio.sdk/twilio@9.14.0",
+      "group": "com.twilio.sdk",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-codec",
+      "version": "1.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d9a38ce1147146d2",
+      "purl": "pkg:maven/commons-codec/commons-codec@1.16.0",
+      "group": "commons-codec",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-io",
+      "version": "2.7",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c3852efe2481b08b",
+      "purl": "pkg:maven/commons-io/commons-io@2.7",
+      "group": "commons-io",
+      "license": "Unknown"
+    },
+    {
+      "name": "jjwt-api",
+      "version": "0.11.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4887ef327d3bfa25",
+      "purl": "pkg:maven/io.jsonwebtoken/jjwt-api@0.11.2",
+      "group": "io.jsonwebtoken",
+      "license": "Unknown"
+    },
+    {
+      "name": "jjwt-jackson",
+      "version": "0.11.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:66bc70ebcbc55820",
+      "purl": "pkg:maven/io.jsonwebtoken/jjwt-jackson@0.11.2",
+      "group": "io.jsonwebtoken",
+      "license": "Unknown"
+    },
+    {
+      "name": "jjwt-impl",
+      "version": "0.11.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f4a228a3e61b568f",
+      "purl": "pkg:maven/io.jsonwebtoken/jjwt-impl@0.11.2",
+      "group": "io.jsonwebtoken",
+      "license": "Unknown"
+    },
+    {
+      "name": "httpclient",
+      "version": "4.5.13",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0928452a7a11fb0a",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.13",
+      "group": "org.apache.httpcomponents",
+      "license": "Unknown"
+    },
+    {
+      "name": "httpcore",
+      "version": "4.4.16",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fe9ebae948573a3f",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+      "group": "org.apache.httpcomponents",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-logging",
+      "version": "1.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:67d627f9829cb797",
+      "purl": "pkg:maven/commons-logging/commons-logging@1.2",
+      "group": "commons-logging",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-dataformat-xml",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:20bdaa9e2a43a52c",
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-xml@2.15.3",
+      "group": "com.fasterxml.jackson.dataformat",
+      "license": "Unknown"
+    },
+    {
+      "name": "stax2-api",
+      "version": "4.2.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:df6b7cc03370dfe4",
+      "purl": "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.1",
+      "group": "org.codehaus.woodstox",
+      "license": "Unknown"
+    },
+    {
+      "name": "woodstox-core",
+      "version": "6.5.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7fe053d0d6b94cd7",
+      "purl": "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.5.1",
+      "group": "com.fasterxml.woodstox",
+      "license": "Unknown"
+    },
+    {
+      "name": "common-platform-notification-services-interfaces",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:99fc5dac11b16ad5",
+      "purl": "pkg:maven/com.catalis/common-platform-notification-services-interfaces@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "sendgrid-java",
+      "version": "4.10.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:319c0972b3b7a950",
+      "purl": "pkg:maven/com.sendgrid/sendgrid-java@4.10.1",
+      "group": "com.sendgrid",
+      "license": "Unknown"
+    },
+    {
+      "name": "java-http-client",
+      "version": "4.5.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:62b98ac0d7acb1d3",
+      "purl": "pkg:maven/com.sendgrid/java-http-client@4.5.0",
+      "group": "com.sendgrid",
+      "license": "Unknown"
+    },
+    {
+      "name": "bcprov-jdk18on",
+      "version": "1.76",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f7072516cde1e4cd",
+      "purl": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.76",
+      "group": "org.bouncycastle",
+      "license": "Unknown"
+    },
+    {
+      "name": "firebase-admin",
+      "version": "9.3.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b536ff268b0ea97e",
+      "purl": "pkg:maven/com.google.firebase/firebase-admin@9.3.0",
+      "group": "com.google.firebase",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-api-client",
+      "version": "2.4.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1df76d575c42701c",
+      "purl": "pkg:maven/com.google.api-client/google-api-client@2.4.0",
+      "group": "com.google.api-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-oauth-client",
+      "version": "1.35.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:cbebba5d52e3150d",
+      "purl": "pkg:maven/com.google.oauth-client/google-oauth-client@1.35.0",
+      "group": "com.google.oauth-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client",
+      "version": "1.43.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9b567f32304ad66e",
+      "purl": "pkg:maven/com.google.http-client/google-http-client@1.43.3",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client-gson",
+      "version": "1.43.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:742a07d06be34a3e",
+      "purl": "pkg:maven/com.google.http-client/google-http-client-gson@1.43.3",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "31.1-android",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:772f68eb4a2b57ca",
+      "purl": "pkg:maven/com.google.guava/guava@31.1-android",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-auth-library-credentials",
+      "version": "1.23.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4f1444028c0f1b2c",
+      "purl": "pkg:maven/com.google.auth/google-auth-library-credentials@1.23.0",
+      "group": "com.google.auth",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-auth-library-oauth2-http",
+      "version": "1.23.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4649bc9e148d1b0d",
+      "purl": "pkg:maven/com.google.auth/google-auth-library-oauth2-http@1.23.0",
+      "group": "com.google.auth",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client-gson",
+      "version": "1.44.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:99a8af354f6248c3",
+      "purl": "pkg:maven/com.google.http-client/google-http-client-gson@1.44.1",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client",
+      "version": "1.44.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9694360545d536c5",
+      "purl": "pkg:maven/com.google.http-client/google-http-client@1.44.1",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "gson",
+      "version": "2.10.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4a6ff478f95963a5",
+      "purl": "pkg:maven/com.google.code.gson/gson@2.10.1",
+      "group": "com.google.code.gson",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "33.0.0-jre",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ab200c9522216a86",
+      "purl": "pkg:maven/com.google.guava/guava@33.0.0-jre",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client-apache-v2",
+      "version": "1.44.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:524cd5706e652467",
+      "purl": "pkg:maven/com.google.http-client/google-http-client-apache-v2@1.44.1",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "httpclient",
+      "version": "4.5.14",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:88159a1798d0e158",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+      "group": "org.apache.httpcomponents",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-api-client-gson",
+      "version": "2.4.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b5d05825b62251b7",
+      "purl": "pkg:maven/com.google.api-client/google-api-client-gson@2.4.0",
+      "group": "com.google.api-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "jsr305",
+      "version": "3.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:db8ded8ff8c6b72d",
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "group": "com.google.code.findbugs",
+      "license": "Unknown"
+    },
+    {
+      "name": "error_prone_annotations",
+      "version": "2.23.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2be4ab04ef6929e4",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.23.0",
+      "group": "com.google.errorprone",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "30.1.1-android",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:56e6684d1ff401aa",
+      "purl": "pkg:maven/com.google.guava/guava@30.1.1-android",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "j2objc-annotations",
+      "version": "2.8",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1924fa9c12db6bb7",
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@2.8",
+      "group": "com.google.j2objc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-context",
+      "version": "1.60.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:633de2fc237ce454",
+      "purl": "pkg:maven/io.grpc/grpc-context@1.60.1",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-api",
+      "version": "1.60.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c76365fcb158a787",
+      "purl": "pkg:maven/io.grpc/grpc-api@1.60.1",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "opencensus-api",
+      "version": "0.31.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:31ba877001622d1b",
+      "purl": "pkg:maven/io.opencensus/opencensus-api@0.31.1",
+      "group": "io.opencensus",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-context",
+      "version": "1.27.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:cca781526681901d",
+      "purl": "pkg:maven/io.grpc/grpc-context@1.27.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "opencensus-contrib-http-util",
+      "version": "0.31.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c8402c22aec9a61e",
+      "purl": "pkg:maven/io.opencensus/opencensus-contrib-http-util@0.31.1",
+      "group": "io.opencensus",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "29.0-android",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6a9c33539de121a1",
+      "purl": "pkg:maven/com.google.guava/guava@29.0-android",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "api-common",
+      "version": "2.31.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ecac32ab2d939430",
+      "purl": "pkg:maven/com.google.api/api-common@2.31.0",
+      "group": "com.google.api",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "33.1.0-jre",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7d864793219cdee8",
+      "purl": "pkg:maven/com.google.guava/guava@33.1.0-jre",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "auto-value-annotations",
+      "version": "1.10.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:95a1a86a43765e02",
+      "purl": "pkg:maven/com.google.auto.value/auto-value-annotations@1.10.4",
+      "group": "com.google.auto.value",
+      "license": "Unknown"
+    },
+    {
+      "name": "javax.annotation-api",
+      "version": "1.3.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:70c0bc6f763784fa",
+      "purl": "pkg:maven/javax.annotation/javax.annotation-api@1.3.2",
+      "group": "javax.annotation",
+      "license": "Unknown"
+    },
+    {
+      "name": "error_prone_annotations",
+      "version": "2.26.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:06cf831fdc7004bd",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.26.1",
+      "group": "com.google.errorprone",
+      "license": "Unknown"
+    },
+    {
+      "name": "j2objc-annotations",
+      "version": "3.0.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:50758376c540dff3",
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+      "group": "com.google.j2objc",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "32.0.0-android",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8ebc1fc52d57aeff",
+      "purl": "pkg:maven/com.google.guava/guava@32.0.0-android",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "error_prone_annotations",
+      "version": "2.18.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5d0fb99aa43bee06",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.18.0",
+      "group": "com.google.errorprone",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-cloud-storage",
+      "version": "2.38.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bfb35a602095ccb0",
+      "purl": "pkg:maven/com.google.cloud/google-cloud-storage@2.38.0",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "failureaccess",
+      "version": "1.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:54edafaef8b85726",
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f7567401ed9005ae",
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-context",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2261a2e291a1d2fc",
+      "purl": "pkg:maven/io.grpc/grpc-context@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client-jackson2",
+      "version": "1.44.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:548e5c9a1b572d3a",
+      "purl": "pkg:maven/com.google.http-client/google-http-client-jackson2@1.44.1",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-api-services-storage",
+      "version": "v1-rev20240319-2.0.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:108e2cbf67497165",
+      "purl": "pkg:maven/com.google.apis/google-api-services-storage@v1-rev20240319-2.0.0",
+      "group": "com.google.apis",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-cloud-core",
+      "version": "2.38.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0427af11a6724ca0",
+      "purl": "pkg:maven/com.google.cloud/google-cloud-core@2.38.0",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-cloud-core-http",
+      "version": "2.38.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:98ccb29657faf269",
+      "purl": "pkg:maven/com.google.cloud/google-cloud-core-http@2.38.0",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-http-client-appengine",
+      "version": "1.44.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5c65ffc5813777b2",
+      "purl": "pkg:maven/com.google.http-client/google-http-client-appengine@1.44.1",
+      "group": "com.google.http-client",
+      "license": "Unknown"
+    },
+    {
+      "name": "gax-httpjson",
+      "version": "2.48.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ff2e9ba7395c9337",
+      "purl": "pkg:maven/com.google.api/gax-httpjson@2.48.0",
+      "group": "com.google.api",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-cloud-core-grpc",
+      "version": "2.38.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dfe584be00f2f5a4",
+      "purl": "pkg:maven/com.google.cloud/google-cloud-core-grpc@2.38.0",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "gax",
+      "version": "2.48.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d8fcd74bb2a2b304",
+      "purl": "pkg:maven/com.google.api/gax@2.48.0",
+      "group": "com.google.api",
+      "license": "Unknown"
+    },
+    {
+      "name": "gax-grpc",
+      "version": "2.48.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b080f69c5d65f9d5",
+      "purl": "pkg:maven/com.google.api/gax-grpc@2.48.0",
+      "group": "com.google.api",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-inprocess",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:26e52d3d800c3209",
+      "purl": "pkg:maven/io.grpc/grpc-inprocess@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-alts",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e2f37ca00676a8f2",
+      "purl": "pkg:maven/io.grpc/grpc-alts@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-grpclb",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:11be5d555edda39d",
+      "purl": "pkg:maven/io.grpc/grpc-grpclb@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "conscrypt-openjdk-uber",
+      "version": "2.5.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f36713a8bd4dd2dd",
+      "purl": "pkg:maven/org.conscrypt/conscrypt-openjdk-uber@2.5.2",
+      "group": "org.conscrypt",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-auth",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:58256d59a0a2b12f",
+      "purl": "pkg:maven/io.grpc/grpc-auth@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "proto-google-iam-v1",
+      "version": "1.34.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:aa02d5bd77342010",
+      "purl": "pkg:maven/com.google.api.grpc/proto-google-iam-v1@1.34.0",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "protobuf-java",
+      "version": "3.25.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ed32616f51dd9e6c",
+      "purl": "pkg:maven/com.google.protobuf/protobuf-java@3.25.3",
+      "group": "com.google.protobuf",
+      "license": "Unknown"
+    },
+    {
+      "name": "protobuf-java-util",
+      "version": "3.25.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:88122d9118bc31ca",
+      "purl": "pkg:maven/com.google.protobuf/protobuf-java-util@3.25.3",
+      "group": "com.google.protobuf",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-core",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:452f0d8af51468e5",
+      "purl": "pkg:maven/io.grpc/grpc-core@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "annotations",
+      "version": "4.1.1.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9ef9c1654eeb01a5",
+      "purl": "pkg:maven/com.google.android/annotations@4.1.1.4",
+      "group": "com.google.android",
+      "license": "Unknown"
+    },
+    {
+      "name": "animal-sniffer-annotations",
+      "version": "1.23",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:79c1982c88dabd3f",
+      "purl": "pkg:maven/org.codehaus.mojo/animal-sniffer-annotations@1.23",
+      "group": "org.codehaus.mojo",
+      "license": "Unknown"
+    },
+    {
+      "name": "perfmark-api",
+      "version": "0.27.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:296b3607a84c194c",
+      "purl": "pkg:maven/io.perfmark/perfmark-api@0.27.0",
+      "group": "io.perfmark",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-protobuf",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:83eaf06765160992",
+      "purl": "pkg:maven/io.grpc/grpc-protobuf@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-protobuf-lite",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:67858cb301c533ba",
+      "purl": "pkg:maven/io.grpc/grpc-protobuf-lite@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "proto-google-common-protos",
+      "version": "2.39.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:513bb6edc71b3d75",
+      "purl": "pkg:maven/com.google.api.grpc/proto-google-common-protos@2.39.0",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "threetenbp",
+      "version": "1.6.9",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6e02ccedfc6ecabd",
+      "purl": "pkg:maven/org.threeten/threetenbp@1.6.9",
+      "group": "org.threeten",
+      "license": "Unknown"
+    },
+    {
+      "name": "proto-google-cloud-storage-v2",
+      "version": "2.38.0-alpha",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bc61e7ed4c89fdae",
+      "purl": "pkg:maven/com.google.api.grpc/proto-google-cloud-storage-v2@2.38.0-alpha",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-google-cloud-storage-v2",
+      "version": "2.38.0-alpha",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9ce993b917aac122",
+      "purl": "pkg:maven/com.google.api.grpc/grpc-google-cloud-storage-v2@2.38.0-alpha",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "gapic-google-cloud-storage-v2",
+      "version": "2.38.0-alpha",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f12fecfb7e188006",
+      "purl": "pkg:maven/com.google.api.grpc/gapic-google-cloud-storage-v2@2.38.0-alpha",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-api",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:30fc06acce97feec",
+      "purl": "pkg:maven/io.grpc/grpc-api@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-netty-shaded",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b0dca7e0441e93c3",
+      "purl": "pkg:maven/io.grpc/grpc-netty-shaded@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-util",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:05846f44a3d58e89",
+      "purl": "pkg:maven/io.grpc/grpc-util@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-stub",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b7d1424b9791ec70",
+      "purl": "pkg:maven/io.grpc/grpc-stub@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-googleapis",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a6b0c609702254fc",
+      "purl": "pkg:maven/io.grpc/grpc-googleapis@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "checker-qual",
+      "version": "3.42.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0a08b16d9ac89319",
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.42.0",
+      "group": "org.checkerframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-xds",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7500816c45563ca3",
+      "purl": "pkg:maven/io.grpc/grpc-xds@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "opencensus-proto",
+      "version": "0.2.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fb0d5ad381a2d111",
+      "purl": "pkg:maven/io.opencensus/opencensus-proto@0.2.0",
+      "group": "io.opencensus",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-services",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:941421acb0255c4f",
+      "purl": "pkg:maven/io.grpc/grpc-services@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "re2j",
+      "version": "1.7",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b3406c23e397f070",
+      "purl": "pkg:maven/com.google.re2j/re2j@1.7",
+      "group": "com.google.re2j",
+      "license": "Unknown"
+    },
+    {
+      "name": "grpc-rls",
+      "version": "1.62.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1babd40b032634f2",
+      "purl": "pkg:maven/io.grpc/grpc-rls@1.62.2",
+      "group": "io.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "google-cloud-firestore",
+      "version": "3.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:18f5ac9756d65e91",
+      "purl": "pkg:maven/com.google.cloud/google-cloud-firestore@3.21.1",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "proto-google-cloud-firestore-v1",
+      "version": "3.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dd43676455c684bd",
+      "purl": "pkg:maven/com.google.api.grpc/proto-google-cloud-firestore-v1@3.21.1",
+      "group": "com.google.api.grpc",
+      "license": "Unknown"
+    },
+    {
+      "name": "proto-google-cloud-firestore-bundle-v1",
+      "version": "3.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:53de994e4d900714",
+      "purl": "pkg:maven/com.google.cloud/proto-google-cloud-firestore-bundle-v1@3.21.1",
+      "group": "com.google.cloud",
+      "license": "Unknown"
+    },
+    {
+      "name": "opencensus-contrib-grpc-util",
+      "version": "0.31.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9474ff63d61e71ad",
+      "purl": "pkg:maven/io.opencensus/opencensus-contrib-grpc-util@0.31.1",
+      "group": "io.opencensus",
+      "license": "Unknown"
+    },
+    {
+      "name": "common-platform-notification-services-providers-twilio",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1cb528c0b858ad90",
+      "purl": "pkg:maven/com.catalis/common-platform-notification-services-providers-twilio@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "common-platform-notification-services-providers-sendgrid",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:68bb8aa1311cca6b",
+      "purl": "pkg:maven/com.catalis/common-platform-notification-services-providers-sendgrid@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "sendgrid-java",
+      "version": "4.9.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e643f251762f39e7",
+      "purl": "pkg:maven/com.sendgrid/sendgrid-java@4.9.3",
+      "group": "com.sendgrid",
+      "license": "Unknown"
+    },
+    {
+      "name": "bcprov-jdk15on",
+      "version": "1.70",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:721e2360dcb5b16d",
+      "purl": "pkg:maven/org.bouncycastle/bcprov-jdk15on@1.70",
+      "group": "org.bouncycastle",
+      "license": "Unknown"
+    },
+    {
+      "name": "common-platform-notification-services-providers-firebase",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d09904abbea126bb",
+      "purl": "pkg:maven/com.catalis/common-platform-notification-services-providers-firebase@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "lib-common-core",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bab605ac344f52c6",
+      "purl": "pkg:maven/com.catalis/lib-common-core@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-aop",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fe51aa686d6bc0bf",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-aop@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "aspectjweaver",
+      "version": "1.9.21",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5214199c873ede74",
+      "purl": "pkg:maven/org.aspectj/aspectjweaver@1.9.21",
+      "group": "org.aspectj",
+      "license": "Unknown"
+    },
+    {
+      "name": "springdoc-openapi-starter-webflux-ui",
+      "version": "2.3.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:497927ce931c062a",
+      "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webflux-ui@2.3.0",
+      "group": "org.springdoc",
+      "license": "Unknown"
+    },
+    {
+      "name": "springdoc-openapi-starter-webflux-api",
+      "version": "2.3.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f8b6294cfa9ce3a8",
+      "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webflux-api@2.3.0",
+      "group": "org.springdoc",
+      "license": "Unknown"
+    },
+    {
+      "name": "springdoc-openapi-starter-common",
+      "version": "2.3.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:339128089bd2ac30",
+      "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-common@2.3.0",
+      "group": "org.springdoc",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-core-jakarta",
+      "version": "2.2.19",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0d35314e4cd84564",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-core-jakarta@2.2.19",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-lang3",
+      "version": "3.13.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b19777019a30456a",
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.13.0",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-annotations-jakarta",
+      "version": "2.2.19",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f4078b04c66819f6",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.19",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-models-jakarta",
+      "version": "2.2.19",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:253fae85f449dafe",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-models-jakarta@2.2.19",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.xml.bind-api",
+      "version": "4.0.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d00afd4d820495b7",
+      "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.1",
+      "group": "jakarta.xml.bind",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-dataformat-yaml",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3ca6b0a44fafc269",
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.15.3",
+      "group": "com.fasterxml.jackson.dataformat",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-ui",
+      "version": "5.10.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dc4bf41eb093d3c9",
+      "purl": "pkg:maven/org.webjars/swagger-ui@5.10.3",
+      "group": "org.webjars",
+      "license": "Unknown"
+    },
+    {
+      "name": "logstash-logback-encoder",
+      "version": "7.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1318025a8fb78c3c",
+      "purl": "pkg:maven/net.logstash.logback/logstash-logback-encoder@7.4",
+      "group": "net.logstash.logback",
+      "license": "Unknown"
+    },
+    {
+      "name": "janino",
+      "version": "3.1.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bc08adce87c5938e",
+      "purl": "pkg:maven/org.codehaus.janino/janino@3.1.11",
+      "group": "org.codehaus.janino",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-compiler",
+      "version": "3.1.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:876ef40956709b96",
+      "purl": "pkg:maven/org.codehaus.janino/commons-compiler@3.1.11",
+      "group": "org.codehaus.janino",
+      "license": "Unknown"
+    },
+    {
+      "name": "reflections",
+      "version": "0.10.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:22a3afa270ff8945",
+      "purl": "pkg:maven/org.reflections/reflections@0.10.2",
+      "group": "org.reflections",
+      "license": "Unknown"
+    },
+    {
+      "name": "javassist",
+      "version": "3.28.0-GA",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ac30c130215861f6",
+      "purl": "pkg:maven/org.javassist/javassist@3.28.0-GA",
+      "group": "org.javassist",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-spring-boot3",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:51db39956ddcd0cb",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-spring-boot3@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-spring6",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:434bc453b216821d",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-spring6@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-annotations",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e5e2e77d5836cd7e",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-annotations@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-consumer",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:00ac1b341111d0c4",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-consumer@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-core",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5bdf1a64c966ec95",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-core@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-circularbuffer",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:74f8a3d3c9549a02",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-circularbuffer@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-framework-common",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:da1818fb428bf514",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-framework-common@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-circuitbreaker",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b2961f036d0f66a6",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-circuitbreaker@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-ratelimiter",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:acedcc6688b17ae7",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-ratelimiter@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-retry",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6f192755ed629369",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-retry@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-bulkhead",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6ce716db39bdf839",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-bulkhead@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-timelimiter",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:002cbbce82eb1ca1",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-timelimiter@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-micrometer",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e1ba58303c4a579a",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-micrometer@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-core",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1cb74d9cc6f84d85",
+      "purl": "pkg:maven/io.micrometer/micrometer-core@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "HdrHistogram",
+      "version": "2.1.12",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dfd54ef189b9d794",
+      "purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.1.12",
+      "group": "org.hdrhistogram",
+      "license": "Unknown"
+    },
+    {
+      "name": "LatencyUtils",
+      "version": "2.0.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b270302724279f6e",
+      "purl": "pkg:maven/org.latencyutils/LatencyUtils@2.0.3",
+      "group": "org.latencyutils",
+      "license": "Unknown"
+    },
+    {
+      "name": "resilience4j-reactor",
+      "version": "2.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9d3bf97bab7371e8",
+      "purl": "pkg:maven/io.github.resilience4j/resilience4j-reactor@2.1.0",
+      "group": "io.github.resilience4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.activation-api",
+      "version": "2.1.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6561ebb139e1e869",
+      "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2",
+      "group": "jakarta.activation",
+      "license": "Unknown"
+    },
+    {
+      "name": "common-platform-notification-services-core",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c220041f22cc9a5d",
+      "purl": "pkg:maven/com.catalis/common-platform-notification-services-core@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "lib-common-web",
+      "version": "1.0.0-SNAPSHOT",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2f414480e2ffb630",
+      "purl": "pkg:maven/com.catalis/lib-common-web@1.0.0-SNAPSHOT",
+      "group": "com.catalis",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-actuator",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c1bf5e0798117a8f",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-cache",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bbc877039a102add",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-cache@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-context-support",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a3a1d3126ca1e134",
+      "purl": "pkg:maven/org.springframework/spring-context-support@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "caffeine",
+      "version": "3.1.8",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f536fb7696aadf7e",
+      "purl": "pkg:maven/com.github.ben-manes.caffeine/caffeine@3.1.8",
+      "group": "com.github.ben-manes.caffeine",
+      "license": "Unknown"
+    },
+    {
+      "name": "checker-qual",
+      "version": "3.37.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d8db1c1f97b3ab87",
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.37.0",
+      "group": "org.checkerframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "error_prone_annotations",
+      "version": "2.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4a55ea45ea839978",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.21.1",
+      "group": "com.google.errorprone",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-data-redis-reactive",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e1233be8517dcf87",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-data-redis-reactive@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "lettuce-core",
+      "version": "6.3.1.RELEASE",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2d8fd48db737080e",
+      "purl": "pkg:maven/io.lettuce/lettuce-core@6.3.1.RELEASE",
+      "group": "io.lettuce",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-data-redis",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e9db88fb9940261c",
+      "purl": "pkg:maven/org.springframework.data/spring-data-redis@3.2.2",
+      "group": "org.springframework.data",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-data-keyvalue",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:60c014c385c4ba5b",
+      "purl": "pkg:maven/org.springframework.data/spring-data-keyvalue@3.2.2",
+      "group": "org.springframework.data",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-data-commons",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6e1c4f54ce70adb7",
+      "purl": "pkg:maven/org.springframework.data/spring-data-commons@3.2.2",
+      "group": "org.springframework.data",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-tx",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:578de4cd82c3919f",
+      "purl": "pkg:maven/org.springframework/spring-tx@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-oxm",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3de46ffae3112af8",
+      "purl": "pkg:maven/org.springframework/spring-oxm@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-security-core",
+      "version": "6.2.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c4c9d78937d77dce",
+      "purl": "pkg:maven/org.springframework.security/spring-security-core@6.2.1",
+      "group": "org.springframework.security",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-security-crypto",
+      "version": "6.2.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:03d3f7b3df4ea59e",
+      "purl": "pkg:maven/org.springframework.security/spring-security-crypto@6.2.1",
+      "group": "org.springframework.security",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.persistence-api",
+      "version": "3.1.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:781cc9e3c3bd23ba",
+      "purl": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.1.0",
+      "group": "jakarta.persistence",
+      "license": "Unknown"
+    },
+    {
+      "name": "r2dbc-spi",
+      "version": "1.0.0.RELEASE",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8ec7b8b279ce33f2",
+      "purl": "pkg:maven/io.r2dbc/r2dbc-spi@1.0.0.RELEASE",
+      "group": "io.r2dbc",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-actuator-autoconfigure",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:71899f0569cfc849",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-actuator",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:468be5947862fbe3",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-jakarta9",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:27760e1934d0d719",
+      "purl": "pkg:maven/io.micrometer/micrometer-jakarta9@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-registry-prometheus",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2a08e14bee46220a",
+      "purl": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "simpleclient_common",
+      "version": "0.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a92fb03d727ba216",
+      "purl": "pkg:maven/io.prometheus/simpleclient_common@0.16.0",
+      "group": "io.prometheus",
+      "license": "Unknown"
+    },
+    {
+      "name": "simpleclient",
+      "version": "0.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0dc12b920897e6fb",
+      "purl": "pkg:maven/io.prometheus/simpleclient@0.16.0",
+      "group": "io.prometheus",
+      "license": "Unknown"
+    },
+    {
+      "name": "simpleclient_tracer_otel",
+      "version": "0.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7f69f8b1a1623e01",
+      "purl": "pkg:maven/io.prometheus/simpleclient_tracer_otel@0.16.0",
+      "group": "io.prometheus",
+      "license": "Unknown"
+    },
+    {
+      "name": "simpleclient_tracer_common",
+      "version": "0.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:11172effa553dcf0",
+      "purl": "pkg:maven/io.prometheus/simpleclient_tracer_common@0.16.0",
+      "group": "io.prometheus",
+      "license": "Unknown"
+    },
+    {
+      "name": "simpleclient_tracer_otel_agent",
+      "version": "0.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:57be20509ae702b8",
+      "purl": "pkg:maven/io.prometheus/simpleclient_tracer_otel_agent@0.16.0",
+      "group": "io.prometheus",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-annotations",
+      "version": "2.2.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0ff65d4d82fda047",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations@2.2.15",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-databind",
+      "version": "2.15.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d8d685f593b30abe",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-datatype-jsr310",
+      "version": "2.15.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0812885fc617d39f",
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.2",
+      "group": "com.fasterxml.jackson.datatype",
+      "license": "Unknown"
+    },
+    {
+      "name": "okhttp",
+      "version": "4.12.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:094d5a722d4a7f2c",
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "group": "com.squareup.okhttp3",
+      "license": "Unknown"
+    },
+    {
+      "name": "okio",
+      "version": "3.6.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8ab3583da35af17f",
+      "purl": "pkg:maven/com.squareup.okio/okio@3.6.0",
+      "group": "com.squareup.okio",
+      "license": "Unknown"
+    },
+    {
+      "name": "okio-jvm",
+      "version": "3.6.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fa83bdab63512f2b",
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm@3.6.0",
+      "group": "com.squareup.okio",
+      "license": "Unknown"
+    },
+    {
+      "name": "kotlin-stdlib-jdk8",
+      "version": "1.9.22",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f19fd9061e6ef47b",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8@1.9.22",
+      "group": "org.jetbrains.kotlin",
+      "license": "Unknown"
+    },
+    {
+      "name": "kotlin-stdlib-common",
+      "version": "1.9.22",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:cc86302f61f2759b",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common@1.9.22",
+      "group": "org.jetbrains.kotlin",
+      "license": "Unknown"
+    },
+    {
+      "name": "kotlin-stdlib",
+      "version": "1.9.22",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b29fd4d3537d25ad",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.22",
+      "group": "org.jetbrains.kotlin",
+      "license": "Unknown"
+    },
+    {
+      "name": "annotations",
+      "version": "13.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f4346fc324cf7b9d",
+      "purl": "pkg:maven/org.jetbrains/annotations@13.0",
+      "group": "org.jetbrains",
+      "license": "Unknown"
+    },
+    {
+      "name": "kotlin-stdlib-jdk7",
+      "version": "1.9.22",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4aa5117354c8a0c6",
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7@1.9.22",
+      "group": "org.jetbrains.kotlin",
+      "license": "Unknown"
+    },
+    {
+      "name": "logging-interceptor",
+      "version": "4.12.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bf1a3a730e637ee7",
+      "purl": "pkg:maven/com.squareup.okhttp3/logging-interceptor@4.12.0",
+      "group": "com.squareup.okhttp3",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-databind-nullable",
+      "version": "0.2.6",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:eff15d0c08c15760",
+      "purl": "pkg:maven/org.openapitools/jackson-databind-nullable@0.2.6",
+      "group": "org.openapitools",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-dataformat-yaml",
+      "version": "2.17.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2f82f7a0b5d5f009",
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.17.0",
+      "group": "com.fasterxml.jackson.dataformat",
+      "license": "Unknown"
+    }
+  ],
+  "stats": {
+    "total_components": 240,
+    "direct_deps": 0,
+    "transitive_deps": 240,
+    "vulnerabilities": 39,
+    "vulnerability_breakdown": {
+      "critical": 3,
+      "high": 8,
+      "medium": 24,
+      "low": 4,
+      "unknown": 0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2wrp-6fg6-hmc5",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Framework URL Parsing with Host Validation",
+      "description": "Applications that use UriComponentsBuilder\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html \u00a0attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22259 https://spring.io/security/cve-2024-22259 \u00a0and  CVE-2024-22243 https://spring.io/security/cve-2024-22243 , but with different input.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.34"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.19"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.6"
+        }
+      ],
+      "published": "2024-04-16T06:30:28Z",
+      "modified": "2025-02-13T19:11:22.164031Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22262",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java",
+        "https://security.netapp.com/advisory/ntap-20240524-0003",
+        "https://spring.io/security/cve-2024-22262"
+      ],
+      "aliases": [
+        "CVE-2024-22262"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-ccgv-vj62-xf9h",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Web vulnerable to Open Redirect or Server Side Request Forgery",
+      "description": "Applications that use UriComponentsBuilder\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect attack or to a SSRF attack if the URL is used after passing validation checks.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.4"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.17"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "fixed": "5.3.32"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.2.25.RELEASE"
+        }
+      ],
+      "published": "2024-02-23T06:30:31Z",
+      "modified": "2025-02-13T19:37:25.844757Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22243",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java",
+        "https://security.netapp.com/advisory/ntap-20240524-0001",
+        "https://spring.io/security/cve-2024-22243",
+        "http://seclists.org/fulldisclosure/2024/Sep/24"
+      ],
+      "aliases": [
+        "CVE-2024-22243"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-hgjh-9rj2-g67j",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Framework URL Parsing with Host Validation Vulnerability",
+      "description": "Applications that use UriComponentsBuilder in Spring Framework\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html \u00a0attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22243 https://spring.io/security/cve-2024-22243, but with different input.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.5"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.18"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.33"
+        }
+      ],
+      "published": "2024-03-16T06:30:27Z",
+      "modified": "2025-02-13T19:11:00.946278Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22259",
+        "https://github.com/spring-projects/spring-framework/commit/297cbae2990e1413537c55845a7e0ea0ffd9f9bb",
+        "https://github.com/spring-projects/spring-framework/commit/381f790329a48b74c2a49fc1384dd68ca9153501",
+        "https://github.com/spring-projects/spring-framework/commit/f2fd2f12269c6a781c5b2c20b3c24141055a3d68",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20240524-0002",
+        "https://spring.io/security/cve-2024-22259"
+      ],
+      "aliases": [
+        "CVE-2024-22259"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4g8c-wm8x-jfhw",
+      "component": "netty-handler",
+      "component_version": "4.1.105.Final",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine",
+      "description": "### Impact\nWhen a special crafted packet is received via SslHandler it doesn't correctly handle validation of such a packet in all cases which can lead to a native crash.\n\n### Workarounds\nAs workaround its possible to either disable the usage of the native SSLEngine or changing the code from:\n\n```\nSslContext context = ...;\nSslHandler handler = context.newHandler(....);\n```\n\nto:\n\n```\nSslContext context = ...;\nSSLEngine engine = context.newEngine(....);\nSslHandler handler = new SslHandler(engine, ....);\n```",
+      "affected_versions": [
+        {
+          "introduced": "4.1.91.Final"
+        },
+        {
+          "fixed": "4.1.118.Final"
+        }
+      ],
+      "published": "2025-02-10T17:38:10Z",
+      "modified": "2025-04-16T19:36:10.233999Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-24970",
+        "https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4",
+        "https://github.com/netty/netty",
+        "https://security.netapp.com/advisory/ntap-20250221-0005",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-detection",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-mitigation"
+      ],
+      "aliases": [
+        "CVE-2025-24970"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-rc42-6c7j-7h5r",
+      "component": "spring-boot",
+      "component_version": "3.2.2",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Spring Boot EndpointRequest.to() creates wrong matcher if actuator endpoint is not exposed",
+      "description": "EndpointRequest.to()\u00a0creates a matcher for null/**\u00a0if the actuator endpoint, for which the EndpointRequest\u00a0has been created, is disabled or not exposed.\n\nYour application may be affected by this if all the following conditions are met:\n\n  *  You use Spring Security\n  *  EndpointRequest.to()\u00a0has been used in a Spring Security chain configuration\n  *  The endpoint which EndpointRequest\u00a0references is disabled or not exposed via web\n  *  Your application handles requests to /null\u00a0and this path needs protection\n\n\nYou are not affected if any of the following is true:\n\n  *  You don't use Spring Security\n  *  You don't use EndpointRequest.to()\n  *  The endpoint which EndpointRequest.to()\u00a0refers to is enabled and is exposed\n  *  Your application does not handle requests to /null\u00a0or this path does not need protection",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "2.7.24.2"
+        },
+        {
+          "introduced": "3.1.0"
+        },
+        {
+          "last_affected": "3.1.15.2"
+        },
+        {
+          "introduced": "3.2.0"
+        },
+        {
+          "last_affected": "3.2.13.2"
+        },
+        {
+          "introduced": "3.3.0"
+        },
+        {
+          "fixed": "3.3.11"
+        },
+        {
+          "introduced": "3.4.0"
+        },
+        {
+          "fixed": "3.4.5"
+        }
+      ],
+      "published": "2025-04-28T09:31:53Z",
+      "modified": "2025-05-17T01:05:47.005564Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22235",
+        "https://github.com/spring-projects/spring-boot",
+        "https://security.netapp.com/advisory/ntap-20250516-0010",
+        "https://spring.io/security/cve-2025-22235"
+      ],
+      "aliases": [
+        "CVE-2025-22235"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-6r3c-xf4w-jxjm",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Spring Framework vulnerable to a reflected file download (RFD)",
+      "description": "### Description\n\nIn Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a \u201cContent-Disposition\u201d header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n\nSpecifically, an application is vulnerable when all the following are true:\n\n  -  The header is prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n  -  The value for the filename is derived from user-supplied input.\n  -  The application does not sanitize the user-supplied input.\n  -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n\n\nAn application is not vulnerable if any of the following is true:\n\n  -  The application does not set a \u201cContent-Disposition\u201d response header.\n  -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via one of:  \n     - `ContentDisposition.Builder#filename(String)`, or\n     - `ContentDisposition.Builder#filename(String, ASCII)`\n  -  The filename is not derived from user-supplied input.\n  -  The filename is derived from user-supplied input but sanitized by the application.\n  -  The attacker cannot inject malicious content in the downloaded content of the response.\n\n\n### Affected Spring Products and VersionsSpring Framework\n\n  -  6.2.0 - 6.2.7\n  -  6.1.0 - 6.1.20\n  -  6.0.5 - 6.0.28\n  -  Older, unsupported versions are not affected\n\n\n### Mitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix version | Availability |\n| - | - | - |\n| 6.2.x | 6.2.8 | OSS |\n| 6.1.x | 6.1.21 | OSS |\n| 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n\nNo further mitigation steps are necessary.",
+      "affected_versions": [
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.8"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.21"
+        },
+        {
+          "introduced": "6.0.5"
+        },
+        {
+          "last_affected": "6.0.23"
+        }
+      ],
+      "published": "2025-06-13T00:33:18Z",
+      "modified": "2025-06-13T22:44:18.772828Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-41234",
+        "https://github.com/spring-projects/spring-framework/issues/35034",
+        "https://github.com/spring-projects/spring-framework/commit/f0e7b42704e6b33958f242d91bd690d6ef7ada9c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2025-41234"
+      ],
+      "aliases": [
+        "CVE-2025-41234"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-cx7f-g6mp-7hqm",
+      "component": "spring-webflux",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Path traversal vulnerability in functional web frameworks",
+      "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.\n\nSpecifically, an application is vulnerable when both of the following are true:\n\n  *  the web application uses RouterFunctions\u00a0to serve static resources\n  *  resource handling is explicitly configured with a FileSystemResource\u00a0location\n\n\nHowever, malicious requests are blocked and rejected when any of the following is true:\n\n  *  the  Spring Security HTTP Firewall https://docs.spring.io/spring-security/reference/servlet/exploits/firewall.html \u00a0is in use\n  *  the application runs on Tomcat or Jetty",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.13"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.13"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "last_affected": "5.3.39"
+        }
+      ],
+      "published": "2024-09-13T06:30:42Z",
+      "modified": "2024-12-27T18:34:05.583740Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38816",
+        "https://github.com/spring-projects/spring-framework/commit/d86bf8b2056429edf5494456cffcb2b243331c49",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20241227-0001",
+        "https://spring.io/security/cve-2024-38816"
+      ],
+      "aliases": [
+        "CVE-2024-38816"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-g5vr-rgqm-vf78",
+      "component": "spring-webflux",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Spring Framework Path Traversal vulnerability",
+      "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        }
+      ],
+      "published": "2024-12-19T18:31:38Z",
+      "modified": "2025-05-28T15:03:53.323993Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38819",
+        "https://github.com/spring-projects/spring-framework/issues/33689",
+        "https://github.com/spring-projects/spring-framework/commit/3bfbe30a7814c9ea1556d40df9bd87ddb3ba372d",
+        "https://github.com/spring-projects/spring-framework/commit/fb7890d73975a3d9e0763e0926df2bd0a608e87e",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20250110-0010",
+        "https://spring.io/security/cve-2024-38819"
+      ],
+      "aliases": [
+        "CVE-2024-38819"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-f3jh-qvm4-mg39",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.0,
+      "title": "Erroneous authentication pass in Spring Security",
+      "description": "In Spring Security, versions 5.7.x prior to 5.7.12, 5.8.x prior to 5.8.11, versions 6.0.x prior to 6.0.9, versions 6.1.x prior to 6.1.8, versions 6.2.x prior to 6.2.3, an application is possible vulnerable to broken access control when it directly uses the AuthenticatedVoter#vote passing a null Authentication parameter.\n\nSpecifically, an application is vulnerable if:\n\nThe application uses AuthenticatedVoter directly and a null authentication parameter is passed to it resulting in an erroneous true return value.\n\nAn application is not vulnerable if any of the following is true:\n\n* The application does not use AuthenticatedVoter#vote directly.\n* The application does not pass null to AuthenticatedVoter#vote.\n\nNote that AuthenticatedVoter is deprecated since 5.8, use implementations of AuthorizationManager as a replacement.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.12"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.11"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.1.8"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.3"
+        }
+      ],
+      "published": "2024-03-18T15:30:51Z",
+      "modified": "2025-02-13T19:11:21.315522Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22257",
+        "https://github.com/spring-projects/spring-security/commit/5a7f12f1a9fdb4edaab6f61495f1d781a7273b61",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20240419-0005",
+        "https://spring.io/security/cve-2024-22257"
+      ],
+      "aliases": [
+        "CVE-2024-22257"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-w3w6-26f2-p474",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.5,
+      "title": "Broken Access Control in Spring Security With Direct Use of isFullyAuthenticated",
+      "description": "In Spring Security, versions 6.1.x prior to 6.1.7 and versions 6.2.x prior to 6.2.2, an application is vulnerable to broken access control when it directly uses the AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0method.\n\nSpecifically, an application is vulnerable if:\n\n  *  The application uses AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0directly and a null\u00a0authentication parameter is passed to it resulting in an erroneous true\u00a0return value.\n\n\nAn application is not vulnerable if any of the following is true:\n\n  *  The application does not use AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0directly.\n  *  The application does not pass null\u00a0to AuthenticationTrustResolver.isFullyAuthenticated\n  *  The application only uses isFullyAuthenticated\u00a0via  Method Security https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html \u00a0or  HTTP Request Security https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.7"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.2"
+        }
+      ],
+      "published": "2024-02-20T09:30:30Z",
+      "modified": "2025-02-13T19:36:07.721740Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22234",
+        "https://github.com/spring-projects/spring-security/commit/750cb30ce44d279c2f54c845d375e6a58bded569",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20240315-0003",
+        "https://spring.io/security/cve-2024-22234"
+      ],
+      "aliases": [
+        "CVE-2024-22234"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-mg83-c7gq-rv5c",
+      "component": "spring-security-crypto",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.5,
+      "title": "Spring Security Does Not Enforce Password Length",
+      "description": "BCryptPasswordEncoder.matches(CharSequence,String)\u00a0will incorrectly return true\u00a0for passwords larger than 72 characters as long as the first 72 characters are the same.",
+      "affected_versions": [
+        {
+          "introduced": "6.3.0"
+        },
+        {
+          "fixed": "6.3.8"
+        },
+        {
+          "introduced": "6.4.0"
+        },
+        {
+          "fixed": "6.4.4"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.10"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.16"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.18"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.16"
+        }
+      ],
+      "published": "2025-03-20T06:31:09Z",
+      "modified": "2025-04-26T01:25:16.786633Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22228",
+        "https://github.com/spring-projects/spring-security/commit/46f0dc6dfc8402cd556c598fdf2d31f9d46cdbf3",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20250425-0009",
+        "https://spring.io/security/cve-2025-22228"
+      ],
+      "aliases": [
+        "CVE-2025-22228"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-389x-839f-4rhx",
+      "component": "netty-common",
+      "component_version": "4.1.105.Final",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Denial of Service attack on windows app using Netty",
+      "description": "### Summary\nAn unsafe reading of environment file could potentially cause a denial of service in Netty.\nWhen loaded on an Windows application, Netty attemps to load a file that does not exist. If an attacker creates such a large file, the Netty application crash.\n\n### Details\nA similar issue was previously reported in https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv\nThis issue was fixed, but the fix was incomplete in that null-bytes were not counted against the input limit.\n\n\n### PoC\nThe PoC is the same as for https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv with the detail that the file should only contain null-bytes; 0x00.\nWhen the null-bytes are encountered by the `InputStreamReader`, it will issue replacement characters in its charset decoding, which will fill up the line-buffer in the `BufferedReader.readLine()`, because the replacement character is not a line-break character.\n\n### Impact\nImpact is the same as https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.118.Final"
+        }
+      ],
+      "published": "2025-02-10T18:14:47Z",
+      "modified": "2025-03-19T15:06:40.575662Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-25193",
+        "https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386",
+        "https://github.com/netty/netty",
+        "https://security.netapp.com/advisory/ntap-20250221-0006"
+      ],
+      "aliases": [
+        "CVE-2025-25193"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4gc7-5j7h-4qph",
+      "component": "spring-context",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "The fix for CVE-2022-22968 made disallowedFields\u00a0patterns in DataBinder\u00a0case insensitive. However, String.toLowerCase()\u00a0has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        }
+      ],
+      "published": "2024-10-18T06:30:32Z",
+      "modified": "2025-05-29T23:41:36.219637Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38820",
+        "https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/commits/v6.2.0-RC2",
+        "https://security.netapp.com/advisory/ntap-20241129-0003",
+        "https://spring.io/security/cve-2024-38820"
+      ],
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4wp7-92pw-q264",
+      "component": "spring-context",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 4.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "CVE-2024-38820 ensured Locale-independent, lowercase conversion for both the configured disallowedFields patterns and for request parameter names. However, there are still cases where it is possible to bypass the disallowedFields checks.\n\nAffected Spring Products and Versions\n\nSpring Framework:\n  *  6.2.0 - 6.2.6\n\n  *  6.1.0 - 6.1.19\n\n  *  6.0.0 - 6.0.27\n\n  *  5.3.0 - 5.3.42\n  *  Older, unsupported versions are also affected\n\n\n\nMitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix Version\u00a0| Availability |\n| - | - | - |\n|\u00a06.2.x |  6.2.7 | OSS |\n| 6.1.x |  6.1.20 | OSS |\n| 6.0.x |  6.0.28 |  Commercial https://enterprise.spring.io/ |\n| 5.3.x |  5.3.43 | Commercial https://enterprise.spring.io/  |\n\nNo further mitigation steps are necessary.\n\n\nGenerally, we recommend using a dedicated model object with properties only for data binding, or using constructor binding since constructor arguments explicitly declare what to bind together with turning off setter binding through the declarativeBinding flag. See the Model Design section in the reference documentation.\n\nFor setting binding, prefer the use of allowedFields (an explicit list) over disallowedFields.\n\nCredit\n\nThis issue was responsibly reported by the TERASOLUNA Framework Development Team from NTT DATA Group Corporation.",
+      "affected_versions": [
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.7"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.20"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        }
+      ],
+      "published": "2025-05-16T21:32:12Z",
+      "modified": "2025-06-02T16:42:14.411674Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22233",
+        "https://github.com/spring-projects/spring-framework/issues/34801",
+        "https://github.com/spring-projects/spring-framework/commit/edfcc6ffb188e4614ec9b212e3208b666981851c",
+        "https://github.com/spring-projects/spring-framework/commit/ee62701f5634e904e42e218baad142cea2bcd332",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2025-22233"
+      ],
+      "aliases": [
+        "CVE-2025-22233"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-6v67-2wr5-gvf4",
+      "component": "logback-core",
+      "component_version": "1.4.14",
+      "severity": "medium",
+      "cvss_score": 6.1,
+      "title": "QOS.CH logback-core Server-Side Request Forgery vulnerability",
+      "description": "Server-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 1.5.12 on the Java platform, allows an attacker to forge requests by compromising logback configuration files in XML.\n \nThe attacks involves the modification of DOCTYPE declaration in\u00a0 XML configuration files.",
+      "affected_versions": [
+        {
+          "introduced": "1.4.0"
+        },
+        {
+          "fixed": "1.5.13"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.3.15"
+        }
+      ],
+      "published": "2024-12-19T18:31:37Z",
+      "modified": "2025-01-03T19:09:07.970205Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-12801",
+        "https://github.com/qos-ch/logback/commit/5f05041cba4c4ac0a62748c5c527a2da48999f2d",
+        "https://github.com/qos-ch/logback",
+        "https://logback.qos.ch/news.html#1.3.15",
+        "https://logback.qos.ch/news.html#1.5.13"
+      ],
+      "aliases": [
+        "CVE-2024-12801"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-pr98-23f8-jwxv",
+      "component": "logback-core",
+      "component_version": "1.4.14",
+      "severity": "medium",
+      "cvss_score": 5.699999999999999,
+      "title": "QOS.CH logback-core Expression Language Injection vulnerability",
+      "description": "ACE vulnerability in JaninoEventEvaluator by QOS.CH logback-core up to and including version 1.5.12 in Java applications allows attackers to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\nMalicious logback configuration files can allow the attacker to execute arbitrary code using the JaninoEventEvaluator extension.\n\nA successful attack requires the user to have write access to a configuration file. Alternatively, the attacker could inject a malicious environment variable pointing to a malicious configuration file. In both cases, the attack requires existing privilege.",
+      "affected_versions": [
+        {
+          "introduced": "1.4.0"
+        },
+        {
+          "fixed": "1.5.13"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.3.15"
+        }
+      ],
+      "published": "2024-12-19T18:31:37Z",
+      "modified": "2025-01-03T19:09:24.842130Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-12798",
+        "https://github.com/qos-ch/logback/commit/2cb6d520df7592ef1c3a198f1b5df3c10c93e183",
+        "https://github.com/qos-ch/logback",
+        "https://logback.qos.ch/news.html#1.3.15",
+        "https://logback.qos.ch/news.html#1.5.13"
+      ],
+      "aliases": [
+        "CVE-2024-12798"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-2rmj-mq67-h97g",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DoS via conditional HTTP request",
+      "description": "### Description\nApplications that parse ETags from `If-Match` or `If-None-Match` request headers are vulnerable to DoS attack.\n\n### Affected Spring Products and Versions\norg.springframework:spring-web in versions \n\n6.1.0 through 6.1.11\n6.0.0 through 6.0.22\n5.3.0 through 5.3.37\n\nOlder, unsupported versions are also affected\n\n### Mitigation\nUsers of affected versions should upgrade to the corresponding fixed version.\n6.1.x -> 6.1.12\n6.0.x -> 6.0.23\n5.3.x -> 5.3.38\nNo other mitigation steps are necessary.\n\nUsers of older, unsupported versions could enforce a size limit on `If-Match` and `If-None-Match` headers, e.g. through a Filter.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.38"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.23"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.12"
+        }
+      ],
+      "published": "2024-09-24T18:34:43Z",
+      "modified": "2025-02-21T15:43:05.420193Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38809",
+        "https://github.com/spring-projects/spring-framework/issues/33372",
+        "https://github.com/spring-projects/spring-framework/commit/582bfccbb72e5c8959a0b472d1dc7d03a20520f3",
+        "https://github.com/spring-projects/spring-framework/commit/8d16a50907c11f7e6b407d878a26e84eba08a533",
+        "https://github.com/spring-projects/spring-framework/commit/bb17ad8314b81850a939fd265fb53b3361705e85",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2024-38809"
+      ],
+      "aliases": [
+        "CVE-2024-38809"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4gc7-5j7h-4qph",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "The fix for CVE-2022-22968 made disallowedFields\u00a0patterns in DataBinder\u00a0case insensitive. However, String.toLowerCase()\u00a0has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        }
+      ],
+      "published": "2024-10-18T06:30:32Z",
+      "modified": "2025-05-29T23:41:36.219637Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38820",
+        "https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/commits/v6.2.0-RC2",
+        "https://security.netapp.com/advisory/ntap-20241129-0003",
+        "https://spring.io/security/cve-2024-38820"
+      ],
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4q2v-9p7v-3v22",
+      "component": "reactor-netty-http",
+      "component_version": "1.1.15",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Reactor Netty HTTP is vulnerable to credential leaks during chained redirects",
+      "description": "In some specific scenarios with chained redirects, Reactor Netty HTTP client leaks credentials. In order for this to happen, the HTTP client must have been explicitly configured to follow redirects.",
+      "affected_versions": [
+        {
+          "introduced": "1.3.0-M1"
+        },
+        {
+          "fixed": "1.3.0-M5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.2.8"
+        }
+      ],
+      "published": "2025-07-16T12:30:21Z",
+      "modified": "2025-07-16T21:12:21.284692Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22227",
+        "https://github.com/reactor/reactor-netty/commit/522892307ea89bf24fe634e8bfea35728c9bf411",
+        "https://github.com/reactor/reactor-netty",
+        "https://spring.io/security/cve-2025-22227"
+      ],
+      "aliases": [
+        "CVE-2025-22227"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5jpm-x58v-624v",
+      "component": "netty-codec-http",
+      "component_version": "4.1.105.Final",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Netty's HttpPostRequestDecoder can OOM",
+      "description": "### Summary\nThe `HttpPostRequestDecoder` can be tricked to accumulate data. I have spotted currently two attack vectors \n\n### Details\n1. While the decoder can store items on the disk if configured so, there are no limits to the number of fields the form can have, an attacher can send a chunked post consisting of many small fields that will be accumulated in the `bodyListHttpData` list.\n2. The decoder cumulates bytes in the `undecodedChunk` buffer until it can decode a field, this field can cumulate data without limits\n\n### PoC\n\nHere is a Netty branch that provides a fix + tests : https://github.com/vietj/netty/tree/post-request-decoder\n\n\nHere is a reproducer with Vert.x (which uses this decoder) https://gist.github.com/vietj/f558b8ea81ec6505f1e9a6ca283c9ae3\n\n### Impact\nAny Netty based HTTP server that uses the `HttpPostRequestDecoder` to decode a form.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.108.Final"
+        }
+      ],
+      "published": "2024-03-25T19:40:50Z",
+      "modified": "2024-10-22T05:29:03.483949Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-5jpm-x58v-624v",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-29025",
+        "https://github.com/netty/netty/commit/0d0c6ed782d13d423586ad0c71737b2c7d02058c",
+        "https://gist.github.com/vietj/f558b8ea81ec6505f1e9a6ca283c9ae3",
+        "https://github.com/netty/netty",
+        "https://github.com/vietj/netty/tree/post-request-decoder",
+        "https://lists.debian.org/debian-lts-announce/2024/06/msg00015.html"
+      ],
+      "aliases": [
+        "CGA-4f97-xch2-fqp3",
+        "CGA-cvrj-h7rr-r975",
+        "CVE-2024-29025"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-78wr-2p64-hpwj",
+      "component": "commons-io",
+      "component_version": "2.7",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+      "description": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "2.0"
+        },
+        {
+          "fixed": "2.14.0"
+        }
+      ],
+      "published": "2024-10-03T12:30:48Z",
+      "modified": "2025-01-31T15:38:02.141931Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-47554",
+        "https://github.com/apache/commons-io",
+        "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1",
+        "https://security.netapp.com/advisory/ntap-20250131-0010",
+        "http://www.openwall.com/lists/oss-security/2024/10/03/2"
+      ],
+      "aliases": [
+        "CVE-2024-47554"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4h8f-2wvx-gg5w",
+      "component": "bcprov-jdk18on",
+      "component_version": "1.76",
+      "severity": "medium",
+      "cvss_score": 6.0,
+      "title": "Bouncy Castle Java Cryptography API vulnerable to DNS poisoning",
+      "description": "An issue was discovered in the Bouncy Castle Crypto Package For Java before BC TLS Java 1.0.19 (ships with BC Java 1.78, BC Java (LTS) 2.73.6) and before BC FIPS TLS Java 1.0.19. When endpoint identification is enabled in the BCJSSE and an SSL socket is created without an explicit hostname (as happens with HttpsURLConnection), hostname verification could be performed against a DNS-resolved IP address in some situations, opening up a possibility of DNS poisoning.",
+      "affected_versions": [
+        {
+          "introduced": "1.61"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.61"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.61"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.61"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.0.19"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.73.6"
+        }
+      ],
+      "published": "2024-05-03T18:30:37Z",
+      "modified": "2025-06-24T19:12:21.765415Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-34447",
+        "https://github.com/bcgit/bc-java/issues/1656",
+        "https://github.com/bcgit/bc-java",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9034447",
+        "https://security.netapp.com/advisory/ntap-20240614-0007",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-88fx-6j2p-hrcp",
+        "CGA-j5h3-f4x4-8725",
+        "CGA-xf7g-2h39-r54g",
+        "CVE-2024-34447"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-8xfc-gm6g-vgpv",
+      "component": "bcprov-jdk18on",
+      "component_version": "1.76",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Bouncy Castle certificate parsing issues cause high CPU usage during parameter evaluation.",
+      "description": "An issue was discovered in ECCurve.java and ECCurve.cs in Bouncy Castle Java (BC Java) before 1.78, BC Java LTS before 2.73.6, BC-FJA before 1.0.2.5, and BC C# .Net before 2.3.1. Importing an EC certificate with crafted F2m parameters can lead to excessive CPU consumption during the evaluation of the curve parameters.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.0.2.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.3.1"
+        }
+      ],
+      "published": "2024-05-14T15:32:54Z",
+      "modified": "2024-12-06T15:48:32.838321Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-29857",
+        "https://github.com/bcgit/bc-csharp/commit/56daa6eac526f165416d17f661422d60de0dfd63",
+        "https://github.com/bcgit/bc-java/commit/efc498ca4caa340ac2fe11f2efee06c1a294501f",
+        "https://github.com/bcgit/bc-java/commit/fee80dd230e7fba132d03a34f1dd1d6aae0d0281",
+        "https://github.com/bcgit/bc-csharp/wiki/CVE%E2%80%902024%E2%80%9029857",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9029857",
+        "https://security.netapp.com/advisory/ntap-20241206-0008",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-h49m-7vwx-446f",
+        "CGA-pmw5-3929-3rqr",
+        "CGA-x9cj-c42r-f4mr",
+        "CVE-2024-29857"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-m44j-cfrm-g8qc",
+      "component": "bcprov-jdk18on",
+      "component_version": "1.76",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "Bouncy Castle crafted signature and public key can be used to trigger an infinite loop",
+      "description": "An issue was discovered in Bouncy Castle Java Cryptography APIs starting in 1.73 and before 1.78. An Ed25519 verification code infinite loop can occur via a crafted signature and public key.",
+      "affected_versions": [
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "1.73"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.3.1"
+        }
+      ],
+      "published": "2024-05-14T15:32:54Z",
+      "modified": "2024-12-02T16:33:08.858488Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-30172",
+        "https://github.com/bcgit/bc-java/commit/1b9fd9b545e691bfb3941a9f6a797660c8860f02",
+        "https://github.com/bcgit/bc-java/commit/9c165791b68a204678b48ec11e4e579754c2ea49",
+        "https://github.com/bcgit/bc-java/commit/ebe1c75579170072dc59b8dee2b55ce31663178f",
+        "https://github.com/bcgit/bc-csharp/wiki/CVE%E2%80%902024%E2%80%9030172",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9030172",
+        "https://security.netapp.com/advisory/ntap-20240614-0007",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-96m8-9rvf-gh6w",
+        "CGA-jjwj-6v39-vh3f",
+        "CGA-qh5m-p3cq-84w2",
+        "CVE-2024-30172"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-v435-xc8x-wvr9",
+      "component": "bcprov-jdk18on",
+      "component_version": "1.76",
+      "severity": "medium",
+      "cvss_score": 6.0,
+      "title": "Bouncy Castle affected by timing side-channel for RSA key exchange (\"The Marvin Attack\")",
+      "description": "An issue was discovered in Bouncy Castle Java TLS API and JSSE Provider before 1.78. Timing-based leakage may occur in RSA based handshakes because of exception processing.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.0.19"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.3.1"
+        }
+      ],
+      "published": "2024-05-14T15:32:54Z",
+      "modified": "2024-10-22T05:28:59.209889Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-30171",
+        "https://github.com/bcgit/bc-csharp/commit/c984b8bfd8544dfc55dba91a02cbbbb9c580c217",
+        "https://github.com/bcgit/bc-java/commit/d7d5e735abd64bf0f413f54fd9e495fc02400fb0",
+        "https://github.com/bcgit/bc-java/commit/e0569dcb1dea9d421d84fc4c5c5688fe101afa2d",
+        "https://github.com/bcgit/bc-csharp/wiki/CVE%E2%80%902024%E2%80%9030171",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9030171",
+        "https://security.netapp.com/advisory/ntap-20240614-0008",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-2f4h-fc34-cw83",
+        "CGA-5mrq-75x2-g8hj",
+        "CGA-9qv8-44xh-vf2p",
+        "CVE-2024-30171"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-7g45-4rm6-3mm3",
+      "component": "guava",
+      "component_version": "31.1-android",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Guava vulnerable to insecure use of temporary directory",
+      "description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, maintainers recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+      "affected_versions": [
+        {
+          "introduced": "1.0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2023-06-14T18:30:38Z",
+      "modified": "2025-02-13T19:12:26.586279Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-2976",
+        "https://github.com/google/guava/issues/2575",
+        "https://github.com/google/guava/issues/6532",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava",
+        "https://github.com/google/guava/releases/tag/v32.0.0",
+        "https://security.netapp.com/advisory/ntap-20230818-0008",
+        "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01006.html"
+      ],
+      "aliases": [
+        "CGA-g8pm-vcpp-9jxq",
+        "CVE-2023-2976"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-7g45-4rm6-3mm3",
+      "component": "guava",
+      "component_version": "30.1.1-android",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Guava vulnerable to insecure use of temporary directory",
+      "description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, maintainers recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+      "affected_versions": [
+        {
+          "introduced": "1.0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2023-06-14T18:30:38Z",
+      "modified": "2025-02-13T19:12:26.586279Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-2976",
+        "https://github.com/google/guava/issues/2575",
+        "https://github.com/google/guava/issues/6532",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava",
+        "https://github.com/google/guava/releases/tag/v32.0.0",
+        "https://security.netapp.com/advisory/ntap-20230818-0008",
+        "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01006.html"
+      ],
+      "aliases": [
+        "CGA-g8pm-vcpp-9jxq",
+        "CVE-2023-2976"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-7g45-4rm6-3mm3",
+      "component": "guava",
+      "component_version": "29.0-android",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Guava vulnerable to insecure use of temporary directory",
+      "description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, maintainers recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+      "affected_versions": [
+        {
+          "introduced": "1.0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2023-06-14T18:30:38Z",
+      "modified": "2025-02-13T19:12:26.586279Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-2976",
+        "https://github.com/google/guava/issues/2575",
+        "https://github.com/google/guava/issues/6532",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava",
+        "https://github.com/google/guava/releases/tag/v32.0.0",
+        "https://security.netapp.com/advisory/ntap-20230818-0008",
+        "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01006.html"
+      ],
+      "aliases": [
+        "CGA-g8pm-vcpp-9jxq",
+        "CVE-2023-2976"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-735f-pc8j-v9w8",
+      "component": "protobuf-java",
+      "component_version": "3.25.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "protobuf-java has potential Denial of Service issue",
+      "description": "### Summary\nWhen parsing unknown fields in the Protobuf Java Lite and Full library, a maliciously crafted message can cause a StackOverflow error and lead to a program crash.\n\nReporter: Alexis Challande, Trail of Bits Ecosystem Security Team <ecosystem@trailofbits.com>\n\nAffected versions: This issue affects all versions of both the Java full and lite Protobuf runtimes, as well as Protobuf for Kotlin and JRuby, which themselves use the Java Protobuf runtime.\n\n### Severity\n[CVE-2024-7254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7254) **High** CVSS4.0 Score 8.7 (NOTE: there may be a delay in publication)\nThis is a potential Denial of Service. Parsing nested groups as unknown fields with DiscardUnknownFieldsParser or Java Protobuf Lite parser, or against Protobuf map fields, creates unbounded recursions that can be abused by an attacker.\n\n### Proof of Concept\nFor reproduction details, please refer to the unit tests (Protobuf Java [LiteTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/lite/src/test/java/com/google/protobuf/LiteTest.java) and [CodedInputStreamTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/core/src/test/java/com/google/protobuf/CodedInputStreamTest.java)) that identify the specific inputs that exercise this parsing weakness.\n\n### Remediation and Mitigation\nWe have been working diligently to address this issue and have released a mitigation that is available now. Please update to the latest available versions of the following packages:\n* protobuf-java (3.25.5, 4.27.5, 4.28.2)\n* protobuf-javalite (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin-lite (3.25.5, 4.27.5, 4.28.2)\n* com-protobuf [JRuby gem only] (3.25.5, 4.27.5, 4.28.2)",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.25.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.25.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.25.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.25.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "3.25.5"
+        },
+        {
+          "introduced": "4.0.0.rc.1"
+        },
+        {
+          "fixed": "4.27.5"
+        },
+        {
+          "introduced": "4.28.0.rc.1"
+        },
+        {
+          "fixed": "4.28.2"
+        },
+        {
+          "introduced": "4.0.0.rc.1"
+        },
+        {
+          "fixed": "4.27.5"
+        },
+        {
+          "introduced": "4.28.0.rc.1"
+        },
+        {
+          "fixed": "4.28.2"
+        },
+        {
+          "introduced": "4.0.0.rc.1"
+        },
+        {
+          "fixed": "4.27.5"
+        },
+        {
+          "introduced": "4.28.0.rc.1"
+        },
+        {
+          "fixed": "4.28.2"
+        },
+        {
+          "introduced": "4.0.0.rc.1"
+        },
+        {
+          "fixed": "4.27.5"
+        },
+        {
+          "introduced": "4.28.0.rc.1"
+        },
+        {
+          "fixed": "4.28.2"
+        },
+        {
+          "introduced": "4.0.0.rc.1"
+        },
+        {
+          "fixed": "4.27.5"
+        },
+        {
+          "introduced": "4.28.0.rc.1"
+        },
+        {
+          "fixed": "4.28.2"
+        }
+      ],
+      "published": "2024-09-19T16:06:03Z",
+      "modified": "2025-04-23T15:03:11.956278Z",
+      "references": [
+        "https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-735f-pc8j-v9w8",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-7254",
+        "https://github.com/protocolbuffers/protobuf/commit/4728531c162f2f9e8c2ca1add713cfee2db6be3b",
+        "https://github.com/protocolbuffers/protobuf/commit/850fcce9176e2c9070614dab53537760498c926b",
+        "https://github.com/protocolbuffers/protobuf/commit/9a5f5fe752a20cbac2e722b06949ac985abdd534",
+        "https://github.com/protocolbuffers/protobuf/commit/ac9fb5b4c71b0dd80985b27684e265d1f03abf46",
+        "https://github.com/protocolbuffers/protobuf/commit/cc8b3483a5584b3301e3d43d17eb59704857ffaa",
+        "https://github.com/protocolbuffers/protobuf/commit/d6c82fc55a76481c676f541a255571e8950bb8c3",
+        "https://github.com/protocolbuffers/protobuf",
+        "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/google-protobuf/CVE-2024-7254.yml",
+        "https://security.netapp.com/advisory/ntap-20241213-0010",
+        "https://security.netapp.com/advisory/ntap-20250418-0006"
+      ],
+      "aliases": [
+        "CVE-2024-7254"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-8xfc-gm6g-vgpv",
+      "component": "bcprov-jdk15on",
+      "component_version": "1.70",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Bouncy Castle certificate parsing issues cause high CPU usage during parameter evaluation.",
+      "description": "An issue was discovered in ECCurve.java and ECCurve.cs in Bouncy Castle Java (BC Java) before 1.78, BC Java LTS before 2.73.6, BC-FJA before 1.0.2.5, and BC C# .Net before 2.3.1. Importing an EC certificate with crafted F2m parameters can lead to excessive CPU consumption during the evaluation of the curve parameters.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.0.2.5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.3.1"
+        }
+      ],
+      "published": "2024-05-14T15:32:54Z",
+      "modified": "2024-12-06T15:48:32.838321Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-29857",
+        "https://github.com/bcgit/bc-csharp/commit/56daa6eac526f165416d17f661422d60de0dfd63",
+        "https://github.com/bcgit/bc-java/commit/efc498ca4caa340ac2fe11f2efee06c1a294501f",
+        "https://github.com/bcgit/bc-java/commit/fee80dd230e7fba132d03a34f1dd1d6aae0d0281",
+        "https://github.com/bcgit/bc-csharp/wiki/CVE%E2%80%902024%E2%80%9029857",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9029857",
+        "https://security.netapp.com/advisory/ntap-20241206-0008",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-h49m-7vwx-446f",
+        "CGA-pmw5-3929-3rqr",
+        "CGA-x9cj-c42r-f4mr",
+        "CVE-2024-29857"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-hr8g-6v94-x4m9",
+      "component": "bcprov-jdk15on",
+      "component_version": "1.70",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Bouncy Castle For Java LDAP injection vulnerability",
+      "description": "Bouncy Castle provides the `X509LDAPCertStoreSpi.java` class which can be used in conjunction with the CertPath API for validating certificate paths. Pre-1.73 the implementation did not check the X.500 name of any certificate, subject, or issuer being passed in for LDAP wild cards, meaning the presence of a wild car may lead to Information Disclosure.\n\nA potential attack would be to generate a self-signed certificate with a subject name that contains special characters, e.g: `CN=Subject*)(objectclass=`. This will be included into the filter and provides the attacker ability to specify additional attributes in the search query. This can be exploited as a blind LDAP injection: an attacker can enumerate valid attribute values using the boolean blind injection technique. The exploitation depends on the structure of the target LDAP directory, as well as what kind of errors are exposed to the user.\n\nChanges to the `X509LDAPCertStoreSpi.java` class add the additional checking of any X.500 name used to correctly escape wild card characters.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.74"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "last_affected": "1.70"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "last_affected": "1.70"
+        },
+        {
+          "introduced": "1.49"
+        },
+        {
+          "last_affected": "1.70"
+        }
+      ],
+      "published": "2023-07-05T03:30:23Z",
+      "modified": "2024-10-22T05:28:49.779895Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-33201",
+        "https://github.com/bcgit/bc-java/commit/ccf93ca736b89250ff4ce079a5aa56f5cbf0ebbd",
+        "https://github.com/bcgit/bc-java/commit/e8c409a8389c815ea3fda5e8b94c92fdfe583bcc",
+        "https://bouncycastle.org",
+        "https://bouncycastle.org/releasenotes.html#r1rv74",
+        "https://github.com/bcgit/bc-java",
+        "https://github.com/bcgit/bc-java/commits/main/prov/src/main/java/org/bouncycastle/jce/provider/X509LDAPCertStoreSpi.java",
+        "https://github.com/bcgit/bc-java/wiki/CVE-2023-33201",
+        "https://lists.debian.org/debian-lts-announce/2023/08/msg00000.html",
+        "https://security.netapp.com/advisory/ntap-20230824-0008"
+      ],
+      "aliases": [
+        "CGA-9v29-fwrv-3vmr",
+        "CVE-2023-33201"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-v435-xc8x-wvr9",
+      "component": "bcprov-jdk15on",
+      "component_version": "1.70",
+      "severity": "medium",
+      "cvss_score": 6.0,
+      "title": "Bouncy Castle affected by timing side-channel for RSA key exchange (\"The Marvin Attack\")",
+      "description": "An issue was discovered in Bouncy Castle Java TLS API and JSSE Provider before 1.78. Timing-based leakage may occur in RSA based handshakes because of exception processing.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.0.19"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.78"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "2.3.1"
+        }
+      ],
+      "published": "2024-05-14T15:32:54Z",
+      "modified": "2024-10-22T05:28:59.209889Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-30171",
+        "https://github.com/bcgit/bc-csharp/commit/c984b8bfd8544dfc55dba91a02cbbbb9c580c217",
+        "https://github.com/bcgit/bc-java/commit/d7d5e735abd64bf0f413f54fd9e495fc02400fb0",
+        "https://github.com/bcgit/bc-java/commit/e0569dcb1dea9d421d84fc4c5c5688fe101afa2d",
+        "https://github.com/bcgit/bc-csharp/wiki/CVE%E2%80%902024%E2%80%9030171",
+        "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902024%E2%80%9030171",
+        "https://security.netapp.com/advisory/ntap-20240614-0008",
+        "https://www.bouncycastle.org/latest_releases.html"
+      ],
+      "aliases": [
+        "CGA-2f4h-fc34-cw83",
+        "CGA-5mrq-75x2-g8hj",
+        "CGA-9qv8-44xh-vf2p",
+        "CVE-2024-30171"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-wjxj-5m7g-mg7q",
+      "component": "bcprov-jdk15on",
+      "component_version": "1.70",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Bouncy Castle Denial of Service (DoS)",
+      "description": "Bouncy Castle for Java before 1.73 contains a potential Denial of Service (DoS) issue within the Bouncy Castle org.bouncycastle.openssl.PEMParser class. This class parses OpenSSL PEM encoded streams containing X.509 certificates, PKCS8 encoded keys, and PKCS7 objects. Parsing a file that has crafted ASN.1 data through the PEMParser causes an OutOfMemoryError, which can enable a denial of service attack.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.73"
+        }
+      ],
+      "published": "2023-11-23T18:30:33Z",
+      "modified": "2024-10-22T05:28:59.117892Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-33202",
+        "https://github.com/bcgit/bc-java/commit/0c576892862ed41894f49a8f639112e8d66d229c",
+        "https://bouncycastle.org",
+        "https://github.com/bcgit/bc-java",
+        "https://github.com/bcgit/bc-java/wiki/CVE-2023-33202",
+        "https://security.netapp.com/advisory/ntap-20240125-0001"
+      ],
+      "aliases": [
+        "CGA-q98p-rjg3-8jq7",
+        "CVE-2023-33202"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "component": "commons-lang3",
+      "component_version": "3.13.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "description": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with\u00a0commons-lang:commons-lang\u00a02.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before\u00a03.18.0.\n\nThe methods ClassUtils.getClass(...) can throw\u00a0StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could\u00a0cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "3.0"
+        },
+        {
+          "fixed": "3.18.0"
+        },
+        {
+          "introduced": "2.0"
+        },
+        {
+          "last_affected": "2.6"
+        }
+      ],
+      "published": "2025-07-11T15:31:37Z",
+      "modified": "2025-07-12T01:27:15.943417Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-48924",
+        "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53",
+        "https://github.com/apache/commons-lang",
+        "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-q3v6-hm2v-pw99",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "Spring Framework has Authorization Bypass for Case Sensitive Comparisons",
+      "description": "The usage of String.toLowerCase()\u00a0and String.toUpperCase()\u00a0has some Locale\u00a0dependent exceptions that could potentially result in authorization rules not working properly.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.14"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.16"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.12"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.8"
+        },
+        {
+          "introduced": "6.3.0"
+        },
+        {
+          "fixed": "6.3.5"
+        }
+      ],
+      "published": "2024-12-02T15:31:41Z",
+      "modified": "2025-01-24T22:03:01.566382Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38827",
+        "https://github.com/spring-projects/spring-framework/issues/33708",
+        "https://github.com/spring-projects/spring-framework/issues/34232",
+        "https://github.com/spring-projects/spring-framework/commit/11d4272ff48b4a4dabc4b28dfbff0364a4204bc9",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20250124-0007",
+        "https://spring.io/security/cve-2024-38827"
+      ],
+      "aliases": [
+        "CVE-2024-38827"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-xq3w-v528-46rv",
+      "component": "netty-common",
+      "component_version": "4.1.105.Final",
+      "severity": "low",
+      "cvss_score": 3.5,
+      "title": "Denial of Service attack on windows app using netty",
+      "description": "### Summary\n\nAn unsafe reading of environment file could potentially cause a denial of service in Netty.\nWhen loaded on an Windows application, Netty attemps to load a file that does not exist. If an attacker creates such a large file, the Netty application crash.\n\n\n### Details\n\nWhen the library netty is loaded in a java windows application, the library tries to identify the system environnement in which it is executed.\n\nAt this stage, Netty tries to load both `/etc/os-release` and `/usr/lib/os-release` even though it is in a Windows environment. \n\n<img width=\"364\" alt=\"1\" src=\"https://github.com/user-attachments/assets/9466b181-9394-45a3-b0e3-1dcf105def59\">\n\nIf netty finds this files, it reads them and loads them into memory.\n\nBy default :\n\n- The JVM maximum memory size is set to 1 GB,\n- A non-privileged user can create a directory at `C:\\` and create files within it.\n\n<img width=\"340\" alt=\"2\" src=\"https://github.com/user-attachments/assets/43b359a2-5871-4592-ae2b-ffc40ac76831\">\n\n<img width=\"523\" alt=\"3\" src=\"https://github.com/user-attachments/assets/ad5c6eed-451c-4513-92d5-ba0eee7715c1\">\n\nthe source code identified :\nhttps://github.com/netty/netty/blob/4.1/common/src/main/java/io/netty/util/internal/PlatformDependent.java\n\nDespite the implementation of the function `normalizeOs()` the source code not verify the OS before reading `C:\\etc\\os-release` and `C:\\usr\\lib\\os-release`.\n\n### PoC\n\nCreate a file larger than 1 GB of data in `C:\\etc\\os-release` or `C:\\usr\\lib\\os-release` on a Windows environnement and start your Netty application.\n\nTo observe what the application does with the file, the security analyst used \"Process Monitor\" from the \"Windows SysInternals\" suite. (https://learn.microsoft.com/en-us/sysinternals/)\n\n```\ncd C:\\etc\nfsutil file createnew os-release 3000000000\n```\n\n<img width=\"519\" alt=\"4\" src=\"https://github.com/user-attachments/assets/39df22a3-462b-4fd0-af9a-aa30077ec08f\">\n\n<img width=\"517\" alt=\"5\" src=\"https://github.com/user-attachments/assets/129dbd50-fc36-4da5-8eb1-582123fb528f\">\n\nThe source code used is the Netty website code example : [Echo \u2010 the very basic client and server](https://netty.io/4.1/xref/io/netty/example/echo/package-summary.html).\n\nThe vulnerability was tested on the 4.1.112.Final version.\n\nThe security analyst tried the same technique for `C:\\proc\\sys\\net\\core\\somaxconn` with a lot of values to impact Netty but the only things that works is the \"larger than 1 GB file\" technique. https://github.com/netty/netty/blob/c0fdb8e9f8f256990e902fcfffbbe10754d0f3dd/common/src/main/java/io/netty/util/NetUtil.java#L186\n\n### Impact\n\nBy loading the \"file larger than 1 GB\" into the memory, the Netty library exceeds the JVM memory limit and causes a crash in the java Windows application.\n\nThis behaviour occurs 100% of the time in both Server mode and Client mode if the large file exists.\n\nClient mode :\n\n<img width=\"449\" alt=\"6\" src=\"https://github.com/user-attachments/assets/f8fe1ed0-1a42-4490-b9ed-dbc9af7804be\">\n\nServer mode :\n\n<img width=\"464\" alt=\"7\" src=\"https://github.com/user-attachments/assets/b34b42bd-4fbd-4170-b93a-d29ba87b88eb\">\n\nsomaxconn :\n\n<img width=\"532\" alt=\"8\" src=\"https://github.com/user-attachments/assets/0656b3bb-32c6-4ae2-bff7-d93babba08a3\">\n\n### Severity\n\n- Attack vector : \"Local\" because the attacker needs to be on the system where the Netty application is running.\n- Attack complexity : \"Low\" because the attacker only need to create a massive file (regardless of its contents).\n- Privileges required : \"Low\" because the attacker requires a user account to exploit the vulnerability.\n- User intercation : \"None\" because the administrator don't need to accidentally click anywhere to trigger the vulnerability. Furthermore, the exploitation works with defaults windows/AD settings.\n- Scope : \"Unchanged\" because only Netty is affected by the vulnerability.\n- Confidentiality : \"None\" because no data is exposed through exploiting the vulnerability.\n- Integrity : \"None\" because the explotation of the vulnerability does not allow editing, deleting or adding data elsewhere.\n- Availability : \"High\" because the exploitation of this vulnerability crashes the entire java application.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.115.Final"
+        }
+      ],
+      "published": "2024-11-12T19:53:17Z",
+      "modified": "2025-02-18T16:16:53.215963Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-47535",
+        "https://github.com/netty/netty/commit/fbf7a704a82e7449b48bd0bbb679f5661c6d61a3",
+        "https://github.com/netty/netty"
+      ],
+      "aliases": [
+        "CVE-2024-47535"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5mg8-w23w-74h3",
+      "component": "guava",
+      "component_version": "31.1-android",
+      "severity": "low",
+      "cvss_score": 3.5,
+      "title": "Information Disclosure in Guava",
+      "description": "A temp directory creation vulnerability exists in Guava prior to version 32.0.0 allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava `com.google.common.io.Files.createTempDir()`. The permissions granted to the directory created default to the standard unix-like /tmp ones, leaving the files open. Maintainers recommend explicitly changing the permissions after the creation of the directory, or removing uses of the vulnerable method.\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2021-03-25T17:04:19Z",
+      "modified": "2025-02-20T05:28:20.657499Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2020-8908",
+        "https://github.com/google/guava/issues/4011",
+        "https://github.com/google/guava/issues/4011#issuecomment-1578991974",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava/commit/fec0dbc4634006a6162cfd4d0d09c962073ddf40",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95@%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95%40%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f@%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f%40%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf@%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322@%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322%40%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://www.oracle.com/security-alerts/cpuoct2021.html",
+        "https://www.oracle.com/security-alerts/cpujan2022.html",
+        "https://www.oracle.com/security-alerts/cpuapr2022.html",
+        "https://www.oracle.com/security-alerts/cpuApr2021.html",
+        "https://www.oracle.com//security-alerts/cpujul2021.html",
+        "https://snyk.io/vuln/SNYK-JAVA-COMGOOGLEGUAVA-1015415",
+        "https://security.netapp.com/advisory/ntap-20220210-0003",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594@%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594%40%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf%40%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748@%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748%40%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r037fed1d0ebde50c9caf8d99815db3093c344c3f651c5a49a09824ce@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://github.com/google/guava",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba@%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba%40%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6@%3Ccommits.cxf.apache.org%3E"
+      ],
+      "aliases": [
+        "CGA-7rjh-334q-pq8g",
+        "CVE-2020-8908"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5mg8-w23w-74h3",
+      "component": "guava",
+      "component_version": "30.1.1-android",
+      "severity": "low",
+      "cvss_score": 3.5,
+      "title": "Information Disclosure in Guava",
+      "description": "A temp directory creation vulnerability exists in Guava prior to version 32.0.0 allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava `com.google.common.io.Files.createTempDir()`. The permissions granted to the directory created default to the standard unix-like /tmp ones, leaving the files open. Maintainers recommend explicitly changing the permissions after the creation of the directory, or removing uses of the vulnerable method.\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2021-03-25T17:04:19Z",
+      "modified": "2025-02-20T05:28:20.657499Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2020-8908",
+        "https://github.com/google/guava/issues/4011",
+        "https://github.com/google/guava/issues/4011#issuecomment-1578991974",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava/commit/fec0dbc4634006a6162cfd4d0d09c962073ddf40",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95@%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95%40%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f@%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f%40%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf@%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322@%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322%40%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://www.oracle.com/security-alerts/cpuoct2021.html",
+        "https://www.oracle.com/security-alerts/cpujan2022.html",
+        "https://www.oracle.com/security-alerts/cpuapr2022.html",
+        "https://www.oracle.com/security-alerts/cpuApr2021.html",
+        "https://www.oracle.com//security-alerts/cpujul2021.html",
+        "https://snyk.io/vuln/SNYK-JAVA-COMGOOGLEGUAVA-1015415",
+        "https://security.netapp.com/advisory/ntap-20220210-0003",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594@%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594%40%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf%40%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748@%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748%40%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r037fed1d0ebde50c9caf8d99815db3093c344c3f651c5a49a09824ce@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://github.com/google/guava",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba@%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba%40%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6@%3Ccommits.cxf.apache.org%3E"
+      ],
+      "aliases": [
+        "CGA-7rjh-334q-pq8g",
+        "CVE-2020-8908"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5mg8-w23w-74h3",
+      "component": "guava",
+      "component_version": "29.0-android",
+      "severity": "low",
+      "cvss_score": 3.5,
+      "title": "Information Disclosure in Guava",
+      "description": "A temp directory creation vulnerability exists in Guava prior to version 32.0.0 allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava `com.google.common.io.Files.createTempDir()`. The permissions granted to the directory created default to the standard unix-like /tmp ones, leaving the files open. Maintainers recommend explicitly changing the permissions after the creation of the directory, or removing uses of the vulnerable method.\n",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "32.0.0-android"
+        }
+      ],
+      "published": "2021-03-25T17:04:19Z",
+      "modified": "2025-02-20T05:28:20.657499Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2020-8908",
+        "https://github.com/google/guava/issues/4011",
+        "https://github.com/google/guava/issues/4011#issuecomment-1578991974",
+        "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284",
+        "https://github.com/google/guava/commit/fec0dbc4634006a6162cfd4d0d09c962073ddf40",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95@%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95%40%3Cgithub.arrow.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f@%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f%40%3Cdev.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3@%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3%40%3Ctorque-dev.db.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf@%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322@%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322%40%3Cgitbox.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://www.oracle.com/security-alerts/cpuoct2021.html",
+        "https://www.oracle.com/security-alerts/cpujan2022.html",
+        "https://www.oracle.com/security-alerts/cpuapr2022.html",
+        "https://www.oracle.com/security-alerts/cpuApr2021.html",
+        "https://www.oracle.com//security-alerts/cpujul2021.html",
+        "https://snyk.io/vuln/SNYK-JAVA-COMGOOGLEGUAVA-1015415",
+        "https://security.netapp.com/advisory/ntap-20220210-0003",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594@%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594%40%3Cdev.myfaces.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf%40%3Cdev.pig.apache.org%3E",
+        "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6%40%3Ccommits.cxf.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748@%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748%40%3Ccommits.pulsar.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r037fed1d0ebde50c9caf8d99815db3093c344c3f651c5a49a09824ce@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://github.com/google/guava",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba@%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba%40%3Cissues.maven.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c@%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c%40%3Cissues.hive.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222@%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222%40%3Ccommits.ws.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a@%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a%40%3Cdev.drill.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199@%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199%40%3Cyarn-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44@%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44%40%3Cissues.geode.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac@%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac%40%3Ccommon-issues.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27@%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27%40%3Cyarn-dev.hadoop.apache.org%3E",
+        "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6@%3Ccommits.cxf.apache.org%3E"
+      ],
+      "aliases": [
+        "CGA-7rjh-334q-pq8g",
+        "CVE-2020-8908"
+      ],
+      "ecosystem": "Maven"
+    }
+  ]
+}

@@ -1,0 +1,3909 @@
+{
+  "metadata": {
+    "repository": "/var/folders/jg/_c1c86nj7ms0_kqg0hyty3zw0000gn/T/sbom_lib-common-vaadin_pziojlug/lib-common-vaadin",
+    "timestamp": "2025-08-07T22:21:31.309273",
+    "technologies": [
+      "Java/Maven"
+    ],
+    "tool": {
+      "name": "Firefly SBOM Tool",
+      "version": "1.0.0"
+    },
+    "repository_name": "lib-common-vaadin",
+    "repository_url": "https://github.com/firefly-oss/lib-common-vaadin.git",
+    "description": null,
+    "primary_language": null
+  },
+  "components": [
+    {
+      "name": "vaadin-spring-boot-starter",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6e817110daeb999f",
+      "purl": "pkg:maven/com.vaadin/vaadin-spring-boot-starter@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-spring",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e88ddd31b0d3b611",
+      "purl": "pkg:maven/com.vaadin/vaadin-spring@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-server",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d08f1307dc81c216",
+      "purl": "pkg:maven/com.vaadin/flow-server@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-push",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9af3d830f89d3323",
+      "purl": "pkg:maven/com.vaadin/flow-push@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "throw-if-servlet3",
+      "version": "1.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bb9b8a7058d93590",
+      "purl": "pkg:maven/com.vaadin.servletdetector/throw-if-servlet3@1.0.2",
+      "group": "com.vaadin.servletdetector",
+      "license": "Unknown"
+    },
+    {
+      "name": "jspecify",
+      "version": "1.0.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b20e46b6429cf992",
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0",
+      "group": "org.jspecify",
+      "license": "Unknown"
+    },
+    {
+      "name": "slf4j-api",
+      "version": "2.0.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b68d76fdcbf0820d",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.11",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "gwt-elemental",
+      "version": "2.8.2.vaadin2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:48295e6e8100aea3",
+      "purl": "pkg:maven/com.vaadin.external.gwt/gwt-elemental@2.8.2.vaadin2",
+      "group": "com.vaadin.external.gwt",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-fileupload2-jakarta",
+      "version": "2.0.0-M1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:99a63528996ce1a6",
+      "purl": "pkg:maven/org.apache.commons/commons-fileupload2-jakarta@2.0.0-M1",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-fileupload2-core",
+      "version": "2.0.0-M1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:33beae796324b704",
+      "purl": "pkg:maven/org.apache.commons/commons-fileupload2-core@2.0.0-M1",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-io",
+      "version": "2.18.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f8ac6363053a494e",
+      "purl": "pkg:maven/commons-io/commons-io@2.18.0",
+      "group": "commons-io",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-core",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5fa2936d6e9c49a4",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-databind",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f9219dbe7c6a9562",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-annotations",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:156a0a19eb3318c4",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.15.3",
+      "group": "com.fasterxml.jackson.core",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-datatype-jsr310",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3cba93c13f5af85b",
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.3",
+      "group": "com.fasterxml.jackson.datatype",
+      "license": "Unknown"
+    },
+    {
+      "name": "jsoup",
+      "version": "1.18.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:75ffdebd58e4091f",
+      "purl": "pkg:maven/org.jsoup/jsoup@1.18.3",
+      "group": "org.jsoup",
+      "license": "Unknown"
+    },
+    {
+      "name": "ph-css",
+      "version": "7.0.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c21cb0e450d26de6",
+      "purl": "pkg:maven/com.helger/ph-css@7.0.4",
+      "group": "com.helger",
+      "license": "Unknown"
+    },
+    {
+      "name": "ph-commons",
+      "version": "11.2.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:baa85cd35a39686f",
+      "purl": "pkg:maven/com.helger.commons/ph-commons@11.2.0",
+      "group": "com.helger.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "jsr305",
+      "version": "3.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:db8ded8ff8c6b72d",
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "group": "com.google.code.findbugs",
+      "license": "Unknown"
+    },
+    {
+      "name": "asm",
+      "version": "9.7.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:aa97b5c8bd136024",
+      "purl": "pkg:maven/org.ow2.asm/asm@9.7.1",
+      "group": "org.ow2.asm",
+      "license": "Unknown"
+    },
+    {
+      "name": "gentyref",
+      "version": "1.2.0.vaadin1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:012ac3f9670fc049",
+      "purl": "pkg:maven/com.vaadin.external/gentyref@1.2.0.vaadin1",
+      "group": "com.vaadin.external",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-compress",
+      "version": "1.27.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:56a4eeba1fcf4e70",
+      "purl": "pkg:maven/org.apache.commons/commons-compress@1.27.1",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-codec",
+      "version": "1.16.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d9a38ce1147146d2",
+      "purl": "pkg:maven/commons-codec/commons-codec@1.16.0",
+      "group": "commons-codec",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-lang3",
+      "version": "3.13.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b19777019a30456a",
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.13.0",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "atmosphere-runtime",
+      "version": "3.0.5.slf4jvaadin1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d1c1d275834033c9",
+      "purl": "pkg:maven/com.vaadin.external.atmosphere/atmosphere-runtime@3.0.5.slf4jvaadin1",
+      "group": "com.vaadin.external.atmosphere",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-client",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3dcb9a026a5c7b74",
+      "purl": "pkg:maven/com.vaadin/flow-client@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-webmvc",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f51fb53249724fb2",
+      "purl": "pkg:maven/org.springframework/spring-webmvc@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-aop",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:178eba1d8800822e",
+      "purl": "pkg:maven/org.springframework/spring-aop@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-beans",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d95682fe793e077c",
+      "purl": "pkg:maven/org.springframework/spring-beans@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-core",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6054249bbecba0fd",
+      "purl": "pkg:maven/org.springframework/spring-core@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-context",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6830fde6fac98ac7",
+      "purl": "pkg:maven/org.springframework/spring-context@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-expression",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:276fd54954c1f051",
+      "purl": "pkg:maven/org.springframework/spring-expression@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-observation",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a97befe81c5cc22e",
+      "purl": "pkg:maven/io.micrometer/micrometer-observation@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-jcl",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f41e50fb18eab5f4",
+      "purl": "pkg:maven/org.springframework/spring-jcl@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-web",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:09345b4d854cccd8",
+      "purl": "pkg:maven/org.springframework/spring-web@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-websocket",
+      "version": "6.1.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8a3ad97c26e4e57d",
+      "purl": "pkg:maven/org.springframework/spring-websocket@6.1.3",
+      "group": "org.springframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "hibernate-validator",
+      "version": "8.0.1.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f1d1930d6cc7a7a1",
+      "purl": "pkg:maven/org.hibernate.validator/hibernate-validator@8.0.1.Final",
+      "group": "org.hibernate.validator",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.validation-api",
+      "version": "3.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5818111a60f874e3",
+      "purl": "pkg:maven/jakarta.validation/jakarta.validation-api@3.0.2",
+      "group": "jakarta.validation",
+      "license": "Unknown"
+    },
+    {
+      "name": "jboss-logging",
+      "version": "3.5.3.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4fb1447c30fd2e72",
+      "purl": "pkg:maven/org.jboss.logging/jboss-logging@3.5.3.Final",
+      "group": "org.jboss.logging",
+      "license": "Unknown"
+    },
+    {
+      "name": "classmate",
+      "version": "1.6.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:efa67e4ea3af0f76",
+      "purl": "pkg:maven/com.fasterxml/classmate@1.6.0",
+      "group": "com.fasterxml",
+      "license": "Unknown"
+    },
+    {
+      "name": "reflections",
+      "version": "0.10.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:22a3afa270ff8945",
+      "purl": "pkg:maven/org.reflections/reflections@0.10.2",
+      "group": "org.reflections",
+      "license": "Unknown"
+    },
+    {
+      "name": "javassist",
+      "version": "3.30.2-GA",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f26f45f47300d192",
+      "purl": "pkg:maven/org.javassist/javassist@3.30.2-GA",
+      "group": "org.javassist",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-core",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0874e8199fb9c800",
+      "purl": "pkg:maven/com.vaadin/vaadin-core@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-core-internal",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3a77b78d3b9b4e5c",
+      "purl": "pkg:maven/com.vaadin/vaadin-core-internal@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-lit-template",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:eba7ef89f7c56f00",
+      "purl": "pkg:maven/com.vaadin/flow-lit-template@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-react",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:edec54c8d3aaf7d9",
+      "purl": "pkg:maven/com.vaadin/flow-react@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-html-components",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ce769d7b8d3ed1a6",
+      "purl": "pkg:maven/com.vaadin/flow-html-components@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-data",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c71630b186570328",
+      "purl": "pkg:maven/com.vaadin/flow-data@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "flow-dnd",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1577bc28bb28d77a",
+      "purl": "pkg:maven/com.vaadin/flow-dnd@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-lumo-theme",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:882ea2b119b67adc",
+      "purl": "pkg:maven/com.vaadin/vaadin-lumo-theme@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-icons-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7abaa47b1b4b91de",
+      "purl": "pkg:maven/com.vaadin/vaadin-icons-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-flow-components-base",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7c4cf8539bb3b1c6",
+      "purl": "pkg:maven/com.vaadin/vaadin-flow-components-base@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-material-theme",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4a16a7d2eeeb64cf",
+      "purl": "pkg:maven/com.vaadin/vaadin-material-theme@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-core-components",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b748efee4994585f",
+      "purl": "pkg:maven/com.vaadin/vaadin-core-components@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-accordion-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ec1cd313de7219e3",
+      "purl": "pkg:maven/com.vaadin/vaadin-accordion-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-details-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:588453a2d76f337e",
+      "purl": "pkg:maven/com.vaadin/vaadin-details-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-avatar-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7acdccc18ce15f3d",
+      "purl": "pkg:maven/com.vaadin/vaadin-avatar-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-button-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4608ffafe7bc7d53",
+      "purl": "pkg:maven/com.vaadin/vaadin-button-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-checkbox-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e6b5e58b411877a5",
+      "purl": "pkg:maven/com.vaadin/vaadin-checkbox-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-renderer-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f96958effa89b344",
+      "purl": "pkg:maven/com.vaadin/vaadin-renderer-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-combo-box-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1867bb798b1818f5",
+      "purl": "pkg:maven/com.vaadin/vaadin-combo-box-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-data-commons",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6e1c4f54ce70adb7",
+      "purl": "pkg:maven/org.springframework.data/spring-data-commons@3.2.2",
+      "group": "org.springframework.data",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-confirm-dialog-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6fb47f66a0379675",
+      "purl": "pkg:maven/com.vaadin/vaadin-confirm-dialog-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-custom-field-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bb2530a4a29e0ba7",
+      "purl": "pkg:maven/com.vaadin/vaadin-custom-field-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-date-picker-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:466da288fc616c8a",
+      "purl": "pkg:maven/com.vaadin/vaadin-date-picker-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-date-time-picker-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ed4669cdc4060dd4",
+      "purl": "pkg:maven/com.vaadin/vaadin-date-time-picker-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-time-picker-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:10b80462ff461e8a",
+      "purl": "pkg:maven/com.vaadin/vaadin-time-picker-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-select-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:063adb1db675c8c9",
+      "purl": "pkg:maven/com.vaadin/vaadin-select-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-side-nav-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b6bf8f5199e49575",
+      "purl": "pkg:maven/com.vaadin/vaadin-side-nav-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-dialog-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:11badc508c6514b1",
+      "purl": "pkg:maven/com.vaadin/vaadin-dialog-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-form-layout-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:47563467868bcec4",
+      "purl": "pkg:maven/com.vaadin/vaadin-form-layout-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-field-highlighter-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c76440ffeea5466",
+      "purl": "pkg:maven/com.vaadin/vaadin-field-highlighter-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-grid-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8135816f7f7ad191",
+      "purl": "pkg:maven/com.vaadin/vaadin-grid-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-context-menu-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a6b520d2d9eb6259",
+      "purl": "pkg:maven/com.vaadin/vaadin-context-menu-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-virtual-list-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6b32802e25f23f38",
+      "purl": "pkg:maven/com.vaadin/vaadin-virtual-list-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-list-box-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:64f93cc3895a5c6b",
+      "purl": "pkg:maven/com.vaadin/vaadin-list-box-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-login-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f59b85b444b42b7b",
+      "purl": "pkg:maven/com.vaadin/vaadin-login-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-messages-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4f8a75030a2d61b6",
+      "purl": "pkg:maven/com.vaadin/vaadin-messages-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-ordered-layout-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:87c4948010238cab",
+      "purl": "pkg:maven/com.vaadin/vaadin-ordered-layout-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-progress-bar-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8c363da7513590a9",
+      "purl": "pkg:maven/com.vaadin/vaadin-progress-bar-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-popover-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fef111f784bc896d",
+      "purl": "pkg:maven/com.vaadin/vaadin-popover-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-radio-button-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:814a1dfd1d614f63",
+      "purl": "pkg:maven/com.vaadin/vaadin-radio-button-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-split-layout-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f6a566823a4a0683",
+      "purl": "pkg:maven/com.vaadin/vaadin-split-layout-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-tabs-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ae601b5e1e214ea7",
+      "purl": "pkg:maven/com.vaadin/vaadin-tabs-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-text-field-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:84413bcfec11a35e",
+      "purl": "pkg:maven/com.vaadin/vaadin-text-field-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-upload-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e72a6703152cabb7",
+      "purl": "pkg:maven/com.vaadin/vaadin-upload-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-notification-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3f7aeb98448fa252",
+      "purl": "pkg:maven/com.vaadin/vaadin-notification-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-app-layout-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d5bfcd29e50232ed",
+      "purl": "pkg:maven/com.vaadin/vaadin-app-layout-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-menu-bar-flow",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7af652f3f5b30cd3",
+      "purl": "pkg:maven/com.vaadin/vaadin-menu-bar-flow@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "collaboration-engine",
+      "version": "6.4.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1f1d245090a77093",
+      "purl": "pkg:maven/com.vaadin/collaboration-engine@6.4.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-dev",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:35adca929e5c1b9f",
+      "purl": "pkg:maven/com.vaadin/vaadin-dev@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-dev-server",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:788869b2a2315cf9",
+      "purl": "pkg:maven/com.vaadin/vaadin-dev-server@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "license-checker",
+      "version": "1.13.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4fdd99545c1002de",
+      "purl": "pkg:maven/com.vaadin/license-checker@1.13.4",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "oshi-core",
+      "version": "6.6.5",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:dd5ebb53bc4c9f56",
+      "purl": "pkg:maven/com.github.oshi/oshi-core@6.6.5",
+      "group": "com.github.oshi",
+      "license": "Unknown"
+    },
+    {
+      "name": "jna",
+      "version": "5.15.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4b006ede543b5ead",
+      "purl": "pkg:maven/net.java.dev.jna/jna@5.15.0",
+      "group": "net.java.dev.jna",
+      "license": "Unknown"
+    },
+    {
+      "name": "jna-platform",
+      "version": "5.15.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:55f2122bdfac0903",
+      "purl": "pkg:maven/net.java.dev.jna/jna-platform@5.15.0",
+      "group": "net.java.dev.jna",
+      "license": "Unknown"
+    },
+    {
+      "name": "nimbus-jose-jwt",
+      "version": "9.37.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:880a83504bb4283a",
+      "purl": "pkg:maven/com.nimbusds/nimbus-jose-jwt@9.37.3",
+      "group": "com.nimbusds",
+      "license": "Unknown"
+    },
+    {
+      "name": "jcip-annotations",
+      "version": "1.0.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:edda2abfb827c736",
+      "purl": "pkg:maven/org.lucee/jcip-annotations@1.0.0",
+      "group": "org.lucee",
+      "license": "Unknown"
+    },
+    {
+      "name": "open",
+      "version": "8.5.0.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:fd1a0cc391ff58b7",
+      "purl": "pkg:maven/com.vaadin/open@8.5.0.4",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "javaparser-core",
+      "version": "3.26.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:790548d73d3f996a",
+      "purl": "pkg:maven/com.github.javaparser/javaparser-core@3.26.3",
+      "group": "com.github.javaparser",
+      "license": "Unknown"
+    },
+    {
+      "name": "directory-watcher",
+      "version": "0.18.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e0fa0fbf7bbedb2a",
+      "purl": "pkg:maven/io.methvin/directory-watcher@0.18.0",
+      "group": "io.methvin",
+      "license": "Unknown"
+    },
+    {
+      "name": "vaadin-dev-bundle",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:42bc646690eedafc",
+      "purl": "pkg:maven/com.vaadin/vaadin-dev-bundle@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-dev",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0a2758aa0f007328",
+      "purl": "pkg:maven/com.vaadin/hilla-dev@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "copilot",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:610daa67e811200d",
+      "purl": "pkg:maven/com.vaadin/copilot@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty",
+      "version": "1.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:60d25b96c25f056e",
+      "purl": "pkg:maven/io.projectreactor.netty/reactor-netty@1.1.15",
+      "group": "io.projectreactor.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty-core",
+      "version": "1.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:980cb298ff6ee66b",
+      "purl": "pkg:maven/io.projectreactor.netty/reactor-netty-core@1.1.15",
+      "group": "io.projectreactor.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-handler-proxy",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c81557e02c09a50",
+      "purl": "pkg:maven/io.netty/netty-handler-proxy@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d06ed1518317268b",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns-native-macos",
+      "version": "osx-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:86c3fe64d0c70b8b",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-native-macos@osx-x86_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-epoll",
+      "version": "linux-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7934b0103eee144e",
+      "purl": "pkg:maven/io.netty/netty-transport-native-epoll@linux-x86_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-core",
+      "version": "3.6.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:00bf5a37b6a85592",
+      "purl": "pkg:maven/io.projectreactor/reactor-core@3.6.2",
+      "group": "io.projectreactor",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty-http",
+      "version": "1.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0fced9d4d27e374d",
+      "purl": "pkg:maven/io.projectreactor.netty/reactor-netty-http@1.1.15",
+      "group": "io.projectreactor.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-http",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:16082a9be23b1df1",
+      "purl": "pkg:maven/io.netty/netty-codec-http@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-http2",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:67224d491e884b1f",
+      "purl": "pkg:maven/io.netty/netty-codec-http2@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactor-netty-incubator-quic",
+      "version": "0.1.15",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e4dd8fd8e52c287c",
+      "purl": "pkg:maven/io.projectreactor.netty.incubator/reactor-netty-incubator-quic@0.1.15",
+      "group": "io.projectreactor.netty.incubator",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-incubator-codec-native-quic",
+      "version": "linux-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:669e125fca8974d6",
+      "purl": "pkg:maven/io.netty.incubator/netty-incubator-codec-native-quic@linux-x86_64",
+      "group": "io.netty.incubator",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-incubator-codec-classes-quic",
+      "version": "0.0.55.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:839123cae2738474",
+      "purl": "pkg:maven/io.netty.incubator/netty-incubator-codec-classes-quic@0.0.55.Final",
+      "group": "io.netty.incubator",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-all",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f3caba84802d5833",
+      "purl": "pkg:maven/io.netty/netty-all@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-buffer",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c584c64d8a85ca7",
+      "purl": "pkg:maven/io.netty/netty-buffer@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:66e4956ba52a892e",
+      "purl": "pkg:maven/io.netty/netty-codec@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-dns",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b25d2ac6d75dca27",
+      "purl": "pkg:maven/io.netty/netty-codec-dns@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-haproxy",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b98ae23efe9df3a0",
+      "purl": "pkg:maven/io.netty/netty-codec-haproxy@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-memcache",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2a084542a2bc12a9",
+      "purl": "pkg:maven/io.netty/netty-codec-memcache@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-mqtt",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:090796d9ea8cd84b",
+      "purl": "pkg:maven/io.netty/netty-codec-mqtt@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-redis",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bca57c6b971c9f68",
+      "purl": "pkg:maven/io.netty/netty-codec-redis@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-smtp",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e1e30438c0b35496",
+      "purl": "pkg:maven/io.netty/netty-codec-smtp@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-socks",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:a21b89ef1093a08d",
+      "purl": "pkg:maven/io.netty/netty-codec-socks@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-stomp",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:8e08cd2c6e1bdd9b",
+      "purl": "pkg:maven/io.netty/netty-codec-stomp@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-codec-xml",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:7a17edec450d5795",
+      "purl": "pkg:maven/io.netty/netty-codec-xml@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-common",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:66d4546c55d39fee",
+      "purl": "pkg:maven/io.netty/netty-common@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-handler",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1e50c87d18934129",
+      "purl": "pkg:maven/io.netty/netty-handler@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-unix-common",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:96c197a08db2ab54",
+      "purl": "pkg:maven/io.netty/netty-transport-native-unix-common@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-handler-ssl-ocsp",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:2f6b20ced46098bb",
+      "purl": "pkg:maven/io.netty/netty-handler-ssl-ocsp@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:24445b59419408f2",
+      "purl": "pkg:maven/io.netty/netty-resolver@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:472cde11a6a03c05",
+      "purl": "pkg:maven/io.netty/netty-transport@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-rxtx",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:40ecd9d87a51ffa4",
+      "purl": "pkg:maven/io.netty/netty-transport-rxtx@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-sctp",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:628c68ea809c2de8",
+      "purl": "pkg:maven/io.netty/netty-transport-sctp@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-udt",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:0209ce748ccda11c",
+      "purl": "pkg:maven/io.netty/netty-transport-udt@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-classes-epoll",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:42986f4b768a0aa2",
+      "purl": "pkg:maven/io.netty/netty-transport-classes-epoll@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-classes-kqueue",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:846692bc9d6916ed",
+      "purl": "pkg:maven/io.netty/netty-transport-classes-kqueue@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns-classes-macos",
+      "version": "4.1.105.Final",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:afb45ad558cc5d9e",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-classes-macos@4.1.105.Final",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-epoll",
+      "version": "linux-aarch_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:553039c8433c8d7d",
+      "purl": "pkg:maven/io.netty/netty-transport-native-epoll@linux-aarch_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-epoll",
+      "version": "linux-riscv64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4dad86cfb9a62e1b",
+      "purl": "pkg:maven/io.netty/netty-transport-native-epoll@linux-riscv64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-kqueue",
+      "version": "osx-x86_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:ea241cad9a435253",
+      "purl": "pkg:maven/io.netty/netty-transport-native-kqueue@osx-x86_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-transport-native-kqueue",
+      "version": "osx-aarch_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e2843d71ea3d89e6",
+      "purl": "pkg:maven/io.netty/netty-transport-native-kqueue@osx-aarch_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "netty-resolver-dns-native-macos",
+      "version": "osx-aarch_64",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b43cde66be86197d",
+      "purl": "pkg:maven/io.netty/netty-resolver-dns-native-macos@osx-aarch_64",
+      "group": "io.netty",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.annotation-api",
+      "version": "2.1.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:45df7a38266277a5",
+      "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+      "group": "jakarta.annotation",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-configuration2",
+      "version": "2.11.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:cc5afe2c770177d0",
+      "purl": "pkg:maven/org.apache.commons/commons-configuration2@2.11.0",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "commons-text",
+      "version": "1.12.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:81f0be690266b914",
+      "purl": "pkg:maven/org.apache.commons/commons-text@1.12.0",
+      "group": "org.apache.commons",
+      "license": "Unknown"
+    },
+    {
+      "name": "javaparser-symbol-solver-core",
+      "version": "3.26.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e5c4236707040378",
+      "purl": "pkg:maven/com.github.javaparser/javaparser-symbol-solver-core@3.26.3",
+      "group": "com.github.javaparser",
+      "license": "Unknown"
+    },
+    {
+      "name": "ui-tests",
+      "version": "1.1.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:5fa451c7f488dddb",
+      "purl": "pkg:maven/com.vaadin/ui-tests@1.1.1",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3d2196b3f1da75b1",
+      "purl": "pkg:maven/com.vaadin/hilla@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-endpoint",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d5dfdc01cb5a29fa",
+      "purl": "pkg:maven/com.vaadin/hilla-endpoint@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-engine-core",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:72806c108241d655",
+      "purl": "pkg:maven/com.vaadin/hilla-engine-core@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-core",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3d710e4c4a2649e9",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-core@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "classgraph",
+      "version": "4.8.179",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:43dcd0df81cd792e",
+      "purl": "pkg:maven/io.github.classgraph/classgraph@4.8.179",
+      "group": "io.github.classgraph",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-dataformat-yaml",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3ca6b0a44fafc269",
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.15.3",
+      "group": "com.fasterxml.jackson.dataformat",
+      "license": "Unknown"
+    },
+    {
+      "name": "snakeyaml",
+      "version": "2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:df0bf7cc4ec5df4d",
+      "purl": "pkg:maven/org.yaml/snakeyaml@2.2",
+      "group": "org.yaml",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-utils",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:62b60f9e99b47780",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-utils@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-plugin-backbone",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e65bbb62dc6e99cc",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-plugin-backbone@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-module-parameter-names",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:34a37ed22a532d1e",
+      "purl": "pkg:maven/com.fasterxml.jackson.module/jackson-module-parameter-names@2.15.3",
+      "group": "com.fasterxml.jackson.module",
+      "license": "Unknown"
+    },
+    {
+      "name": "jackson-datatype-jdk8",
+      "version": "2.15.3",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:327d8d450960361d",
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.15.3",
+      "group": "com.fasterxml.jackson.datatype",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-plugin-nonnull",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:979b560336b7db0e",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-plugin-nonnull@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-plugin-subtypes",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:69feae41923d8a27",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-plugin-subtypes@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-plugin-model",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f3afe5029d6a8234",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-plugin-model@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-parser-jvm-plugin-transfertypes",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:3c068eeda63696b2",
+      "purl": "pkg:maven/com.vaadin/hilla-parser-jvm-plugin-transfertypes@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-runtime-plugin-transfertypes",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:4849d36be27d4426",
+      "purl": "pkg:maven/com.vaadin/hilla-runtime-plugin-transfertypes@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "reactive-streams",
+      "version": "1.0.4",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f9783dd954c4638e",
+      "purl": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4",
+      "group": "org.reactivestreams",
+      "license": "Unknown"
+    },
+    {
+      "name": "android-json",
+      "version": "0.0.20131108.vaadin1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:46c170d045a9b215",
+      "purl": "pkg:maven/com.vaadin.external.google/android-json@0.0.20131108.vaadin1",
+      "group": "com.vaadin.external.google",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-security-core",
+      "version": "6.2.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c4c9d78937d77dce",
+      "purl": "pkg:maven/org.springframework.security/spring-security-core@6.2.1",
+      "group": "org.springframework.security",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-security-crypto",
+      "version": "6.2.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:03d3f7b3df4ea59e",
+      "purl": "pkg:maven/org.springframework.security/spring-security-crypto@6.2.1",
+      "group": "org.springframework.security",
+      "license": "Unknown"
+    },
+    {
+      "name": "guava",
+      "version": "33.3.1-jre",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e10cd7cfc1619b6b",
+      "purl": "pkg:maven/com.google.guava/guava@33.3.1-jre",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "failureaccess",
+      "version": "1.0.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:54edafaef8b85726",
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:f7567401ed9005ae",
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "group": "com.google.guava",
+      "license": "Unknown"
+    },
+    {
+      "name": "checker-qual",
+      "version": "3.43.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:af2b67950bbd57e1",
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+      "group": "org.checkerframework",
+      "license": "Unknown"
+    },
+    {
+      "name": "error_prone_annotations",
+      "version": "2.28.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:550f95da39844248",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.28.0",
+      "group": "com.google.errorprone",
+      "license": "Unknown"
+    },
+    {
+      "name": "j2objc-annotations",
+      "version": "3.0.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:50758376c540dff3",
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+      "group": "com.google.j2objc",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-core",
+      "version": "2.2.28",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b37cfa8e0faabc48",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-core@2.2.28",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.xml.bind-api",
+      "version": "4.0.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d00afd4d820495b7",
+      "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.1",
+      "group": "jakarta.xml.bind",
+      "license": "Unknown"
+    },
+    {
+      "name": "jakarta.activation-api",
+      "version": "2.1.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6561ebb139e1e869",
+      "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.2",
+      "group": "jakarta.activation",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-annotations",
+      "version": "2.2.20",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:22b98b235432957c",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations@2.2.20",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "swagger-models",
+      "version": "2.2.28",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d7a36d6cb40a44e2",
+      "purl": "pkg:maven/io.swagger.core.v3/swagger-models@2.2.28",
+      "group": "io.swagger.core.v3",
+      "license": "Unknown"
+    },
+    {
+      "name": "hilla-engine-runtime",
+      "version": "24.7.0",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9ad3b490650ae6ab",
+      "purl": "pkg:maven/com.vaadin/hilla-engine-runtime@24.7.0",
+      "group": "com.vaadin",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-web",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:114f482e30207fc7",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:6d9cc90f469dae6b",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c4afb52656772d61",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-autoconfigure",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e6683ff160f3203a",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-logging",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:bda541527d5f5b0c",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "logback-classic",
+      "version": "1.4.14",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:787f4eaf156fdc74",
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.4.14",
+      "group": "ch.qos.logback",
+      "license": "Unknown"
+    },
+    {
+      "name": "logback-core",
+      "version": "1.4.14",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:62be3755b9896082",
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.4.14",
+      "group": "ch.qos.logback",
+      "license": "Unknown"
+    },
+    {
+      "name": "log4j-to-slf4j",
+      "version": "2.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d57b0dc7e5d44d10",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.21.1",
+      "group": "org.apache.logging.log4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "log4j-api",
+      "version": "2.21.1",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:b3374768c56d154d",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.21.1",
+      "group": "org.apache.logging.log4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "jul-to-slf4j",
+      "version": "2.0.11",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:c3b55257379282ef",
+      "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.11",
+      "group": "org.slf4j",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-json",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:e014fc9107b0c2c2",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "spring-boot-starter-tomcat",
+      "version": "3.2.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:1a41d022cf6bb49f",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@3.2.2",
+      "group": "org.springframework.boot",
+      "license": "Unknown"
+    },
+    {
+      "name": "tomcat-embed-core",
+      "version": "10.1.18",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:afaec66871157c70",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@10.1.18",
+      "group": "org.apache.tomcat.embed",
+      "license": "Unknown"
+    },
+    {
+      "name": "tomcat-embed-el",
+      "version": "10.1.18",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:d9b4b7c2ef94055f",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@10.1.18",
+      "group": "org.apache.tomcat.embed",
+      "license": "Unknown"
+    },
+    {
+      "name": "tomcat-embed-websocket",
+      "version": "10.1.18",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:41633432f98515a3",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@10.1.18",
+      "group": "org.apache.tomcat.embed",
+      "license": "Unknown"
+    },
+    {
+      "name": "micrometer-commons",
+      "version": "1.12.2",
+      "type": "library",
+      "scope": "transitive",
+      "bom-ref": "pkg:9f2d9794687c4346",
+      "purl": "pkg:maven/io.micrometer/micrometer-commons@1.12.2",
+      "group": "io.micrometer",
+      "license": "Unknown"
+    }
+  ],
+  "stats": {
+    "total_components": 199,
+    "direct_deps": 0,
+    "transitive_deps": 199,
+    "vulnerabilities": 36,
+    "vulnerability_breakdown": {
+      "critical": 3,
+      "high": 12,
+      "medium": 20,
+      "low": 1,
+      "unknown": 0
+    }
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2wrp-6fg6-hmc5",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Framework URL Parsing with Host Validation",
+      "description": "Applications that use UriComponentsBuilder\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html \u00a0attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22259 https://spring.io/security/cve-2024-22259 \u00a0and  CVE-2024-22243 https://spring.io/security/cve-2024-22243 , but with different input.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.34"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.19"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.6"
+        }
+      ],
+      "published": "2024-04-16T06:30:28Z",
+      "modified": "2025-02-13T19:11:22.164031Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22262",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java",
+        "https://security.netapp.com/advisory/ntap-20240524-0003",
+        "https://spring.io/security/cve-2024-22262"
+      ],
+      "aliases": [
+        "CVE-2024-22262"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-ccgv-vj62-xf9h",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Web vulnerable to Open Redirect or Server Side Request Forgery",
+      "description": "Applications that use UriComponentsBuilder\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect attack or to a SSRF attack if the URL is used after passing validation checks.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.4"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.17"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "fixed": "5.3.32"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.2.25.RELEASE"
+        }
+      ],
+      "published": "2024-02-23T06:30:31Z",
+      "modified": "2025-02-13T19:37:25.844757Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22243",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java",
+        "https://security.netapp.com/advisory/ntap-20240524-0001",
+        "https://spring.io/security/cve-2024-22243",
+        "http://seclists.org/fulldisclosure/2024/Sep/24"
+      ],
+      "aliases": [
+        "CVE-2024-22243"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-hgjh-9rj2-g67j",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "critical",
+      "cvss_score": 9.5,
+      "title": "Spring Framework URL Parsing with Host Validation Vulnerability",
+      "description": "Applications that use UriComponentsBuilder in Spring Framework\u00a0to parse an externally provided URL (e.g. through a query parameter) AND\u00a0perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html \u00a0attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22243 https://spring.io/security/cve-2024-22243, but with different input.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.5"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.18"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.33"
+        }
+      ],
+      "published": "2024-03-16T06:30:27Z",
+      "modified": "2025-02-13T19:11:00.946278Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22259",
+        "https://github.com/spring-projects/spring-framework/commit/297cbae2990e1413537c55845a7e0ea0ffd9f9bb",
+        "https://github.com/spring-projects/spring-framework/commit/381f790329a48b74c2a49fc1384dd68ca9153501",
+        "https://github.com/spring-projects/spring-framework/commit/f2fd2f12269c6a781c5b2c20b3c24141055a3d68",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20240524-0002",
+        "https://spring.io/security/cve-2024-22259"
+      ],
+      "aliases": [
+        "CVE-2024-22259"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-cx7f-g6mp-7hqm",
+      "component": "spring-webmvc",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Path traversal vulnerability in functional web frameworks",
+      "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.\n\nSpecifically, an application is vulnerable when both of the following are true:\n\n  *  the web application uses RouterFunctions\u00a0to serve static resources\n  *  resource handling is explicitly configured with a FileSystemResource\u00a0location\n\n\nHowever, malicious requests are blocked and rejected when any of the following is true:\n\n  *  the  Spring Security HTTP Firewall https://docs.spring.io/spring-security/reference/servlet/exploits/firewall.html \u00a0is in use\n  *  the application runs on Tomcat or Jetty",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.13"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.13"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "5.3.0"
+        },
+        {
+          "last_affected": "5.3.39"
+        }
+      ],
+      "published": "2024-09-13T06:30:42Z",
+      "modified": "2024-12-27T18:34:05.583740Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38816",
+        "https://github.com/spring-projects/spring-framework/commit/d86bf8b2056429edf5494456cffcb2b243331c49",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20241227-0001",
+        "https://spring.io/security/cve-2024-38816"
+      ],
+      "aliases": [
+        "CVE-2024-38816"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-g5vr-rgqm-vf78",
+      "component": "spring-webmvc",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Spring Framework Path Traversal vulnerability",
+      "description": "Applications serving static resources through the functional web frameworks WebMvc.fn or WebFlux.fn are vulnerable to path traversal attacks. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible to the process in which the Spring application is running.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        }
+      ],
+      "published": "2024-12-19T18:31:38Z",
+      "modified": "2025-05-28T15:03:53.323993Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38819",
+        "https://github.com/spring-projects/spring-framework/issues/33689",
+        "https://github.com/spring-projects/spring-framework/commit/3bfbe30a7814c9ea1556d40df9bd87ddb3ba372d",
+        "https://github.com/spring-projects/spring-framework/commit/fb7890d73975a3d9e0763e0926df2bd0a608e87e",
+        "https://github.com/spring-projects/spring-framework",
+        "https://security.netapp.com/advisory/ntap-20250110-0010",
+        "https://spring.io/security/cve-2024-38819"
+      ],
+      "aliases": [
+        "CVE-2024-38819"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-6r3c-xf4w-jxjm",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "Spring Framework vulnerable to a reflected file download (RFD)",
+      "description": "### Description\n\nIn Spring Framework, versions 6.0.x as of 6.0.5, versions 6.1.x and 6.2.x, an application is vulnerable to a reflected file download (RFD) attack when it sets a \u201cContent-Disposition\u201d header with a non-ASCII charset, where the filename attribute is derived from user-supplied input.\n\nSpecifically, an application is vulnerable when all the following are true:\n\n  -  The header is prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via `ContentDisposition.Builder#filename(String, Charset)`.\n  -  The value for the filename is derived from user-supplied input.\n  -  The application does not sanitize the user-supplied input.\n  -  The downloaded content of the response is injected with malicious commands by the attacker (see RFD paper reference for details).\n\n\nAn application is not vulnerable if any of the following is true:\n\n  -  The application does not set a \u201cContent-Disposition\u201d response header.\n  -  The header is not prepared with `org.springframework.http.ContentDisposition`.\n  -  The filename is set via one of:  \n     - `ContentDisposition.Builder#filename(String)`, or\n     - `ContentDisposition.Builder#filename(String, ASCII)`\n  -  The filename is not derived from user-supplied input.\n  -  The filename is derived from user-supplied input but sanitized by the application.\n  -  The attacker cannot inject malicious content in the downloaded content of the response.\n\n\n### Affected Spring Products and VersionsSpring Framework\n\n  -  6.2.0 - 6.2.7\n  -  6.1.0 - 6.1.20\n  -  6.0.5 - 6.0.28\n  -  Older, unsupported versions are not affected\n\n\n### Mitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix version | Availability |\n| - | - | - |\n| 6.2.x | 6.2.8 | OSS |\n| 6.1.x | 6.1.21 | OSS |\n| 6.0.x | 6.0.29 | [Commercial](https://enterprise.spring.io/) |\n\nNo further mitigation steps are necessary.",
+      "affected_versions": [
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.8"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.21"
+        },
+        {
+          "introduced": "6.0.5"
+        },
+        {
+          "last_affected": "6.0.23"
+        }
+      ],
+      "published": "2025-06-13T00:33:18Z",
+      "modified": "2025-06-13T22:44:18.772828Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-41234",
+        "https://github.com/spring-projects/spring-framework/issues/35034",
+        "https://github.com/spring-projects/spring-framework/commit/f0e7b42704e6b33958f242d91bd690d6ef7ada9c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2025-41234"
+      ],
+      "aliases": [
+        "CVE-2025-41234"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4g8c-wm8x-jfhw",
+      "component": "netty-handler",
+      "component_version": "4.1.105.Final",
+      "severity": "high",
+      "cvss_score": 7.0,
+      "title": "SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine",
+      "description": "### Impact\nWhen a special crafted packet is received via SslHandler it doesn't correctly handle validation of such a packet in all cases which can lead to a native crash.\n\n### Workarounds\nAs workaround its possible to either disable the usage of the native SSLEngine or changing the code from:\n\n```\nSslContext context = ...;\nSslHandler handler = context.newHandler(....);\n```\n\nto:\n\n```\nSslContext context = ...;\nSSLEngine engine = context.newEngine(....);\nSslHandler handler = new SslHandler(engine, ....);\n```",
+      "affected_versions": [
+        {
+          "introduced": "4.1.91.Final"
+        },
+        {
+          "fixed": "4.1.118.Final"
+        }
+      ],
+      "published": "2025-02-10T17:38:10Z",
+      "modified": "2025-04-16T19:36:10.233999Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-24970",
+        "https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4",
+        "https://github.com/netty/netty",
+        "https://security.netapp.com/advisory/ntap-20250221-0005",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-detection",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24970-netty-vulnerability-mitigation"
+      ],
+      "aliases": [
+        "CVE-2025-24970"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-f3jh-qvm4-mg39",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.0,
+      "title": "Erroneous authentication pass in Spring Security",
+      "description": "In Spring Security, versions 5.7.x prior to 5.7.12, 5.8.x prior to 5.8.11, versions 6.0.x prior to 6.0.9, versions 6.1.x prior to 6.1.8, versions 6.2.x prior to 6.2.3, an application is possible vulnerable to broken access control when it directly uses the AuthenticatedVoter#vote passing a null Authentication parameter.\n\nSpecifically, an application is vulnerable if:\n\nThe application uses AuthenticatedVoter directly and a null authentication parameter is passed to it resulting in an erroneous true return value.\n\nAn application is not vulnerable if any of the following is true:\n\n* The application does not use AuthenticatedVoter#vote directly.\n* The application does not pass null to AuthenticatedVoter#vote.\n\nNote that AuthenticatedVoter is deprecated since 5.8, use implementations of AuthorizationManager as a replacement.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.12"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.11"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.1.8"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.3"
+        }
+      ],
+      "published": "2024-03-18T15:30:51Z",
+      "modified": "2025-02-13T19:11:21.315522Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22257",
+        "https://github.com/spring-projects/spring-security/commit/5a7f12f1a9fdb4edaab6f61495f1d781a7273b61",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20240419-0005",
+        "https://spring.io/security/cve-2024-22257"
+      ],
+      "aliases": [
+        "CVE-2024-22257"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-w3w6-26f2-p474",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.5,
+      "title": "Broken Access Control in Spring Security With Direct Use of isFullyAuthenticated",
+      "description": "In Spring Security, versions 6.1.x prior to 6.1.7 and versions 6.2.x prior to 6.2.2, an application is vulnerable to broken access control when it directly uses the AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0method.\n\nSpecifically, an application is vulnerable if:\n\n  *  The application uses AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0directly and a null\u00a0authentication parameter is passed to it resulting in an erroneous true\u00a0return value.\n\n\nAn application is not vulnerable if any of the following is true:\n\n  *  The application does not use AuthenticationTrustResolver.isFullyAuthenticated(Authentication)\u00a0directly.\n  *  The application does not pass null\u00a0to AuthenticationTrustResolver.isFullyAuthenticated\n  *  The application only uses isFullyAuthenticated\u00a0via  Method Security https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html \u00a0or  HTTP Request Security https://docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.7"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.2"
+        }
+      ],
+      "published": "2024-02-20T09:30:30Z",
+      "modified": "2025-02-13T19:36:07.721740Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-22234",
+        "https://github.com/spring-projects/spring-security/commit/750cb30ce44d279c2f54c845d375e6a58bded569",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20240315-0003",
+        "https://spring.io/security/cve-2024-22234"
+      ],
+      "aliases": [
+        "CVE-2024-22234"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-mg83-c7gq-rv5c",
+      "component": "spring-security-crypto",
+      "component_version": "6.2.1",
+      "severity": "high",
+      "cvss_score": 8.5,
+      "title": "Spring Security Does Not Enforce Password Length",
+      "description": "BCryptPasswordEncoder.matches(CharSequence,String)\u00a0will incorrectly return true\u00a0for passwords larger than 72 characters as long as the first 72 characters are the same.",
+      "affected_versions": [
+        {
+          "introduced": "6.3.0"
+        },
+        {
+          "fixed": "6.3.8"
+        },
+        {
+          "introduced": "6.4.0"
+        },
+        {
+          "fixed": "6.4.4"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.10"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.16"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.18"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.16"
+        }
+      ],
+      "published": "2025-03-20T06:31:09Z",
+      "modified": "2025-04-26T01:25:16.786633Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22228",
+        "https://github.com/spring-projects/spring-security/commit/46f0dc6dfc8402cd556c598fdf2d31f9d46cdbf3",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20250425-0009",
+        "https://spring.io/security/cve-2025-22228"
+      ],
+      "aliases": [
+        "CVE-2025-22228"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-rc42-6c7j-7h5r",
+      "component": "spring-boot",
+      "component_version": "3.2.2",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Spring Boot EndpointRequest.to() creates wrong matcher if actuator endpoint is not exposed",
+      "description": "EndpointRequest.to()\u00a0creates a matcher for null/**\u00a0if the actuator endpoint, for which the EndpointRequest\u00a0has been created, is disabled or not exposed.\n\nYour application may be affected by this if all the following conditions are met:\n\n  *  You use Spring Security\n  *  EndpointRequest.to()\u00a0has been used in a Spring Security chain configuration\n  *  The endpoint which EndpointRequest\u00a0references is disabled or not exposed via web\n  *  Your application handles requests to /null\u00a0and this path needs protection\n\n\nYou are not affected if any of the following is true:\n\n  *  You don't use Spring Security\n  *  You don't use EndpointRequest.to()\n  *  The endpoint which EndpointRequest.to()\u00a0refers to is enabled and is exposed\n  *  Your application does not handle requests to /null\u00a0or this path does not need protection",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "2.7.24.2"
+        },
+        {
+          "introduced": "3.1.0"
+        },
+        {
+          "last_affected": "3.1.15.2"
+        },
+        {
+          "introduced": "3.2.0"
+        },
+        {
+          "last_affected": "3.2.13.2"
+        },
+        {
+          "introduced": "3.3.0"
+        },
+        {
+          "fixed": "3.3.11"
+        },
+        {
+          "introduced": "3.4.0"
+        },
+        {
+          "fixed": "3.4.5"
+        }
+      ],
+      "published": "2025-04-28T09:31:53Z",
+      "modified": "2025-05-17T01:05:47.005564Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22235",
+        "https://github.com/spring-projects/spring-boot",
+        "https://security.netapp.com/advisory/ntap-20250516-0010",
+        "https://spring.io/security/cve-2025-22235"
+      ],
+      "aliases": [
+        "CVE-2025-22235"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-27hp-xhwr-wr2m",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
+      "description": "Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.0.97.\n\nThe mitigation for CVE-2024-50379 was incomplete.\n\nUsers running Tomcat on a case insensitive file system with the default servlet write enabled (readonly initialisation \nparameter set to the non-default value of false) may need additional configuration to fully mitigate CVE-2024-50379 depending on which version of Java they are using with Tomcat:\n- running on Java 8 or Java 11: the system property\u00a0sun.io.useCanonCaches must be explicitly set to false (it defaults to true)\n- running on Java 17: the\u00a0system property sun.io.useCanonCaches, if set, must be set to false\u00a0(it defaults to false)\n- running on Java 21 onwards: no further configuration is required\u00a0(the system property and the problematic cache have been removed)\n\nTomcat 11.0.3, 10.1.35 and 9.0.99 onwards will include checks that\u00a0sun.io.useCanonCaches is set appropriately before allowing the default servlet to be write enabled on a case insensitive file system. Tomcat will also set\u00a0sun.io.useCanonCaches to false by default where it can.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.2"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.34"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.98"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.2"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.34"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.98"
+        }
+      ],
+      "published": "2024-12-20T18:31:32Z",
+      "modified": "2025-01-08T16:25:33.932021Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-56337",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp",
+        "https://security.netapp.com/advisory/ntap-20250103-0002",
+        "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.34",
+        "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.2",
+        "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98",
+        "https://www.cve.org/CVERecord?id=CVE-2024-50379"
+      ],
+      "aliases": [
+        "BIT-tomcat-2024-56337",
+        "CVE-2024-56337"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5j33-cvvr-w245",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
+      "description": "Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability during JSP compilation in Apache Tomcat permits an RCE on case insensitive file systems when the default servlet is enabled for write (non-default configuration).\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.0.97.\n\nUsers are recommended to upgrade to version 11.0.2, 10.1.34 or 9.0.98, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.2"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.34"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.98"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.2"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.34"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.98"
+        }
+      ],
+      "published": "2024-12-17T15:31:43Z",
+      "modified": "2025-01-03T12:35:42.423963Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-50379",
+        "https://github.com/apache/tomcat/commit/05ddeeaa54df1e2dc427d0164bedd6b79f78d81f",
+        "https://github.com/apache/tomcat/commit/43b507ebac9d268b1ea3d908e296cc6e46795c00",
+        "https://github.com/apache/tomcat/commit/631500b0c9b2a2a2abb707e3de2e10a5936e5d41",
+        "https://github.com/apache/tomcat/commit/684247ae85fa633b9197b32391de59fc54703842",
+        "https://github.com/apache/tomcat/commit/8554f6b1722b33a2ce8b0a3fad37825f3a75f2d2",
+        "https://github.com/apache/tomcat/commit/cc7a98b57c6dc1df21979fcff94a36e068f4456c",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/y6lj6q1xnp822g6ro70tn19sgtjmr80r",
+        "https://security.netapp.com/advisory/ntap-20250103-0003",
+        "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.34",
+        "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.2",
+        "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98",
+        "http://www.openwall.com/lists/oss-security/2024/12/17/4",
+        "http://www.openwall.com/lists/oss-security/2024/12/18/2"
+      ],
+      "aliases": [
+        "BIT-tomcat-2024-50379",
+        "CVE-2024-50379"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-83qj-6fr2-vhqg",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT",
+      "description": "Path Equivalence: 'file.Name' (Internal Dot) leading to\u00a0Remote Code Execution and/or Information disclosure\u00a0and/or malicious content added to uploaded files via write enabled\u00a0Default Servlet\u00a0in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.2, from 10.1.0-M1 through 10.1.34, from 9.0.0.M1 through 9.0.98.\n\nIf all of the following were true, a malicious user was able to view security sensitive files and/or inject content into those files:\n-\u00a0writes enabled for the default servlet (disabled by default)\n- support for partial PUT (enabled by default)\n- a target URL for security sensitive uploads that was a sub-directory of\u00a0a target URL for public uploads\n-\u00a0attacker knowledge of the names of security sensitive files being\u00a0uploaded\n-\u00a0the security sensitive files also being uploaded via partial PUT\n\nIf all of the following were true, a malicious user was able to perform remote code execution:\n- writes enabled for the default servlet (disabled by default)\n-\u00a0support for partial PUT (enabled by default)\n-\u00a0application was using Tomcat's file based session persistence with the\u00a0default storage location\n-\u00a0application included a library that may be leveraged in a\u00a0deserialization attack\n\nUsers are recommended to upgrade to version 11.0.3, 10.1.35 or 9.0.99, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.3"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.35"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.99"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.3"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.35"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.99"
+        }
+      ],
+      "published": "2025-03-10T18:31:56Z",
+      "modified": "2025-07-21T19:01:23.581378Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-24813",
+        "https://github.com/apache/tomcat/commit/0a668e0c27f2b7ca0cc7c6eea32253b9b5ecb29c",
+        "https://github.com/apache/tomcat/commit/eb61aade8f8daccaecabf07d428b877975622f72",
+        "https://github.com/apache/tomcat/commit/f6c01d6577cf9a1e06792be47e623d36acc3b5dc",
+        "https://github.com/absholi7ly/POC-CVE-2025-24813/blob/main/README.md",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/j5fkjv2k477os90nczf2v9l61fb0kkgq",
+        "https://lists.debian.org/debian-lts-announce/2025/04/msg00003.html",
+        "https://security.netapp.com/advisory/ntap-20250321-0001",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24813-detect-apache-tomcat-rce",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24813-mitigate-apache-tomcat-rce",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24813-tomcat-detect-vulnerability",
+        "https://www.vicarius.io/vsociety/posts/cve-2025-24813-tomcat-mitigation-vulnerability",
+        "http://www.openwall.com/lists/oss-security/2025/03/10/5"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-24813",
+        "CVE-2025-24813"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-v682-8vv8-vpwr",
+      "component": "tomcat-embed-websocket",
+      "component_version": "10.1.18",
+      "severity": "high",
+      "cvss_score": 7.5,
+      "title": "Denial of Service via incomplete cleanup vulnerability in Apache Tomcat",
+      "description": "Denial of Service via incomplete cleanup vulnerability in Apache Tomcat. It was possible for WebSocket clients to keep WebSocket connections open leading to increased resource consumption.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M16, from 10.1.0-M1 through 10.1.18, from 9.0.0-M1 through 9.0.85, from 8.5.0 through 8.5.98.\n\nUsers are recommended to upgrade to version 11.0.0-M17, 10.1.19, 9.0.86 or 8.5.99 which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M17"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.19"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.86"
+        },
+        {
+          "introduced": "8.5.0"
+        },
+        {
+          "fixed": "8.5.99"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M17"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.19"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.86"
+        },
+        {
+          "introduced": "8.5.0"
+        },
+        {
+          "fixed": "8.5.99"
+        }
+      ],
+      "published": "2024-03-13T18:31:34Z",
+      "modified": "2025-02-13T19:13:35.387763Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-23672",
+        "https://github.com/apache/tomcat/commit/0052b374684b613b0c849899b325ebe334ac6501",
+        "https://github.com/apache/tomcat/commit/3631adb1342d8bbd8598802a12b63ad02c37d591",
+        "https://github.com/apache/tomcat/commit/52d6650e062d880704898d7d8c1b2b7a3efe8068",
+        "https://github.com/apache/tomcat/commit/b0e3b1bd78de270d53e319d7cb79eb282aa53cb9",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/cmpswfx6tj4s7x0nxxosvfqs11lvdx2f",
+        "https://lists.debian.org/debian-lts-announce/2024/04/msg00001.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3UWIS5MMGYDZBLJYT674ZI5AWFHDZ46B",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/736G4GPZWS2DSQO5WKXO3G6OMZKFEK55",
+        "https://security.netapp.com/advisory/ntap-20240402-0002",
+        "http://www.openwall.com/lists/oss-security/2024/03/13/4"
+      ],
+      "aliases": [
+        "BIT-tomcat-2024-23672",
+        "CVE-2024-23672"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-vv7r-c36w-3prj",
+      "component": "commons-fileupload2-core",
+      "component_version": "2.0.0-M1",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Commons FileUpload, Apache Commons FileUpload: FileUpload DoS via part headers",
+      "description": "Allocation of resources for multipart headers with insufficient limits enabled a DoS vulnerability in Apache Commons FileUpload.\n\nThis issue affects Apache Commons FileUpload: from 1.0 before 1.6; from 2.0.0-M1 before 2.0.0-M4.\n\nUsers are recommended to upgrade to versions 1.6 or 2.0.0-M4, which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "1.0"
+        },
+        {
+          "fixed": "1.6.0"
+        },
+        {
+          "introduced": "2.0.0-M1"
+        },
+        {
+          "fixed": "2.0.0-M4"
+        }
+      ],
+      "published": "2025-06-16T15:32:28Z",
+      "modified": "2025-07-09T19:02:20.198824Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-48976",
+        "https://github.com/apache/commons-fileupload/commit/b247774a72a044f5d5380ae947140ee80af4e78b",
+        "https://github.com/apache/commons-fileupload/commit/bf68f63cfb312ef4710fb3dfb4d8e4e1665f4497",
+        "https://github.com/apache/tomcat/commit/97790a35a27d236fa053e660676c3f8196284d93",
+        "https://github.com/apache/commons-fileupload",
+        "https://lists.apache.org/thread/fbs3wrr3p67vkjcxogqqqqz45pqtso12",
+        "http://www.openwall.com/lists/oss-security/2025/06/16/4"
+      ],
+      "aliases": [
+        "CVE-2025-48976"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "component": "commons-lang3",
+      "component_version": "3.13.0",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "description": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with\u00a0commons-lang:commons-lang\u00a02.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before\u00a03.18.0.\n\nThe methods ClassUtils.getClass(...) can throw\u00a0StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could\u00a0cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "3.0"
+        },
+        {
+          "fixed": "3.18.0"
+        },
+        {
+          "introduced": "2.0"
+        },
+        {
+          "last_affected": "2.6"
+        }
+      ],
+      "published": "2025-07-11T15:31:37Z",
+      "modified": "2025-07-12T01:27:15.943417Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-48924",
+        "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53",
+        "https://github.com/apache/commons-lang",
+        "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4gc7-5j7h-4qph",
+      "component": "spring-context",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "The fix for CVE-2022-22968 made disallowedFields\u00a0patterns in DataBinder\u00a0case insensitive. However, String.toLowerCase()\u00a0has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        }
+      ],
+      "published": "2024-10-18T06:30:32Z",
+      "modified": "2025-05-29T23:41:36.219637Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38820",
+        "https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/commits/v6.2.0-RC2",
+        "https://security.netapp.com/advisory/ntap-20241129-0003",
+        "https://spring.io/security/cve-2024-38820"
+      ],
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4wp7-92pw-q264",
+      "component": "spring-context",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 4.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "CVE-2024-38820 ensured Locale-independent, lowercase conversion for both the configured disallowedFields patterns and for request parameter names. However, there are still cases where it is possible to bypass the disallowedFields checks.\n\nAffected Spring Products and Versions\n\nSpring Framework:\n  *  6.2.0 - 6.2.6\n\n  *  6.1.0 - 6.1.19\n\n  *  6.0.0 - 6.0.27\n\n  *  5.3.0 - 5.3.42\n  *  Older, unsupported versions are also affected\n\n\n\nMitigation\n\nUsers of affected versions should upgrade to the corresponding fixed version.\n\n| Affected version(s) | Fix Version\u00a0| Availability |\n| - | - | - |\n|\u00a06.2.x |  6.2.7 | OSS |\n| 6.1.x |  6.1.20 | OSS |\n| 6.0.x |  6.0.28 |  Commercial https://enterprise.spring.io/ |\n| 5.3.x |  5.3.43 | Commercial https://enterprise.spring.io/  |\n\nNo further mitigation steps are necessary.\n\n\nGenerally, we recommend using a dedicated model object with properties only for data binding, or using constructor binding since constructor arguments explicitly declare what to bind together with turning off setter binding through the declarativeBinding flag. See the Model Design section in the reference documentation.\n\nFor setting binding, prefer the use of allowedFields (an explicit list) over disallowedFields.\n\nCredit\n\nThis issue was responsibly reported by the TERASOLUNA Framework Development Team from NTT DATA Group Corporation.",
+      "affected_versions": [
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.7"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.20"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.23"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.39"
+        }
+      ],
+      "published": "2025-05-16T21:32:12Z",
+      "modified": "2025-06-02T16:42:14.411674Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22233",
+        "https://github.com/spring-projects/spring-framework/issues/34801",
+        "https://github.com/spring-projects/spring-framework/commit/edfcc6ffb188e4614ec9b212e3208b666981851c",
+        "https://github.com/spring-projects/spring-framework/commit/ee62701f5634e904e42e218baad142cea2bcd332",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2025-22233"
+      ],
+      "aliases": [
+        "CVE-2025-22233"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-2rmj-mq67-h97g",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DoS via conditional HTTP request",
+      "description": "### Description\nApplications that parse ETags from `If-Match` or `If-None-Match` request headers are vulnerable to DoS attack.\n\n### Affected Spring Products and Versions\norg.springframework:spring-web in versions \n\n6.1.0 through 6.1.11\n6.0.0 through 6.0.22\n5.3.0 through 5.3.37\n\nOlder, unsupported versions are also affected\n\n### Mitigation\nUsers of affected versions should upgrade to the corresponding fixed version.\n6.1.x -> 6.1.12\n6.0.x -> 6.0.23\n5.3.x -> 5.3.38\nNo other mitigation steps are necessary.\n\nUsers of older, unsupported versions could enforce a size limit on `If-Match` and `If-None-Match` headers, e.g. through a Filter.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.3.38"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.23"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.12"
+        }
+      ],
+      "published": "2024-09-24T18:34:43Z",
+      "modified": "2025-02-21T15:43:05.420193Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38809",
+        "https://github.com/spring-projects/spring-framework/issues/33372",
+        "https://github.com/spring-projects/spring-framework/commit/582bfccbb72e5c8959a0b472d1dc7d03a20520f3",
+        "https://github.com/spring-projects/spring-framework/commit/8d16a50907c11f7e6b407d878a26e84eba08a533",
+        "https://github.com/spring-projects/spring-framework/commit/bb17ad8314b81850a939fd265fb53b3361705e85",
+        "https://github.com/spring-projects/spring-framework",
+        "https://spring.io/security/cve-2024-38809"
+      ],
+      "aliases": [
+        "CVE-2024-38809"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4gc7-5j7h-4qph",
+      "component": "spring-web",
+      "component_version": "6.1.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "description": "The fix for CVE-2022-22968 made disallowedFields\u00a0patterns in DataBinder\u00a0case insensitive. However, String.toLowerCase()\u00a0has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+      "affected_versions": [
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.14"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "last_affected": "6.0.24"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "last_affected": "5.3.40"
+        }
+      ],
+      "published": "2024-10-18T06:30:32Z",
+      "modified": "2025-05-29T23:41:36.219637Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38820",
+        "https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c",
+        "https://github.com/spring-projects/spring-framework",
+        "https://github.com/spring-projects/spring-framework/commits/v6.2.0-RC2",
+        "https://security.netapp.com/advisory/ntap-20241129-0003",
+        "https://spring.io/security/cve-2024-38820"
+      ],
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-xwmg-2g98-w7v9",
+      "component": "nimbus-jose-jwt",
+      "component_version": "9.37.3",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Nimbus JOSE + JWT is vulnerable to DoS attacks when processing deeply nested JSON",
+      "description": "Connect2id Nimbus JOSE + JWT before 10.0.2 allows a remote attacker to cause a denial of service via a deeply nested JSON object supplied in a JWT claim set, because of uncontrolled recursion. NOTE: this is independent of the Gson 2.11.0 issue because the Connect2id product could have checked the JSON object nesting depth, regardless of what limits (if any) were imposed by Gson.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "10.0.2"
+        }
+      ],
+      "published": "2025-07-11T03:30:34Z",
+      "modified": "2025-07-11T17:12:23.177486Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-53864",
+        "https://github.com/google/gson/commit/1039427ff0100293dd3cf967a53a55282c0fef6b",
+        "https://bitbucket.org/connect2id/nimbus-jose-jwt",
+        "https://bitbucket.org/connect2id/nimbus-jose-jwt/issues/583/stackoverflowerror-due-to-deeply-nested",
+        "https://github.com/google/gson/compare/gson-parent-2.11.0...gson-parent-2.12.0"
+      ],
+      "aliases": [
+        "CVE-2025-53864"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-4q2v-9p7v-3v22",
+      "component": "reactor-netty-http",
+      "component_version": "1.1.15",
+      "severity": "medium",
+      "cvss_score": 6.5,
+      "title": "Reactor Netty HTTP is vulnerable to credential leaks during chained redirects",
+      "description": "In some specific scenarios with chained redirects, Reactor Netty HTTP client leaks credentials. In order for this to happen, the HTTP client must have been explicitly configured to follow redirects.",
+      "affected_versions": [
+        {
+          "introduced": "1.3.0-M1"
+        },
+        {
+          "fixed": "1.3.0-M5"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.2.8"
+        }
+      ],
+      "published": "2025-07-16T12:30:21Z",
+      "modified": "2025-07-16T21:12:21.284692Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-22227",
+        "https://github.com/reactor/reactor-netty/commit/522892307ea89bf24fe634e8bfea35728c9bf411",
+        "https://github.com/reactor/reactor-netty",
+        "https://spring.io/security/cve-2025-22227"
+      ],
+      "aliases": [
+        "CVE-2025-22227"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-5jpm-x58v-624v",
+      "component": "netty-codec-http",
+      "component_version": "4.1.105.Final",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Netty's HttpPostRequestDecoder can OOM",
+      "description": "### Summary\nThe `HttpPostRequestDecoder` can be tricked to accumulate data. I have spotted currently two attack vectors \n\n### Details\n1. While the decoder can store items on the disk if configured so, there are no limits to the number of fields the form can have, an attacher can send a chunked post consisting of many small fields that will be accumulated in the `bodyListHttpData` list.\n2. The decoder cumulates bytes in the `undecodedChunk` buffer until it can decode a field, this field can cumulate data without limits\n\n### PoC\n\nHere is a Netty branch that provides a fix + tests : https://github.com/vietj/netty/tree/post-request-decoder\n\n\nHere is a reproducer with Vert.x (which uses this decoder) https://gist.github.com/vietj/f558b8ea81ec6505f1e9a6ca283c9ae3\n\n### Impact\nAny Netty based HTTP server that uses the `HttpPostRequestDecoder` to decode a form.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.108.Final"
+        }
+      ],
+      "published": "2024-03-25T19:40:50Z",
+      "modified": "2024-10-22T05:29:03.483949Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-5jpm-x58v-624v",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-29025",
+        "https://github.com/netty/netty/commit/0d0c6ed782d13d423586ad0c71737b2c7d02058c",
+        "https://gist.github.com/vietj/f558b8ea81ec6505f1e9a6ca283c9ae3",
+        "https://github.com/netty/netty",
+        "https://github.com/vietj/netty/tree/post-request-decoder",
+        "https://lists.debian.org/debian-lts-announce/2024/06/msg00015.html"
+      ],
+      "aliases": [
+        "CGA-4f97-xch2-fqp3",
+        "CGA-cvrj-h7rr-r975",
+        "CVE-2024-29025"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-389x-839f-4rhx",
+      "component": "netty-common",
+      "component_version": "4.1.105.Final",
+      "severity": "medium",
+      "cvss_score": 5.0,
+      "title": "Denial of Service attack on windows app using Netty",
+      "description": "### Summary\nAn unsafe reading of environment file could potentially cause a denial of service in Netty.\nWhen loaded on an Windows application, Netty attemps to load a file that does not exist. If an attacker creates such a large file, the Netty application crash.\n\n### Details\nA similar issue was previously reported in https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv\nThis issue was fixed, but the fix was incomplete in that null-bytes were not counted against the input limit.\n\n\n### PoC\nThe PoC is the same as for https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv with the detail that the file should only contain null-bytes; 0x00.\nWhen the null-bytes are encountered by the `InputStreamReader`, it will issue replacement characters in its charset decoding, which will fill up the line-buffer in the `BufferedReader.readLine()`, because the replacement character is not a line-break character.\n\n### Impact\nImpact is the same as https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.118.Final"
+        }
+      ],
+      "published": "2025-02-10T18:14:47Z",
+      "modified": "2025-03-19T15:06:40.575662Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-25193",
+        "https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386",
+        "https://github.com/netty/netty",
+        "https://security.netapp.com/advisory/ntap-20250221-0006"
+      ],
+      "aliases": [
+        "CVE-2025-25193"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-q3v6-hm2v-pw99",
+      "component": "spring-security-core",
+      "component_version": "6.2.1",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "Spring Framework has Authorization Bypass for Case Sensitive Comparisons",
+      "description": "The usage of String.toLowerCase()\u00a0and String.toUpperCase()\u00a0has some Locale\u00a0dependent exceptions that could potentially result in authorization rules not working properly.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "5.7.14"
+        },
+        {
+          "introduced": "5.8.0"
+        },
+        {
+          "fixed": "5.8.16"
+        },
+        {
+          "introduced": "6.0.0"
+        },
+        {
+          "fixed": "6.0.14"
+        },
+        {
+          "introduced": "6.1.0"
+        },
+        {
+          "fixed": "6.1.12"
+        },
+        {
+          "introduced": "6.2.0"
+        },
+        {
+          "fixed": "6.2.8"
+        },
+        {
+          "introduced": "6.3.0"
+        },
+        {
+          "fixed": "6.3.5"
+        }
+      ],
+      "published": "2024-12-02T15:31:41Z",
+      "modified": "2025-01-24T22:03:01.566382Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-38827",
+        "https://github.com/spring-projects/spring-framework/issues/33708",
+        "https://github.com/spring-projects/spring-framework/issues/34232",
+        "https://github.com/spring-projects/spring-framework/commit/11d4272ff48b4a4dabc4b28dfbff0364a4204bc9",
+        "https://github.com/spring-projects/spring-security",
+        "https://security.netapp.com/advisory/ntap-20250124-0007",
+        "https://spring.io/security/cve-2024-38827"
+      ],
+      "aliases": [
+        "CVE-2024-38827"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-6v67-2wr5-gvf4",
+      "component": "logback-core",
+      "component_version": "1.4.14",
+      "severity": "medium",
+      "cvss_score": 6.1,
+      "title": "QOS.CH logback-core Server-Side Request Forgery vulnerability",
+      "description": "Server-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 1.5.12 on the Java platform, allows an attacker to forge requests by compromising logback configuration files in XML.\n \nThe attacks involves the modification of DOCTYPE declaration in\u00a0 XML configuration files.",
+      "affected_versions": [
+        {
+          "introduced": "1.4.0"
+        },
+        {
+          "fixed": "1.5.13"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.3.15"
+        }
+      ],
+      "published": "2024-12-19T18:31:37Z",
+      "modified": "2025-01-03T19:09:07.970205Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-12801",
+        "https://github.com/qos-ch/logback/commit/5f05041cba4c4ac0a62748c5c527a2da48999f2d",
+        "https://github.com/qos-ch/logback",
+        "https://logback.qos.ch/news.html#1.3.15",
+        "https://logback.qos.ch/news.html#1.5.13"
+      ],
+      "aliases": [
+        "CVE-2024-12801"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-pr98-23f8-jwxv",
+      "component": "logback-core",
+      "component_version": "1.4.14",
+      "severity": "medium",
+      "cvss_score": 5.699999999999999,
+      "title": "QOS.CH logback-core Expression Language Injection vulnerability",
+      "description": "ACE vulnerability in JaninoEventEvaluator by QOS.CH logback-core up to and including version 1.5.12 in Java applications allows attackers to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\nMalicious logback configuration files can allow the attacker to execute arbitrary code using the JaninoEventEvaluator extension.\n\nA successful attack requires the user to have write access to a configuration file. Alternatively, the attacker could inject a malicious environment variable pointing to a malicious configuration file. In both cases, the attack requires existing privilege.",
+      "affected_versions": [
+        {
+          "introduced": "1.4.0"
+        },
+        {
+          "fixed": "1.5.13"
+        },
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "1.3.15"
+        }
+      ],
+      "published": "2024-12-19T18:31:37Z",
+      "modified": "2025-01-03T19:09:24.842130Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-12798",
+        "https://github.com/qos-ch/logback/commit/2cb6d520df7592ef1c3a198f1b5df3c10c93e183",
+        "https://github.com/qos-ch/logback",
+        "https://logback.qos.ch/news.html#1.3.15",
+        "https://logback.qos.ch/news.html#1.5.13"
+      ],
+      "aliases": [
+        "CVE-2024-12798"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-3p2h-wqq4-wf4h",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Tomcat Denial of Service via invalid HTTP priority header",
+      "description": "Improper Input Validation vulnerability in Apache Tomcat. Incorrect error handling for some invalid HTTP priority headers resulted in incomplete clean-up of the failed request which created a memory leak. A large number of such requests could trigger an OutOfMemoryException resulting in a denial of service.\n\nThis issue affects Apache Tomcat: from 9.0.76 through 9.0.102, from 10.1.10 through 10.1.39, from 11.0.0-M2 through 11.0.5.\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6 which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "9.0.76"
+        },
+        {
+          "fixed": "9.0.104"
+        },
+        {
+          "introduced": "10.1.10"
+        },
+        {
+          "fixed": "10.1.40"
+        },
+        {
+          "introduced": "11.0.0-M2"
+        },
+        {
+          "fixed": "11.0.6"
+        },
+        {
+          "introduced": "9.0.76"
+        },
+        {
+          "fixed": "9.0.104"
+        },
+        {
+          "introduced": "10.1.10"
+        },
+        {
+          "fixed": "10.1.40"
+        },
+        {
+          "introduced": "11.0.0-M2"
+        },
+        {
+          "fixed": "11.0.6"
+        }
+      ],
+      "published": "2025-04-28T21:30:43Z",
+      "modified": "2025-05-14T21:30:00.365368Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-31650",
+        "https://github.com/apache/tomcat/commit/1eef1dc459c45f1e421d8bd25ef340fc1cc34edc",
+        "https://github.com/apache/tomcat/commit/40ae788c2e64d018b4e58cd4210bb96434d0100d",
+        "https://github.com/apache/tomcat/commit/75554da2fc5574862510ae6f0d7b3d78937f1d40",
+        "https://github.com/apache/tomcat/commit/8cc3b8fb3f2d8d4d6a757e014f19d1fafa948a60",
+        "https://github.com/apache/tomcat/commit/b7674782679e1514a0d154166b1d04d38aaac4a9",
+        "https://github.com/apache/tomcat/commit/b98e74f517b36929f4208506e5adad22cb767baa",
+        "https://github.com/apache/tomcat/commit/cba1a0fe1289ee7f5dd46c61c38d1e1ac5437bff",
+        "https://github.com/apache/tomcat/commit/ded0285b96b4d3f5560dfc8856ad5ec4a9b50ba9",
+        "https://github.com/apache/tomcat/commit/f619e6a05029538886d5a9d987925d573b5bb8c2",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/j6zzk0y3yym9pzfzkq5vcyxzz0yzh826",
+        "https://tomcat.apache.org/security-10.html",
+        "https://tomcat.apache.org/security-11.html",
+        "https://tomcat.apache.org/security-9.html",
+        "http://www.openwall.com/lists/oss-security/2025/04/28/2"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-31650",
+        "CVE-2025-31650"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-7w75-32cg-r6g2",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Tomcat Denial of Service due to improper input validation vulnerability for HTTP/2 requests",
+      "description": "Denial of Service due to improper input validation vulnerability for HTTP/2 requests in Apache Tomcat. When processing an HTTP/2 request, if the request exceeded any of the configured limits for headers, the associated HTTP/2 stream was not reset until after all of the headers had been processed.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M16, from 10.1.0-M1 through 10.1.18, from 9.0.0-M1 through 9.0.85, from 8.5.0 through 8.5.98.\n\nUsers are recommended to upgrade to version 11.0.0-M17, 10.1.19, 9.0.86 or 8.5.99 which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M17"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.19"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.86"
+        },
+        {
+          "introduced": "8.5.0"
+        },
+        {
+          "fixed": "8.5.99"
+        },
+        {
+          "introduced": "8.5.0"
+        },
+        {
+          "fixed": "8.5.99"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.86"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.19"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M17"
+        }
+      ],
+      "published": "2024-03-13T18:31:34Z",
+      "modified": "2025-02-13T19:13:00.391397Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-24549",
+        "https://github.com/apache/tomcat/commit/0cac540a882220231ba7a82330483cbd5f6b1f96",
+        "https://github.com/apache/tomcat/commit/810f49d5ff6d64b704af85d5b8d0aab9ec3c83f5",
+        "https://github.com/apache/tomcat/commit/8e03be9f2698f2da9027d40b9e9c0c9429b74dc0",
+        "https://github.com/apache/tomcat/commit/d07c82194edb69d99b438828fe2cbfadbb207843",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/4c50rmomhbbsdgfjsgwlb51xdwfjdcvg",
+        "https://lists.debian.org/debian-lts-announce/2024/04/msg00001.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3UWIS5MMGYDZBLJYT674ZI5AWFHDZ46B",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/736G4GPZWS2DSQO5WKXO3G6OMZKFEK55",
+        "https://security.netapp.com/advisory/ntap-20240402-0002",
+        "http://www.openwall.com/lists/oss-security/2024/03/13/3"
+      ],
+      "aliases": [
+        "BIT-tomcat-2024-24549",
+        "CVE-2024-24549"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-ff77-26x5-69cr",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 4.8,
+      "title": "Apache Tomcat Rewrite rule bypass",
+      "description": "Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in Apache Tomcat.\u00a0For a subset of unlikely rewrite rule configurations, it was possible for a specially crafted request to bypass some rewrite rules. If those rewrite rules effectively enforced security constraints, those constraints could be bypassed.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.5, from 10.1.0-M1 through 10.1.39, from 9.0.0.M1 through 9.0.102.\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6, which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "9.0.76"
+        },
+        {
+          "fixed": "9.0.104"
+        },
+        {
+          "introduced": "10.1.10"
+        },
+        {
+          "fixed": "10.1.40"
+        },
+        {
+          "introduced": "11.0.0-M2"
+        },
+        {
+          "fixed": "11.0.6"
+        },
+        {
+          "introduced": "9.0.76"
+        },
+        {
+          "fixed": "9.0.104"
+        },
+        {
+          "introduced": "10.1.10"
+        },
+        {
+          "fixed": "10.1.40"
+        },
+        {
+          "introduced": "11.0.0-M2"
+        },
+        {
+          "fixed": "11.0.6"
+        }
+      ],
+      "published": "2025-04-28T21:30:43Z",
+      "modified": "2025-05-14T21:30:19.876449Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-31651",
+        "https://github.com/apache/tomcat/commit/066bf6b6a15a4e7e0941d4acf096841165b97098",
+        "https://github.com/apache/tomcat/commit/175dc75fc428930034a6c93fb52f830d955d8e64",
+        "https://github.com/apache/tomcat/commit/ee3ab548e92345eca0cbd1f01649eb36c6f29454",
+        "https://github.com/apache/tomcat/commit/fbecc915a10c5a3d634c5e2c6ced4ff479ce9953",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/list.html?announce@tomcat.apache.org",
+        "https://tomcat.apache.org/security-10.html",
+        "https://tomcat.apache.org/security-11.html",
+        "https://tomcat.apache.org/security-9.html",
+        "http://www.openwall.com/lists/oss-security/2025/04/28/3"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-31651",
+        "CVE-2025-31651"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-h2fw-rfh5-95r3",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "Apache Tomcat - CGI security constraint bypass",
+      "description": "Improper Handling of Case Sensitivity vulnerability in Apache Tomcat's GCI servlet allows security constraint bypass of security constraints that apply to the pathInfo component of a URI mapped to the CGI servlet.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.6, from 10.1.0-M1 through 10.1.40, from 9.0.0.M1 through 9.0.104.\n\nUsers are recommended to upgrade to version 11.0.7, 10.1.41 or 9.0.105, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.105"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.41"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.7"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.105"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.41"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.7"
+        }
+      ],
+      "published": "2025-05-29T21:31:37Z",
+      "modified": "2025-06-02T09:57:28.884520Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-46701",
+        "https://github.com/apache/tomcat/commit/0f01966eb60015d975525019e12a087f05ebf01a",
+        "https://github.com/apache/tomcat/commit/238d2aa54b99f91d1111467e2237d2244c64e558",
+        "https://github.com/apache/tomcat/commit/2c6800111e7d8d8d5403c07978ea9bff3db5a5a5",
+        "https://github.com/apache/tomcat/commit/8cb95ff03221067c511b3fa66d4f745bc4b0a605",
+        "https://github.com/apache/tomcat/commit/8df00018a252baa9497615d6420fb6c10466fa74",
+        "https://github.com/apache/tomcat/commit/fab7247d2f0e3a29d5daef565f829f383e10e5e2",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/xhqqk9w5q45srcdqhogdk04lhdscv30j",
+        "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.41",
+        "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.7",
+        "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.105",
+        "http://www.openwall.com/lists/oss-security/2025/05/29/4"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-46701",
+        "CVE-2025-46701"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-h3gc-qfqq-6h8f",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Tomcat - DoS in multipart upload",
+      "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.7, from 10.1.0-M1 through 10.1.41, from 9.0.0.M1 through 9.0.105.\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.8"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.42"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.106"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.8"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.42"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.106"
+        }
+      ],
+      "published": "2025-06-16T15:32:28Z",
+      "modified": "2025-06-20T10:42:03.249126Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-48988",
+        "https://github.com/apache/tomcat/commit/2b0ab14fb55d4edc896e5f1817f2ab76f714ae5e",
+        "https://github.com/apache/tomcat/commit/cdde8e655bc1c5c60a07efd216251d77c52fd7f6",
+        "https://github.com/apache/tomcat/commit/ee8042ffce4cb9324dfd79efda5984f37bbb6910",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/nzkqsok8t42qofgqfmck536mtyzygp18",
+        "https://tomcat.apache.org/security-10.html",
+        "https://tomcat.apache.org/security-11.html",
+        "https://tomcat.apache.org/security-9.html",
+        "http://www.openwall.com/lists/oss-security/2025/06/16/1"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-48988",
+        "CVE-2025-48988"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-wc4r-xq3c-5cf3",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.1,
+      "title": "Apache Tomcat - Security constraint bypass for pre/post-resources",
+      "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Apache Tomcat.\u00a0 When using PreResources or PostResources mounted other than at the root of the web application, it was possible to access those resources via an unexpected path. That path was likely not to be protected by the same security constraints as the expected path, allowing those security constraints to be bypassed.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.7, from 10.1.0-M1 through 10.1.41, from 9.0.0.M1 through 9.0.105.\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.8"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.42"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.106"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.8"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.42"
+        },
+        {
+          "introduced": "9.0.0.M1"
+        },
+        {
+          "fixed": "9.0.106"
+        }
+      ],
+      "published": "2025-06-16T15:32:28Z",
+      "modified": "2025-06-20T10:42:03.474452Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-49125",
+        "https://github.com/apache/tomcat/commit/7617b9c247bc77ed0444dd69adcd8aa48777886c",
+        "https://github.com/apache/tomcat/commit/9418e3ff9f1f4c006b4661311ae9376c52d162b9",
+        "https://github.com/apache/tomcat/commit/d94bd36fb7eb32e790dae0339bc249069649a637",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/m66cytbfrty9k7dc4cg6tl1czhsnbywk",
+        "https://tomcat.apache.org/security-10.html",
+        "https://tomcat.apache.org/security-11.html",
+        "https://tomcat.apache.org/security-9.html",
+        "http://www.openwall.com/lists/oss-security/2025/06/16/2"
+      ],
+      "aliases": [
+        "BIT-tomcat-2025-49125",
+        "CVE-2025-49125"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-wm9w-rjj3-j356",
+      "component": "tomcat-embed-core",
+      "component_version": "10.1.18",
+      "severity": "medium",
+      "cvss_score": 5.5,
+      "title": "Apache Tomcat - Denial of Service",
+      "description": "Improper Handling of Exceptional Conditions, Uncontrolled Resource Consumption vulnerability in Apache Tomcat. When processing an HTTP/2 stream, Tomcat did not handle some cases of excessive HTTP headers correctly. This led to a miscounting of active HTTP/2 streams which in turn led to the use of an incorrect infinite timeout which allowed connections to remain open which should have been closed.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M20, from 10.1.0-M1 through 10.1.24, from 9.0.0-M1 through 9.0.89.\n\nUsers are recommended to upgrade to version 11.0.0-M21, 10.1.25 or 9.0.90, which fixes the issue.",
+      "affected_versions": [
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M21"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.25"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.90"
+        },
+        {
+          "introduced": "11.0.0-M1"
+        },
+        {
+          "fixed": "11.0.0-M21"
+        },
+        {
+          "introduced": "10.1.0-M1"
+        },
+        {
+          "fixed": "10.1.25"
+        },
+        {
+          "introduced": "9.0.0-M1"
+        },
+        {
+          "fixed": "9.0.90"
+        }
+      ],
+      "published": "2024-07-03T21:39:44Z",
+      "modified": "2025-07-17T08:42:10.337271Z",
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-34750",
+        "https://github.com/apache/tomcat/commit/2344a4c0d03e307ba6b8ab6dc8b894cc8bac63f2",
+        "https://github.com/apache/tomcat/commit/2afae300c9ac9c0e516e2e9de580847d925365c3",
+        "https://github.com/apache/tomcat/commit/9fec9a82887853402833a80b584e3762c7423f5f",
+        "https://github.com/apache/tomcat",
+        "https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l",
+        "https://security.netapp.com/advisory/ntap-20240816-0004",
+        "https://tomcat.apache.org/security-10.html",
+        "https://tomcat.apache.org/security-11.html",
+        "https://tomcat.apache.org/security-9.html"
+      ],
+      "aliases": [
+        "BIT-tomcat-2024-34750",
+        "CVE-2024-34750"
+      ],
+      "ecosystem": "Maven"
+    },
+    {
+      "id": "GHSA-xq3w-v528-46rv",
+      "component": "netty-common",
+      "component_version": "4.1.105.Final",
+      "severity": "low",
+      "cvss_score": 3.5,
+      "title": "Denial of Service attack on windows app using netty",
+      "description": "### Summary\n\nAn unsafe reading of environment file could potentially cause a denial of service in Netty.\nWhen loaded on an Windows application, Netty attemps to load a file that does not exist. If an attacker creates such a large file, the Netty application crash.\n\n\n### Details\n\nWhen the library netty is loaded in a java windows application, the library tries to identify the system environnement in which it is executed.\n\nAt this stage, Netty tries to load both `/etc/os-release` and `/usr/lib/os-release` even though it is in a Windows environment. \n\n<img width=\"364\" alt=\"1\" src=\"https://github.com/user-attachments/assets/9466b181-9394-45a3-b0e3-1dcf105def59\">\n\nIf netty finds this files, it reads them and loads them into memory.\n\nBy default :\n\n- The JVM maximum memory size is set to 1 GB,\n- A non-privileged user can create a directory at `C:\\` and create files within it.\n\n<img width=\"340\" alt=\"2\" src=\"https://github.com/user-attachments/assets/43b359a2-5871-4592-ae2b-ffc40ac76831\">\n\n<img width=\"523\" alt=\"3\" src=\"https://github.com/user-attachments/assets/ad5c6eed-451c-4513-92d5-ba0eee7715c1\">\n\nthe source code identified :\nhttps://github.com/netty/netty/blob/4.1/common/src/main/java/io/netty/util/internal/PlatformDependent.java\n\nDespite the implementation of the function `normalizeOs()` the source code not verify the OS before reading `C:\\etc\\os-release` and `C:\\usr\\lib\\os-release`.\n\n### PoC\n\nCreate a file larger than 1 GB of data in `C:\\etc\\os-release` or `C:\\usr\\lib\\os-release` on a Windows environnement and start your Netty application.\n\nTo observe what the application does with the file, the security analyst used \"Process Monitor\" from the \"Windows SysInternals\" suite. (https://learn.microsoft.com/en-us/sysinternals/)\n\n```\ncd C:\\etc\nfsutil file createnew os-release 3000000000\n```\n\n<img width=\"519\" alt=\"4\" src=\"https://github.com/user-attachments/assets/39df22a3-462b-4fd0-af9a-aa30077ec08f\">\n\n<img width=\"517\" alt=\"5\" src=\"https://github.com/user-attachments/assets/129dbd50-fc36-4da5-8eb1-582123fb528f\">\n\nThe source code used is the Netty website code example : [Echo \u2010 the very basic client and server](https://netty.io/4.1/xref/io/netty/example/echo/package-summary.html).\n\nThe vulnerability was tested on the 4.1.112.Final version.\n\nThe security analyst tried the same technique for `C:\\proc\\sys\\net\\core\\somaxconn` with a lot of values to impact Netty but the only things that works is the \"larger than 1 GB file\" technique. https://github.com/netty/netty/blob/c0fdb8e9f8f256990e902fcfffbbe10754d0f3dd/common/src/main/java/io/netty/util/NetUtil.java#L186\n\n### Impact\n\nBy loading the \"file larger than 1 GB\" into the memory, the Netty library exceeds the JVM memory limit and causes a crash in the java Windows application.\n\nThis behaviour occurs 100% of the time in both Server mode and Client mode if the large file exists.\n\nClient mode :\n\n<img width=\"449\" alt=\"6\" src=\"https://github.com/user-attachments/assets/f8fe1ed0-1a42-4490-b9ed-dbc9af7804be\">\n\nServer mode :\n\n<img width=\"464\" alt=\"7\" src=\"https://github.com/user-attachments/assets/b34b42bd-4fbd-4170-b93a-d29ba87b88eb\">\n\nsomaxconn :\n\n<img width=\"532\" alt=\"8\" src=\"https://github.com/user-attachments/assets/0656b3bb-32c6-4ae2-bff7-d93babba08a3\">\n\n### Severity\n\n- Attack vector : \"Local\" because the attacker needs to be on the system where the Netty application is running.\n- Attack complexity : \"Low\" because the attacker only need to create a massive file (regardless of its contents).\n- Privileges required : \"Low\" because the attacker requires a user account to exploit the vulnerability.\n- User intercation : \"None\" because the administrator don't need to accidentally click anywhere to trigger the vulnerability. Furthermore, the exploitation works with defaults windows/AD settings.\n- Scope : \"Unchanged\" because only Netty is affected by the vulnerability.\n- Confidentiality : \"None\" because no data is exposed through exploiting the vulnerability.\n- Integrity : \"None\" because the explotation of the vulnerability does not allow editing, deleting or adding data elsewhere.\n- Availability : \"High\" because the exploitation of this vulnerability crashes the entire java application.",
+      "affected_versions": [
+        {
+          "introduced": "0"
+        },
+        {
+          "fixed": "4.1.115.Final"
+        }
+      ],
+      "published": "2024-11-12T19:53:17Z",
+      "modified": "2025-02-18T16:16:53.215963Z",
+      "references": [
+        "https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv",
+        "https://nvd.nist.gov/vuln/detail/CVE-2024-47535",
+        "https://github.com/netty/netty/commit/fbf7a704a82e7449b48bd0bbb679f5661c6d61a3",
+        "https://github.com/netty/netty"
+      ],
+      "aliases": [
+        "CVE-2024-47535"
+      ],
+      "ecosystem": "Maven"
+    }
+  ]
+}
