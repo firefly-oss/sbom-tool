@@ -1,0 +1,45 @@
+scan:
+  include_dev_dependencies: false
+  max_depth: 5
+  parallel_workers: 4
+  ignore_patterns:
+    - "*.test.*"
+    - "*.spec.*"
+    - "node_modules/"
+    - "venv/"
+    - ".git/"
+
+audit:
+  vulnerability_databases:
+    - nvd
+    - osv
+    - ghsa
+  fail_on_critical: true
+  severity_threshold: medium
+  check_licenses: true
+  allowed_licenses:
+    - Apache-2.0
+    - MIT
+    - BSD-3-Clause
+    - BSD-2-Clause
+    - ISC
+    - LGPL-3.0
+    - MPL-2.0
+  denied_licenses:
+    - GPL-3.0
+    - AGPL-3.0
+
+output:
+  formats:
+    - cyclonedx-json
+    - spdx-json
+    - html
+  include_metadata: true
+  timestamp: true
+  pretty_print: true
+
+cache:
+  enabled: true
+  directory: ~/.cache/firefly-sbom
+  ttl_hours: 24
+  max_size_mb: 500

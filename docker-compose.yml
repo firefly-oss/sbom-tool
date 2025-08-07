@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  sbom-tool:
+    build: .
+    image: ghcr.io/firefly-oss/sbom-tool:latest
+    volumes:
+      - ./repos:/repos:ro
+      - ./reports:/reports
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    command: scan --path /repos --output-dir /reports --format all --audit
