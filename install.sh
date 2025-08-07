@@ -195,21 +195,22 @@ install_from_pypi() {
 install_from_github() {
     print_info "Installing from GitHub..."
     
-    # Create temporary directory
-    local temp_dir=$(mktemp -d)
-    cd "$temp_dir"
+    # Create virtual environment first
+    print_info "Creating virtual environment..."
+    $PYTHON_CMD -m venv "$VENV_DIR"
     
-    # Clone repository
-    print_info "Cloning repository..."
-    git clone --depth 1 https://github.com/${GITHUB_REPO}.git
-    cd sbom-tool
+    # Activate virtual environment
+    source "$VENV_DIR/bin/activate"
     
-    # Install from source
-    install_from_source "$(pwd)"
+    # Upgrade pip
+    pip install --upgrade pip setuptools wheel
     
-    # Cleanup
-    cd /
-    rm -rf "$temp_dir"
+    # Install directly from GitHub
+    print_info "Installing Firefly SBOM Tool from GitHub..."
+    pip install "git+https://github.com/${GITHUB_REPO}.git"
+    
+    # Create wrapper script
+    create_wrapper_script
     
     print_success "Installation from GitHub completed"
 }
