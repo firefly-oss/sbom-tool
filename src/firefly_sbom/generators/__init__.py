@@ -112,13 +112,14 @@ class HTMLGenerator:
             <i class="fas fa-shield-alt"></i>
             <span>Firefly SBOM</span>
         </div>
-        <div class="nav-links">
-            <a href="#overview"><i class="fas fa-chart-line"></i> Overview</a>
-            <a href="#components"><i class="fas fa-cubes"></i> Components</a>
-            {'<a href="#vulnerabilities"><i class="fas fa-exclamation-triangle"></i> Security</a>' if vulnerabilities else ''}
-            {'<a href="#licenses"><i class="fas fa-balance-scale"></i> Licenses</a>' if license_stats['total_components'] > 0 else ''}
-        </div>
-    </nav>
+            <div class="nav-links">
+                <a href="#overview"><i class="fas fa-chart-line"></i> Overview</a>
+                <a href="#components"><i class="fas fa-cubes"></i> Components</a>
+                {'<a href="#vulnerabilities"><i class="fas fa-exclamation-triangle"></i> Security</a>' if vulnerabilities else ''}
+                {'<a href="#licenses"><i class="fas fa-balance-scale"></i> Licenses</a>' if license_stats['total_components'] > 0 else ''}
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
 
     <main class="main-content">
         <section id="overview" class="hero-section">
@@ -259,8 +260,8 @@ class HTMLGenerator:
         
         # Generate vulnerability details section
         vuln_details = self._generate_vulnerability_details_section(org_summary)
-        
-        return f"""<!DOCTYPE html>
+        return f"""
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -276,7 +277,10 @@ class HTMLGenerator:
         <!-- Header Section -->
         <div class="header">
             <div class="header-content">
-                <h1><i class="fas fa-building"></i> {org_summary.get('organization', 'Organization')} SBOM Dashboard</h1>
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap: wrap;">
+                    <h1><i class="fas fa-building"></i> {org_summary.get('organization', 'Organization')} SBOM Dashboard</h1>
+                    <button id="orgThemeToggle" class="nav-tab" style="max-width: max-content;" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                </div>
                 <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 0;">Comprehensive Software Bill of Materials Analysis</p>
                 
                 <div class="header-meta">
@@ -1362,6 +1366,37 @@ class HTMLGenerator:
             min-height: 100vh;
         }
         
+        /* Dark theme support */
+        :root.dark {
+            --primary-blue: #60a5fa;
+            --secondary-indigo: #818cf8;
+            --success-green: #34d399;
+            --warning-amber: #fbbf24;
+            --danger-red: #f87171;
+            --gray-50: #0b1220;
+            --gray-100: #111827;
+            --gray-200: #1f2937;
+            --gray-300: #374151;
+            --gray-400: #9ca3af;
+            --gray-500: #9aa4b2;
+            --gray-600: #cbd5e1;
+            --gray-700: #e5e7eb;
+            --gray-800: #f3f4f6;
+            --gray-900: #ffffff;
+            --white: #0b1220;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root:not(.light) { color-scheme: dark; }
+        }
+        
+        /* Print styles */
+        @media print {
+            .nav-tabs, .filters-bar, .footer { display: none !important; }
+            .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .content-section, .data-table { box-shadow: none !important; border: 1px solid var(--gray-200); }
+        }
+        
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -1661,6 +1696,9 @@ class HTMLGenerator:
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            position: sticky;
+            top: 0;
+            z-index: 2;
         }
         
         .data-table td {
@@ -1925,6 +1963,19 @@ class HTMLGenerator:
             min-height: 100vh;
         }
         
+        /* Auto respect system dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root:not(.light) { color-scheme: dark; }
+        }
+        
+        /* Print styles */
+        @media print {
+            .navbar, .nav-tabs, .filters-bar, .theme-toggle { display: none !important; }
+            body { background: white; }
+            .section, .component-table, .content-section { box-shadow: none !important; border: 1px solid #e5e7eb !important; }
+            a[href]:after { content: " (" attr(href) ")"; font-size: 0.8em; }
+        }
+        
         /* Navigation */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
@@ -1957,6 +2008,7 @@ class HTMLGenerator:
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
         
         .nav-links a {
@@ -1979,6 +2031,25 @@ class HTMLGenerator:
         
         .nav-links i {
             font-size: 0.9rem;
+        }
+        
+        /* Theme toggle */
+        .theme-toggle {
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            background: white;
+            color: #4a5568;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        .theme-toggle:hover { 
+            background: rgba(102,126,234,0.08);
+            color: #2d3748;
+            transform: translateY(-2px);
         }
         
         /* Main Content */
@@ -2270,13 +2341,21 @@ class HTMLGenerator:
             font-size: 0.875rem;
             font-weight: 600;
         }
-        
-        .component-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .component-table th {
+                
+                .component-table table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                
+                /* Sticky headers for large tables */
+                .component-table.sticky thead th,
+                .sticky-header thead th {
+                    position: sticky;
+                    top: 0;
+                    z-index: 2;
+                }
+                
+                .component-table th {
             background: #f8fafc;
             color: #2d3748;
             font-weight: 600;
@@ -2471,7 +2550,7 @@ class HTMLGenerator:
                     <h3><i class="{icon}"></i> {comp_type.title()}</h3>
                     <div class="component-count">{len(components)} components</div>
                 </div>
-                <table>
+                <table class="sticky-header">
                     <thead>
                         <tr>
                             <th>Component</th>
@@ -2504,8 +2583,28 @@ class HTMLGenerator:
     def _generate_single_report_scripts(self) -> str:
         """Generate JavaScript for single report interactivity"""
         return """
+        // Theme handling
+        (function() {
+            try {
+                const saved = localStorage.getItem('ff-theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const root = document.documentElement;
+                if (saved === 'dark' || (!saved && prefersDark)) { root.classList.add('dark'); }
+                const btn = document.getElementById('themeToggle');
+                if (btn) {
+                    btn.addEventListener('click', function() {
+                        root.classList.toggle('dark');
+                        localStorage.setItem('ff-theme', root.classList.contains('dark') ? 'dark' : 'light');
+                        this.innerHTML = root.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                    });
+                    // set initial icon
+                    btn.innerHTML = root.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                }
+            } catch (e) { /* no-op */ }
+        })();
+
         // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
+        document.querySelectorAll('.nav-links a[href^=\"#\"]').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
@@ -2852,6 +2951,25 @@ class HTMLGenerator:
         org_summary_json = json.dumps(org_summary, default=str)
         
         return f"""
+        // Theme handling
+        (function() {{
+            try {{
+                const saved = localStorage.getItem('ff-theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const root = document.documentElement;
+                if (saved === 'dark' || (!saved && prefersDark)) {{ root.classList.add('dark'); }}
+                const btn = document.getElementById('orgThemeToggle');
+                if (btn) {{
+                    btn.addEventListener('click', function() {{
+                        root.classList.toggle('dark');
+                        localStorage.setItem('ff-theme', root.classList.contains('dark') ? 'dark' : 'light');
+                        this.innerHTML = root.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                    }});
+                    btn.innerHTML = root.classList.contains('dark') ? '<i class=\"fas fa-sun\"></i>' : '<i class=\"fas fa-moon\"></i>';
+                }}
+            }} catch (e) {{ /* no-op */ }}
+        }})();
+
         // Tab switching functionality
         let activeTab = 'overview';
         

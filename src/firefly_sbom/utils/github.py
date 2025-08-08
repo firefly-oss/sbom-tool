@@ -390,3 +390,43 @@ class GitHubAPI:
             logger.warning(f"Access validation failed for {org}: {e}")
             
         return capabilities
+
+    # ========== Issues API ==========
+    def _issues_url(self, owner: str, repo: str) -> str:
+        return f"{self.base_url}/repos/{owner}/{repo}/issues"
+
+    def list_open_issues(self, owner: str, repo: str, labels: Optional[List[str]] = None) -> List[Dict]:
+        url = self._issues_url(owner, repo)
+        params = {"state": "open", "per_page": 100}
+        if labels:
+            params["labels"] = ",".join(labels)
+        return self._make_request(url, params)
+
+    def find_existing_issue(self, owner: str, repo: str, title: str) -> Optional[Dict]:
+        # GitHub search API could be used; simplest: list recent issues and match by title
+        issues = self.list_open_issues(owner, repo)
+        for issue in issues:
+            if issue.get("title") == title:
+                return issue
+        return None
+
+    def create_issue(self, owner: str, repo: str, title: str, body: str, labels: Optional[List[str]] = None) -> Dict:
+        url = self._issues_url(owner, repo)
+        payload = {"title": title, "body": body}
+        if labels:
+            payload["labels"] = labels
+        response = self.session.post(url, json=payload)
+        if response.status_code not in (200, 201):
+            raise GitHubAPIError(f"Failed to create issue: {response.status_code} {response.text}")
+        return response.json()
+
+    def close_issue(self, owner: str, repo: str, number: int, comment: Optional[str] = None) -> Dict:
+        # Optionally add a closing comment
+        if comment:
+            comments_url = f"{self._issues_url(owner, repo)}/{number}/comments"
+            self.session.post(comments_url, json={"body": comment})
+        url = f"{self._issues_url(owner, repo)}/{number}"
+        response = self.session.patch(url, json={"state": "closed"})
+        if response.status_code != 200:
+            raise GitHubAPIError(f"Failed to close issue #{number}: {response.status_code} {response.text}")
+        return response.json()

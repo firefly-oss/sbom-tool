@@ -101,9 +101,11 @@ class Config:
         self.cache = self._parse_cache_config(config_dict.get("cache", {}))
 
         # Additional settings
-        self.github_token = config_dict.get("github", {}).get(
-            "token", os.getenv("GITHUB_TOKEN")
-        )
+        github_cfg = config_dict.get("github", {})
+        self.github_token = github_cfg.get("token", os.getenv("GITHUB_TOKEN"))
+        # Issue automation flags
+        self.github_create_issues = bool(github_cfg.get("create_issues", False))
+        self.github_issue_labels = github_cfg.get("issue_labels", ["security", "sbom-vulnerability"]) or ["security", "sbom-vulnerability"]
         self.proxy = config_dict.get("proxy")
         self.timeout = config_dict.get("timeout", 300)
         self.verbose = config_dict.get("verbose", False)
@@ -266,7 +268,11 @@ class Config:
                 "ttl_hours": self.cache.ttl_hours,
                 "max_size_mb": self.cache.max_size_mb,
             },
-            "github": {"token": self.github_token if self.github_token else None},
+            "github": {
+                "token": self.github_token if self.github_token else None,
+                "create_issues": self.github_create_issues,
+                "issue_labels": self.github_issue_labels,
+            },
             "proxy": self.proxy,
             "timeout": self.timeout,
             "verbose": self.verbose,
