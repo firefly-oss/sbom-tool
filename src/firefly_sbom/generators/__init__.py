@@ -2857,14 +2857,14 @@ class HTMLGenerator:
         
         function showTab(tabName) {{
             // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(function(tab) {
+            document.querySelectorAll('.tab-content').forEach(function(tab) {{
                 tab.classList.remove('active');
-            });
+            }});
             
             // Remove active class from all nav tabs
-            document.querySelectorAll('.nav-tab').forEach(function(tab) {
+            document.querySelectorAll('.nav-tab').forEach(function(tab) {{
                 tab.classList.remove('active');
-            });
+            }});
             
             // Show selected tab content
             const targetTab = document.getElementById(tabName + '-tab');
@@ -2882,9 +2882,9 @@ class HTMLGenerator:
             
             // Initialize charts when switching to relevant tabs
             if (tabName === 'overview') {{
-            setTimeout(function() { initTechChart(); }, 100);
+            setTimeout(function() {{ initTechChart(); }}, 100);
             }} else if (tabName === 'technologies') {{
-                setTimeout(function() { initTechDetailsChart(); }, 100);
+                setTimeout(function() {{ initTechDetailsChart(); }}, 100);
             }}
         }}
         
