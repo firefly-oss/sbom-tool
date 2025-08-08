@@ -43,6 +43,7 @@ jobs:
         python - <<'PY'
         import json
         import os
+        import hashlib
         from pathlib import Path
         from firefly_sbom.core import SBOMGenerator
         
@@ -51,6 +52,7 @@ jobs:
         vulns = data.get('vulnerabilities', [])
         # Normalize fields and compute severity counts
         counts = {k: 0 for k in ['critical','high','medium','low','unknown']}
+        crit_ids = []
         for v in vulns:
             sev = (v.get('severity') or 'unknown').lower()
             counts[sev] = counts.get(sev, 0) + 1
@@ -61,6 +63,8 @@ jobs:
             v['cvss_score'] = v.get('cvss_score', '')
             v['description'] = (v.get('description') or v.get('summary') or '')[:500]
             v['references'] = v.get('references') or []
+            if sev == 'critical':
+                crit_ids.append(v['id'])
         summary = {
             'total': len(vulns),
             'by_severity': counts,
@@ -68,9 +72,17 @@ jobs:
         }
         Path('sbom-vuln-summary.json').write_text(json.dumps(summary, indent=2))
         
+        # Stable fingerprint from sorted critical IDs
+        crit_ids.sort()
+        fp_src = ('|'.join(crit_ids)).encode('utf-8')
+        fingerprint = hashlib.sha256(fp_src).hexdigest() if crit_ids else ''
+        
         # Build a detailed Markdown body
+        title = 'Critical vulnerabilities detected in dependencies'
         lines = []
-        lines.append('# 🚨 Critical vulnerabilities detected')
+        lines.append(f'# 🚨 {title}')
+        if fingerprint:
+            lines.append(f'<!-- vuln-fingerprint: {fingerprint} -->')
         lines.append('')
         lines.append('This issue was created automatically from the SBOM security audit. It includes a summary and detailed list of detected vulnerabilities.')
         lines.append('')
@@ -106,19 +118,72 @@ jobs:
         has_crit = summary['by_severity'].get('critical',0) > 0
         with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
             fh.write(f"has_critical={'true' if has_crit else 'false'}\n")
+            fh.write(f"issue_title={title}\n")
         PY
     
-    - name: Create Issue for Vulnerabilities
+    - name: Upsert Vulnerability Issue
       if: steps.vuln_summary.outputs.has_critical == 'true'
       uses: actions/github-script@v6
       with:
         script: |
           const fs = require('fs');
+          const title = process.env.ISSUE_TITLE || core.getInput('issue_title') || 'Critical vulnerabilities detected in dependencies';
           const body = fs.readFileSync('sbom-vuln-issue.md', 'utf8');
-          await github.rest.issues.create({
+          // Find existing open issue with same title
+          const { data: issues } = await github.rest.issues.listForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            title: 'Critical vulnerabilities detected in dependencies',
-            body,
-            labels: ['security', 'dependencies', 'automated']
-          })
+            state: 'open',
+            labels: 'security,dependencies,automated',
+            per_page: 100
+          });
+          const existing = issues.find(i => i.title === title);
+          if (existing) {
+            core.info(`Updating existing issue #${existing.number}`);
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existing.number,
+              body
+            });
+          } else {
+            core.info('Creating new vulnerability issue');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['security', 'dependencies', 'automated']
+            });
+          }
+      env:
+        ISSUE_TITLE: ${{ steps.vuln_summary.outputs.issue_title }}
+    
+    - name: Close Vulnerability Issue if Resolved
+      if: steps.vuln_summary.outputs.has_critical != 'true'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const title = 'Critical vulnerabilities detected in dependencies';
+          const { data: issues } = await github.rest.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+            labels: 'security,dependencies,automated',
+            per_page: 100
+          });
+          const existing = issues.find(i => i.title === title);
+          if (existing) {
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existing.number,
+              body: '✅ No critical vulnerabilities detected in the latest scan. Closing this issue.'
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existing.number,
+              state: 'closed'
+            });
+          }
