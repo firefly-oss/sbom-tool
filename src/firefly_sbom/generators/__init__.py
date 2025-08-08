@@ -3008,20 +3008,20 @@ class HTMLGenerator:
             
             let visibleCount = 0;
             
-            rows.forEach(function(row) {
+            rows.forEach(function(row) {{
                 const name = row.cells[0].textContent.toLowerCase();
                 const status = row.dataset.status;
                 const tech = row.dataset.tech;
                 
                 let visible = true;
                 
-                if (search && !name.includes(search)) visible = false;
-                if (statusFilter !== 'all' && status !== statusFilter) visible = false;
-                if (techFilter !== 'all' && !tech.includes(techFilter)) visible = false;
+                if (search \u0026\u0026 !name.includes(search)) visible = false;
+                if (statusFilter !== 'all' \u0026\u0026 status !== statusFilter) visible = false;
+                if (techFilter !== 'all' \u0026\u0026 !tech.includes(techFilter)) visible = false;
                 
                 row.style.display = visible ? '' : 'none';
                 if (visible) visibleCount++;
-            });
+            }});
             
             // Update visible count indicator if needed
             const countIndicator = document.getElementById('visibleCount');
@@ -3037,40 +3037,40 @@ class HTMLGenerator:
             if (!table) return;
             
             const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr')).filter(function(row) { return row.style.display !== 'none'; });
+            const rows = Array.from(tbody.querySelectorAll('tr')).filter(function(row) {{ return row.style.display !== 'none'; }});
             
             const direction = sortDirection[columnIndex] = !sortDirection[columnIndex];
             
-        rows.sort(function(a, b) {
+        rows.sort(function(a, b) {{
                 const aVal = a.cells[columnIndex].textContent.trim();
                 const bVal = b.cells[columnIndex].textContent.trim();
                 
                 // Handle numeric columns (Components, Vulnerabilities)
-                if (columnIndex === 2 || columnIndex === 3) {
+                if (columnIndex === 2 || columnIndex === 3) {{
                     const aNum = parseInt(aVal.replace(/,/g, '')) || 0;
                     const bNum = parseInt(bVal.replace(/,/g, '')) || 0;
                     return direction ? bNum - aNum : aNum - bNum;
-                } else {
+                }} else {{
                     // Text columns
                     return direction ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
-                }
-            });
+                }}
+            }});
             
             // Update sort indicators
             const headers = table.querySelectorAll('th');
-            headers.forEach(function(header, index) {
+            headers.forEach(function(header, index) {{
                 const icon = header.querySelector('i');
-                if (icon) {
-                    if (index === columnIndex) {
+                if (icon) {{
+                    if (index === columnIndex) {{
                         icon.className = direction ? 'fas fa-sort-down' : 'fas fa-sort-up';
-                    } else {
+                    }} else {{
                         icon.className = 'fas fa-sort';
-                    }
-                }
-            });
+                    }}
+                }}
+            }});
             
             // Re-append sorted rows
-            rows.forEach(function(row) { tbody.appendChild(row); });
+            rows.forEach(function(row) {{ tbody.appendChild(row); }});
         }}
         
         // Action button handlers
@@ -3111,17 +3111,17 @@ class HTMLGenerator:
             
             // Initialize vulnerability filtering when security tab is first shown
             const securityTab = document.querySelector('.nav-tab[onclick="showTab(\'security\')"]');
-            if (securityTab) {
-                securityTab.addEventListener('click', function() {
-                    setTimeout(function() {
+            if (securityTab) {{
+                securityTab.addEventListener('click', function() {{
+                    setTimeout(function() {{
                         // Initialize filters if they exist
                         const vulnTable = document.getElementById('vulnerabilityTable');
-                        if (vulnTable && typeof filterVulnerabilityTable === 'function') {
+                        if (vulnTable \u0026\u0026 typeof filterVulnerabilityTable === 'function') {{
                             filterVulnerabilityTable();
-                        }
-                    }, 100);
-                });
-            }
+                        }}
+                    }}, 100);
+                }});
+            }}
             
             // Add loading animation
             document.body.style.opacity = '0';
@@ -3132,19 +3132,19 @@ class HTMLGenerator:
             
             // Add smooth animations to cards
             const cards = document.querySelectorAll('.stat-card, .content-section');
-            cards.forEach(function(card, index) {
+            cards.forEach(function(card, index) {{
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
-                setTimeout(function() {
+                setTimeout(function() {{
                     card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, 150 * index);
-            });
+                }}, 150 * index);
+            }});
         }});
         
         // Vulnerability table filtering functionality
-        function filterVulnerabilityTable() {
+        function filterVulnerabilityTable() {{
             const repoFilter = document.getElementById('vulnerabilityRepoFilter').value;
             const severityFilter = document.getElementById('vulnerabilitySeverityFilter').value;
             const componentSearch = document.getElementById('vulnerabilityComponentSearch').value.toLowerCase();
@@ -3152,7 +3152,7 @@ class HTMLGenerator:
             
             let visibleCount = 0;
             
-            rows.forEach(function(row) {
+            rows.forEach(function(row) {{
                 const repository = row.dataset.repository;
                 const severity = row.dataset.severity;
                 const component = row.dataset.component;
@@ -3165,73 +3165,73 @@ class HTMLGenerator:
                 
                 row.style.display = visible ? '' : 'none';
                 if (visible) visibleCount++;
-            });
+            }});
             
             // Update count display if needed
-            console.log(`Showing ${visibleCount} vulnerabilities`);
-        }
+            console.log(`Showing ${{visibleCount}} vulnerabilities`);
+        }}
         
-        function resetVulnerabilityFilters() {
+        function resetVulnerabilityFilters() {{
             document.getElementById('vulnerabilityRepoFilter').value = 'all';
             document.getElementById('vulnerabilitySeverityFilter').value = 'all';
             document.getElementById('vulnerabilityComponentSearch').value = '';
             filterVulnerabilityTable();
-        }
+        }}
         
         // Vulnerability table sorting
-        let vulnSortDirection = {};
-        function sortVulnerabilityTable(columnIndex) {
+        let vulnSortDirection = {{}};
+        function sortVulnerabilityTable(columnIndex) {{
             const table = document.getElementById('vulnerabilityTable');
             if (!table) return;
             
             const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr.vuln-row')).filter(function(row) { return row.style.display !== 'none'; });
+            const rows = Array.from(tbody.querySelectorAll('tr.vuln-row')).filter(function(row) {{ return row.style.display !== 'none'; }});
             
             const direction = vulnSortDirection[columnIndex] = !vulnSortDirection[columnIndex];
             
-            rows.sort(function(a, b) {
+            rows.sort(function(a, b) {{
                 const aVal = a.cells[columnIndex].textContent.trim();
                 const bVal = b.cells[columnIndex].textContent.trim();
                 
                 // Handle severity column with special ordering
-                if (columnIndex === 2) {
-                    const severityOrder = { 'CRITICAL': 0, 'HIGH': 1, 'MEDIUM': 2, 'LOW': 3, 'UNKNOWN': 4 };
+                if (columnIndex === 2) {{
+                    const severityOrder = {{ 'CRITICAL': 0, 'HIGH': 1, 'MEDIUM': 2, 'LOW': 3, 'UNKNOWN': 4 }};
                     const aOrder = severityOrder[aVal.split(' ')[0]] || 4;
                     const bOrder = severityOrder[bVal.split(' ')[0]] || 4;
                     return direction ? bOrder - aOrder : aOrder - bOrder;
-                } else {
+                }} else {{
                     // Text columns
                     return direction ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
-                }
-            });
+                }}
+            }});
             
             // Update sort indicators
             const headers = table.querySelectorAll('th');
-            headers.forEach(function(header, index) {
+            headers.forEach(function(header, index) {{
                 const icon = header.querySelector('i');
-                if (icon) {
-                    if (index === columnIndex) {
+                if (icon) {{
+                    if (index === columnIndex) {{
                         icon.className = direction ? 'fas fa-sort-down' : 'fas fa-sort-up';
-                    } else {
+                    }} else {{
                         icon.className = 'fas fa-sort';
-                    }
-                }
-            });
+                    }}
+                }}
+            }});
             
             // Re-append sorted rows
-            rows.forEach(function(row) { tbody.appendChild(row); });
-        }
+            rows.forEach(function(row) {{ tbody.appendChild(row); }});
+        }}
         
         // Handle window resize for charts
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function() {{
             if (techChart) techChart.resize();
             if (techDetailsChart) techDetailsChart.resize();
-        });
+        }});
         
         // Add keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey || e.metaKey) {
-                switch (e.key) {
+        document.addEventListener('keydown', function(e) {{
+            if (e.ctrlKey || e.metaKey) {{
+                switch (e.key) {{
                     case 'p':
                         e.preventDefault();
                         printReport();
@@ -3240,14 +3240,14 @@ class HTMLGenerator:
                         e.preventDefault();
                         exportData();
                         break;
-                }
-            }
+                }}
+            }}
             
             // ESC to reset vulnerability filters
-            if (e.key === 'Escape' && activeTab === 'security') {
+            if (e.key === 'Escape' && activeTab === 'security') {{
                 resetVulnerabilityFilters();
-            }
-        });
+            }}
+        }});
         """
     
     def showTab(self, tab_name: str) -> None:
