@@ -12,7 +12,7 @@ import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import git
 import requests
@@ -711,13 +711,13 @@ class SBOMGenerator:
 
         return results
 
-    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -e str:
+    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -> str:
         vid = vuln.get("id") or vuln.get("cve") or vuln.get("ghsa") or "UNKNOWN"
         comp = vuln.get("component", "unknown")
         sev = (vuln.get("severity") or "unknown").upper()
         return f"[SBOM][{sev}] {vid} in {comp} ({repo_name})"
 
-    def _issue_body_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -e str:
+    def _issue_body_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -> str:
         lines = []
         lines.append(f"Repository: {repo_name}")
         vid = vuln.get("id") or vuln.get("cve") or vuln.get("ghsa") or "UNKNOWN"
@@ -748,7 +748,7 @@ class SBOMGenerator:
         lines.append("Duplicate prevention: title uses a deterministic key to avoid duplicates.")
         return "\n".join(lines)
 
-    def _sync_github_issues(self, org: str, org_summary: Dict[str, Any]) -e None:
+    def _sync_github_issues(self, org: str, org_summary: Dict[str, Any]) -> None:
         """Create/update/close GitHub issues per vulnerability per repository.
         - One issue per vulnerability (by ID+component) with full details in body
         - Avoid duplicates by matching exact deterministic title
