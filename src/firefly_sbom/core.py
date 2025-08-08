@@ -787,11 +787,17 @@ class SBOMGenerator:
                 open_issues = github.list_open_issues(owner, name, labels=default_labels)
                 for issue in open_issues:
                     ititle = issue.get("title", "")
-                    if ititle not in desired_titles and ititle.startswith("[SBOM]["):
+                    # Close any previously created SBOM issues that do not correspond to a current per-vulnerability title.
+                    # This includes older aggregate "summary" issues whose titles often start with "[SBOM]" without a severity bracket.
+                    if ititle not in desired_titles and ititle.startswith("[SBOM]"):
                         number = issue.get("number")
                         if number:
-                            github.close_issue(owner, name, number, comment="Closing automatically: vulnerability no longer detected in latest SBOM scan.")
-                            logger.info(f"Closed stale issue #{number} in {owner}/{name}")
+                            github.close_issue(
+                                owner,
+                                name,
+                                number,
+                                comment="Closing automatically: replaced by per-vulnerability tracking issues."
+                            )
+                            logger.info(f"Closed stale/aggregate issue #{number} in {owner}/{name}: {ititle}")
             except Exception as e:
-                logger.error(f"Failed to close stale issues for {owner}/{name}: {e}")
                 logger.error(f"Failed to close stale issues for {owner}/{name}: {e}")
