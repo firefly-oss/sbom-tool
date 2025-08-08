@@ -19,8 +19,25 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+try:
+    with open("requirements.txt", "r", encoding="utf-8") as fh:
+        requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+except FileNotFoundError:
+    # Fallback to minimal runtime requirements if requirements.txt is not present when building from sdist
+    requirements = [
+        "click>=8.0",
+        "PyYAML>=6.0",
+        "requests>=2.31",
+        "rich>=13.0",
+        "Jinja2>=3.1",
+        "cyclonedx-python-lib>=6.4",
+        "spdx-tools>=0.8",
+        "packageurl-python>=0.11",
+        "pip-audit>=2.7",
+        "pandas>=2.0",
+        "tabulate>=0.9",
+        "GitPython>=3.1",
+    ]
 
 setup(
     name="firefly-sbom-tool",
