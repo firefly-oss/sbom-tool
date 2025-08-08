@@ -22,6 +22,7 @@ Welcome to the comprehensive documentation for the Firefly SBOM Tool.
 - [Basic Usage Examples](examples/config.yaml) - Configuration examples
 - [Organization Scanning](examples/scan_organization.py) - Python API examples
 - [GitHub Integration Examples](examples/github_integration_examples.md) - Advanced GitHub scanning examples
+- [GitHub Actions Workflow](ci/github-actions.md) - CI setup and templates
 
 ## 🚀 Quick Links
 

@@ -303,3 +303,5 @@ output:
 cache:
   enabled: false  # Disable caching in CI
 ```
+
+See also: docs/ci/github-actions.md for complete GitHub Actions examples with caching, matrices, and scheduled organization scans.

@@ -205,6 +205,15 @@ docker run --rm \
   --audit --parallel 4
 ```
 
+## 🧪 Run in GitHub Actions
+
+The easiest way to run organization or repository scans in CI is with GitHub Actions.
+
+- Minimal workflow for the current repository: see docs/ci/github-actions.md#minimal-current-repository-scan
+- Organization scan workflow (scheduled): see docs/ci/github-actions.md#organization-scan-scheduled
+
+For ready-to-copy templates, check docs/examples/github-actions.yml.
+
 ## 📚 Advanced Examples
 
 For more detailed examples and use cases, see the [GitHub Integration Examples](examples/github_integration_examples.md).

@@ -50,6 +50,40 @@ docker pull ghcr.io/firefly-oss/sbom-tool:latest
 
 ## 🚀 Quick Start
 
+### CI: GitHub Actions (Quick Example)
+Add this workflow to .github/workflows/sbom.yml in your repository to run the scan on every push/PR:
+
+```yaml
+name: SBOM Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  sbom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Firefly SBOM Tool
+        run: pip install firefly-sbom-tool
+      - name: Run SBOM scan (current repo)
+        run: firefly-sbom scan --path . --audit --format cyclonedx-json --format html --output sbom-report
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-reports
+          path: sbom-report*
+```
+
+For advanced CI usage, see the dedicated guide: docs/ci/github-actions.md.
+
 ### Single Repository Scan
 ```bash
 # Basic scan
