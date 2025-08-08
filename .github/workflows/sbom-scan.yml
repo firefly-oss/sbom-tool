@@ -30,7 +30,7 @@ jobs:
         firefly-sbom scan --path . --format all --audit --output sbom-report
     
     - name: Upload SBOM Reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: sbom-reports
         path: sbom-report*
