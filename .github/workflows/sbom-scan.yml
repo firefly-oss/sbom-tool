@@ -129,17 +129,53 @@ jobs:
           const fs = require('fs');
           const title = process.env.ISSUE_TITLE || core.getInput('issue_title') || 'Critical vulnerabilities detected in dependencies';
           const body = fs.readFileSync('sbom-vuln-issue.md', 'utf8');
-          // Find existing open issue with same title
-          const { data: issues } = await github.rest.issues.listForRepo({
+
+          // Helper to extract fingerprint from body if present
+          function extractFingerprint(text) {
+            const m = /vuln-fingerprint:\s*([a-f0-9]{64})/i.exec(text || '');
+            return m ? m[1] : '';
+          }
+          const newFp = extractFingerprint(body);
+
+          // Try to find an existing issue by dedicated label first (avoids duplicates)
+          // We use a dedicated label 'sbom-audit' combined with 'security'
+          const listParams = {
             owner: context.repo.owner,
             repo: context.repo.repo,
-            state: 'open',
-            labels: 'security,dependencies,automated',
+            state: 'all', // search both open and closed to allow reopening
+            labels: 'sbom-audit',
             per_page: 100
-          });
-          const existing = issues.find(i => i.title === title);
+          };
+          const { data: labeledIssues } = await github.rest.issues.listForRepo(listParams);
+          // Prefer same-title matches among labeled issues
+          let existing = labeledIssues.find(i => i.title === title);
+          if (!existing) {
+            // Fallback: search open issues by title (legacy behavior)
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            existing = openIssues.find(i => i.title === title);
+          }
+
           if (existing) {
-            core.info(`Updating existing issue #${existing.number}`);
+            const oldFp = extractFingerprint(existing.body || '');
+            if (existing.state === 'closed') {
+              core.info(`Reopening existing issue #${existing.number}`);
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: 'open'
+              });
+            }
+            if (newFp && newFp !== oldFp) {
+              core.info(`Fingerprint changed; updating body for issue #${existing.number}`);
+            } else {
+              core.info('Updating issue body');
+            }
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -153,7 +189,7 @@ jobs:
               repo: context.repo.repo,
               title,
               body,
-              labels: ['security', 'dependencies', 'automated']
+              labels: ['security', 'dependencies', 'automated', 'sbom-audit']
             });
           }
       env:
@@ -165,14 +201,26 @@ jobs:
       with:
         script: |
           const title = 'Critical vulnerabilities detected in dependencies';
+          // Prefer closing labeled issues to avoid accidental matches
           const { data: issues } = await github.rest.issues.listForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: 'open',
-            labels: 'security,dependencies,automated',
+            labels: 'sbom-audit',
             per_page: 100
           });
-          const existing = issues.find(i => i.title === title);
+          // Prefer same-title match among labeled issues, else any labeled issue
+          let existing = issues.find(i => i.title === title) || issues[0];
+          if (!existing) {
+            // Fallback: open issues by title (legacy behavior)
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            existing = openIssues.find(i => i.title === title);
+          }
           if (existing) {
             await github.rest.issues.createComment({
               owner: context.repo.owner,
