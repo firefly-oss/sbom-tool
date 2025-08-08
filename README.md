@@ -86,7 +86,7 @@ firefly-sbom detect --path ./my-project
 | Language | Package Managers | Lock Files | Status |
 |----------|------------------|------------|--------|
 | **Python** | pip, Poetry, Pipenv | requirements.txt, poetry.lock | ✅ Full support |
-| **Java** | Maven | pom.xml | ✅ Multi-module support |
+| **Java** | Maven | pom.xml | ✅ Multi-module support, improved license extraction |
 | **Node.js** | npm, yarn, pnpm | package-lock.json, yarn.lock | ✅ Framework detection |
 | **Go** | go modules | go.mod, go.sum | ✅ Replace directives |
 | **Ruby** | Bundler | Gemfile.lock | ✅ Group dependencies |

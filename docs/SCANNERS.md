@@ -9,14 +9,15 @@ The Firefly SBOM Tool supports comprehensive dependency scanning across multiple
 **Detects:** `pom.xml` files  
 **Features:**
 - Multi-module Maven project support
-- Parses both `pom.xml` and Maven dependency tree
+- Parses both `pom.xml` and Maven dependency list/tree
 - Supports Maven CLI integration when available
 - Handles transitive dependencies
 - Extracts scope information (compile, runtime, test, provided)
 
 **Supported Files:**
 - `pom.xml`
-- Maven dependency tree output
+- Maven dependency tree/list output
+- Local Maven repository POMs (`~/.m2/repository/.../*.pom`)
 
 ### 2. Python Scanner (`python.py`)
 **Detects:** Python package files  

@@ -267,55 +267,133 @@ class MavenScanner(Scanner):
         return component
         
     def _enrich_with_license_info(self, path: Path, components: List[Dict[str, Any]]) -> None:
-        """Enrich components with license information using Maven"""
+        """Enrich components with license information using multiple strategies
+        
+        Strategy order:
+        1) Parse local dependency POMs from ~/.m2/repository to read <licenses>
+        2) If POM missing, fetch it via `mvn dependency:get -Dpackaging=pom` (no transitive) and parse
+        3) Fallback: attempt project-info-reports:dependencies and parse HTML report
+        """
         try:
-            # Use dependency:analyze-report or project-info-reports:dependencies for license info
-            cmd = [
-                "mvn",
-                "project-info-reports:dependencies",
-                "-DoutputDirectory=target/site",
-                "-q"
-            ]
+            # 1) Try resolving licenses from local/fetched POMs
+            for comp in components:
+                if comp.get('license'):
+                    continue
+                group = comp.get('group')
+                artifact = comp.get('name')
+                version = comp.get('version')
+                if not (group and artifact and version):
+                    continue
+                license_value = self._get_license_from_local_pom(group, artifact, version, repo_path=None)
+                if not license_value:
+                    # Attempt to fetch POM quietly and retry
+                    self._fetch_artifact_pom(group, artifact, version, cwd=path)
+                    license_value = self._get_license_from_local_pom(group, artifact, version, repo_path=None)
+                if license_value:
+                    comp['license'] = license_value
             
-            result = subprocess.run(
-                cmd,
-                cwd=str(path),
-                capture_output=True,
-                text=True,
-                timeout=self.config.timeout,
-            )
-            
-            if result.returncode == 0:
-                # Look for generated license report
-                license_file = path / "target" / "site" / "dependencies.html"
-                if license_file.exists():
-                    self._parse_license_report(license_file, components)
-                    
+            # 2) Fallback to project-info-reports HTML parsing if still missing licenses
+            if any('license' not in c or not c.get('license') for c in components):
+                cmd = [
+                    "mvn",
+                    "project-info-reports:dependencies",
+                    "-DoutputDirectory=target/site",
+                    "-q"
+                ]
+                result = subprocess.run(
+                    cmd,
+                    cwd=str(path),
+                    capture_output=True,
+                    text=True,
+                    timeout=self.config.timeout,
+                )
+                if result.returncode == 0:
+                    license_file = path / "target" / "site" / "dependencies.html"
+                    if license_file.exists():
+                        self._parse_license_report(license_file, components)
         except Exception as e:
-            logger.debug(f"Failed to get license information: {e}")
+            logger.debug(f"Failed to enrich license information: {e}")
             
     def _parse_license_report(self, license_file: Path, components: List[Dict[str, Any]]) -> None:
-        """Parse license report HTML to extract license information"""
+        """Parse license report HTML to extract license information (best-effort)"""
         try:
-            with open(license_file, 'r') as f:
+            with open(license_file, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
-                
-            # Extract license information from HTML table
-            # This is a simplified parser - in production you might want to use BeautifulSoup
             for component in components:
+                if component.get('license'):
+                    continue
                 group_id = component.get('group', '')
                 name = component.get('name', '')
-                
-                # Look for license info in HTML
                 pattern = rf'{re.escape(group_id)}.*?{re.escape(name)}.*?<td>(.*?)</td>'
                 matches = re.findall(pattern, content, re.DOTALL)
                 if matches:
-                    license_text = matches[0].strip()
+                    license_text = re.sub(r'<.*?>', '', matches[0]).strip()
                     if license_text and license_text != '-':
-                        component['license'] = license_text
-                        
+                        component['license'] = self._normalize_license(license_text)
         except Exception as e:
             logger.debug(f"Failed to parse license report: {e}")
+            
+    def _get_license_from_local_pom(self, group: str, artifact: str, version: str, repo_path: Optional[Path]) -> Optional[str]:
+        """Attempt to read licenses from a dependency's POM stored in local Maven repository"""
+        try:
+            if repo_path is None:
+                repo_path = Path.home() / ".m2" / "repository"
+            pom_path = repo_path / Path(group.replace('.', '/')) / artifact / version / f"{artifact}-{version}.pom"
+            if not pom_path.exists():
+                return None
+            licenses = self._parse_pom_for_licenses(pom_path)
+            if licenses:
+                # Join multiple licenses with OR (more permissive assumption)
+                joined = ' OR '.join([self._normalize_license(l) for l in licenses if l])
+                return joined if joined else None
+            return None
+        except Exception as e:
+            logger.debug(f"Failed reading local POM for {group}:{artifact}:{version}: {e}")
+            return None
+        
+    def _fetch_artifact_pom(self, group: str, artifact: str, version: str, cwd: Optional[Path]) -> None:
+        """Fetch an artifact POM (only) into local repo using Maven, without transitive deps"""
+        try:
+            gav = f"{group}:{artifact}:{version}"
+            cmd = [
+                "mvn",
+                "dependency:get",
+                f"-Dartifact={gav}",
+                "-Dpackaging=pom",
+                "-Dtransitive=false",
+                "-q",
+            ]
+            subprocess.run(cmd, cwd=str(cwd) if cwd else None, capture_output=True, text=True, timeout=self.config.timeout)
+        except Exception as e:
+            logger.debug(f"Failed to fetch POM for {gav}: {e}")
+        
+    def _parse_pom_for_licenses(self, pom_path: Path) -> List[str]:
+        """Parse a POM file for <licenses> entries and return list of license names/ids"""
+        try:
+            tree = ET.parse(pom_path)
+            root = tree.getroot()
+            ns = {"m": "http://maven.apache.org/POM/4.0.0"}
+            licenses = []
+            # Try namespaced first
+            for lic in root.findall('.//m:licenses/m:license', ns) or root.findall('.//licenses/license'):
+                name = lic.findtext('m:name', default=None, namespaces=ns) if hasattr(lic, 'findtext') else None
+                if not name:
+                    # Try without namespace
+                    name_elem = lic.find('name')
+                    name = name_elem.text.strip() if name_elem is not None and name_elem.text else None
+                if not name:
+                    # Some POMs use <license><url> or <comments> indicating the license
+                    url_elem = lic.find('m:url', ns) if hasattr(lic, 'find') else None
+                    if not url_elem:
+                        url_elem = lic.find('url')
+                    if url_elem is not None and url_elem.text:
+                        name = url_elem.text.strip()
+                if name:
+                    licenses.append(name)
+            return licenses
+        except Exception as e:
+            logger.debug(f"Failed to parse POM {pom_path} for licenses: {e}")
+            return []
             
     def _remove_duplicates(self, components: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Remove duplicate components while preserving order"""
