@@ -713,7 +713,7 @@ class SBOMGenerator:
 
         return results
 
-    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -e str:
+    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -> str:
         vid = vuln.get("id") or vuln.get("cve") or vuln.get("ghsa")
         comp = vuln.get("component", "unknown")
         sev = (vuln.get("severity") or "unknown").upper()
@@ -753,7 +753,7 @@ class SBOMGenerator:
         lines.append("This issue was created automatically by Firefly SBOM Tool to track remediation.")
         lines.append("Duplicate prevention: title uses a deterministic key to avoid duplicates.")
         return "\n".join(lines)
-    def _sync_github_issues_with_results(self, org: str, scan_results: Dict[str, Dict[str, Any]]) -e None:
+    def _sync_github_issues_with_results(self, org: str, scan_results: Dict[str, Dict[str, Any]]) -> None:
         """Create/update/close GitHub issues per vulnerability per repository using raw scan results."""
         github = GitHubAPI(token=self.config.github_token)
         default_labels = self.config.github_issue_labels
