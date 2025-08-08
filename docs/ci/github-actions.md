@@ -4,7 +4,7 @@ This guide shows how to install and run Firefly SBOM Tool in GitHub Actions to g
 
 ## Minimal: Current Repository Scan
 
-Runs on every push/PR, installs from PyPI, scans the current repo, and uploads reports.
+Runs on every push/PR, installs via the official install script from the repository, scans the current repo, and uploads reports.
 
 ```yaml
 name: SBOM Scan
@@ -25,7 +25,9 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install Firefly SBOM Tool
-        run: pip install firefly-sbom-tool
+        run: |
+          curl -sSL https://raw.githubusercontent.com/firefly-oss/sbom-tool/main/install.sh | bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Run SBOM scan (current repo)
         run: firefly-sbom scan --path . --audit --format cyclonedx-json --format html --output sbom-report
       - name: Upload artifacts
@@ -54,7 +56,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - run: pip install firefly-sbom-tool
+      - name: Install Firefly SBOM Tool
+        run: |
+          curl -sSL https://raw.githubusercontent.com/firefly-oss/sbom-tool/main/install.sh | bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - run: firefly-sbom scan --path . --audit --format cyclonedx-json --output sbom-${{ matrix.python-version }}
       - uses: actions/upload-artifact@v4
         with:
@@ -85,7 +90,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - run: pip install firefly-sbom-tool
+      - name: Install Firefly SBOM Tool
+        run: |
+          curl -sSL https://raw.githubusercontent.com/firefly-oss/sbom-tool/main/install.sh | bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Run org scan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_ORG }}
@@ -146,7 +154,7 @@ permissions:
 
 ## Tips
 
-- Prefer installing from PyPI (pip install firefly-sbom-tool) for speed and stability.
+- Prefer installing via the official install script for consistency with local usage and to ensure latest repository installation path works.
 - Use workflow_dispatch to allow manual runs.
 - Store organization PATs in repository or organization secrets and reference via env.
 - Upload artifacts to inspect detailed HTML reports.

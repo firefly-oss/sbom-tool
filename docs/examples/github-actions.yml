@@ -21,7 +21,9 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install Firefly SBOM Tool
-        run: pip install firefly-sbom-tool
+        run: |
+          curl -sSL https://raw.githubusercontent.com/firefly-oss/sbom-tool/main/install.sh | bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Run SBOM scan (current repo)
         run: firefly-sbom scan --path . --audit --format cyclonedx-json --format html --output sbom-report
       - name: Upload artifacts
