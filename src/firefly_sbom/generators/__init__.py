@@ -974,7 +974,7 @@ class HTMLGenerator:
             const techFilter = document.getElementById('techFilter').value;
             const rows = document.querySelectorAll('#repoTable tbody tr');
             
-            rows.forEach(row => {
+            rows.forEach(function(row) {
                 const name = row.cells[0].textContent.toLowerCase();
                 const status = row.dataset.status;
                 const tech = row.dataset.tech;
@@ -998,7 +998,7 @@ class HTMLGenerator:
             
             const direction = sortDirection[columnIndex] = !sortDirection[columnIndex];
             
-            rows.sort((a, b) => {
+            rows.sort(function(a, b) {
                 const aVal = a.cells[columnIndex].textContent.trim();
                 const bVal = b.cells[columnIndex].textContent.trim();
                 
@@ -1011,15 +1011,15 @@ class HTMLGenerator:
                 }
             });
             
-            rows.forEach(row => tbody.appendChild(row));
+            rows.forEach(function(row) { tbody.appendChild(row); });
         }
         
         // Navigation
-        document.querySelectorAll('.nav-menu a').forEach(link => {
+        document.querySelectorAll('.nav-menu a').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 if (this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
-                    document.querySelectorAll('.nav-menu a').forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('.nav-menu a').forEach(function(l) { l.classList.remove('active'); });
                     this.classList.add('active');
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) target.scrollIntoView({ behavior: 'smooth' });
@@ -1053,7 +1053,7 @@ class HTMLGenerator:
         // Initialize tooltips and smooth scrolling
         document.addEventListener('DOMContentLoaded', function() {
             // Add loading animation
-            setTimeout(() => {
+            setTimeout(function() {
                 document.body.style.opacity = '1';
             }, 100);
         });
@@ -2505,7 +2505,7 @@ class HTMLGenerator:
         """Generate JavaScript for single report interactivity"""
         return """
         // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
@@ -2524,10 +2524,10 @@ class HTMLGenerator:
         const navLinks = document.querySelectorAll('.nav-links a');
         
         const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
+            function(entries) {
+                entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
+                        navLinks.forEach(function(link) {
                             link.style.color = '#4a5568';
                             link.style.background = 'transparent';
                         });
@@ -2546,17 +2546,17 @@ class HTMLGenerator:
             }
         );
         
-        sections.forEach(section => observer.observe(section));
+        sections.forEach(function(section) { observer.observe(section); });
         
         // Animate metrics on scroll
-        const animateMetrics = () => {
+        const animateMetrics = function() {
             const metricNumbers = document.querySelectorAll('.metric-content h3');
-            metricNumbers.forEach(metric => {
+            metricNumbers.forEach(function(metric) {
                 const finalValue = parseInt(metric.textContent.replace(/,/g, ''));
                 let currentValue = 0;
                 const increment = finalValue / 50;
                 
-                const timer = setInterval(() => {
+                const timer = setInterval(function() {
                     currentValue += increment;
                     if (currentValue >= finalValue) {
                         currentValue = finalValue;
@@ -2570,17 +2570,17 @@ class HTMLGenerator:
         // Trigger animation when metrics section is visible
         const metricsSection = document.querySelector('.metrics-section');
         if (metricsSection) {
-            const metricsObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            animateMetrics();
-                            metricsObserver.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.5 }
-            );
+        const metricsObserver = new IntersectionObserver(
+            function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        animateMetrics();
+                        metricsObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
             
             metricsObserver.observe(metricsSection);
         }
@@ -2588,7 +2588,7 @@ class HTMLGenerator:
         // Add loading state removal
         document.addEventListener('DOMContentLoaded', function() {
             document.body.style.opacity = '0';
-            setTimeout(() => {
+            setTimeout(function() {
                 document.body.style.transition = 'opacity 0.5s ease-in';
                 document.body.style.opacity = '1';
             }, 100);
@@ -2857,14 +2857,14 @@ class HTMLGenerator:
         
         function showTab(tabName) {{
             // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(tab => {{
+            document.querySelectorAll('.tab-content').forEach(function(tab) {
                 tab.classList.remove('active');
-            }});
+            });
             
             // Remove active class from all nav tabs
-            document.querySelectorAll('.nav-tab').forEach(tab => {{
+            document.querySelectorAll('.nav-tab').forEach(function(tab) {
                 tab.classList.remove('active');
-            }});
+            });
             
             // Show selected tab content
             const targetTab = document.getElementById(tabName + '-tab');
@@ -2882,9 +2882,9 @@ class HTMLGenerator:
             
             // Initialize charts when switching to relevant tabs
             if (tabName === 'overview') {{
-                setTimeout(() => initTechChart(), 100);
+            setTimeout(function() { initTechChart(); }, 100);
             }} else if (tabName === 'technologies') {{
-                setTimeout(() => initTechDetailsChart(), 100);
+                setTimeout(function() { initTechDetailsChart(); }, 100);
             }}
         }}
         
@@ -3008,7 +3008,7 @@ class HTMLGenerator:
             
             let visibleCount = 0;
             
-            rows.forEach(row => {{
+            rows.forEach(function(row) {
                 const name = row.cells[0].textContent.toLowerCase();
                 const status = row.dataset.status;
                 const tech = row.dataset.tech;
@@ -3021,7 +3021,7 @@ class HTMLGenerator:
                 
                 row.style.display = visible ? '' : 'none';
                 if (visible) visibleCount++;
-            }});
+            });
             
             // Update visible count indicator if needed
             const countIndicator = document.getElementById('visibleCount');
@@ -3037,40 +3037,40 @@ class HTMLGenerator:
             if (!table) return;
             
             const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr')).filter(row => row.style.display !== 'none');
+            const rows = Array.from(tbody.querySelectorAll('tr')).filter(function(row) { return row.style.display !== 'none'; });
             
             const direction = sortDirection[columnIndex] = !sortDirection[columnIndex];
             
-            rows.sort((a, b) => {{
+        rows.sort(function(a, b) {
                 const aVal = a.cells[columnIndex].textContent.trim();
                 const bVal = b.cells[columnIndex].textContent.trim();
                 
                 // Handle numeric columns (Components, Vulnerabilities)
-                if (columnIndex === 2 || columnIndex === 3) {{
+                if (columnIndex === 2 || columnIndex === 3) {
                     const aNum = parseInt(aVal.replace(/,/g, '')) || 0;
                     const bNum = parseInt(bVal.replace(/,/g, '')) || 0;
                     return direction ? bNum - aNum : aNum - bNum;
-                }} else {{
+                } else {
                     // Text columns
                     return direction ? bVal.localeCompare(aVal) : aVal.localeCompare(bVal);
-                }}
-            }});
+                }
+            });
             
             // Update sort indicators
             const headers = table.querySelectorAll('th');
-            headers.forEach((header, index) => {{
+            headers.forEach(function(header, index) {
                 const icon = header.querySelector('i');
-                if (icon) {{
-                    if (index === columnIndex) {{
+                if (icon) {
+                    if (index === columnIndex) {
                         icon.className = direction ? 'fas fa-sort-down' : 'fas fa-sort-up';
-                    }} else {{
+                    } else {
                         icon.className = 'fas fa-sort';
-                    }}
-                }}
-            }});
+                    }
+                }
+            });
             
             // Re-append sorted rows
-            rows.forEach(row => tbody.appendChild(row));
+            rows.forEach(function(row) { tbody.appendChild(row); });
         }}
         
         // Action button handlers
@@ -3113,7 +3113,7 @@ class HTMLGenerator:
             const securityTab = document.querySelector('.nav-tab[onclick="showTab(\'security\')"]');
             if (securityTab) {
                 securityTab.addEventListener('click', function() {
-                    setTimeout(() => {
+                    setTimeout(function() {
                         // Initialize filters if they exist
                         const vulnTable = document.getElementById('vulnerabilityTable');
                         if (vulnTable && typeof filterVulnerabilityTable === 'function') {
@@ -3125,22 +3125,22 @@ class HTMLGenerator:
             
             // Add loading animation
             document.body.style.opacity = '0';
-            setTimeout(() => {{
+            setTimeout(function() {{
                 document.body.style.transition = 'opacity 0.6s ease-in';
                 document.body.style.opacity = '1';
             }}, 100);
             
             // Add smooth animations to cards
             const cards = document.querySelectorAll('.stat-card, .content-section');
-            cards.forEach((card, index) => {{
+            cards.forEach(function(card, index) {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
-                setTimeout(() => {{
+                setTimeout(function() {
                     card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }}, 150 * index);
-            }});
+                }, 150 * index);
+            });
         }});
         
         // Vulnerability table filtering functionality
@@ -3152,7 +3152,7 @@ class HTMLGenerator:
             
             let visibleCount = 0;
             
-            rows.forEach(row => {
+            rows.forEach(function(row) {
                 const repository = row.dataset.repository;
                 const severity = row.dataset.severity;
                 const component = row.dataset.component;
@@ -3185,11 +3185,11 @@ class HTMLGenerator:
             if (!table) return;
             
             const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr.vuln-row')).filter(row => row.style.display !== 'none');
+            const rows = Array.from(tbody.querySelectorAll('tr.vuln-row')).filter(function(row) { return row.style.display !== 'none'; });
             
             const direction = vulnSortDirection[columnIndex] = !vulnSortDirection[columnIndex];
             
-            rows.sort((a, b) => {
+            rows.sort(function(a, b) {
                 const aVal = a.cells[columnIndex].textContent.trim();
                 const bVal = b.cells[columnIndex].textContent.trim();
                 
@@ -3207,7 +3207,7 @@ class HTMLGenerator:
             
             // Update sort indicators
             const headers = table.querySelectorAll('th');
-            headers.forEach((header, index) => {
+            headers.forEach(function(header, index) {
                 const icon = header.querySelector('i');
                 if (icon) {
                     if (index === columnIndex) {
@@ -3219,7 +3219,7 @@ class HTMLGenerator:
             });
             
             // Re-append sorted rows
-            rows.forEach(row => tbody.appendChild(row));
+            rows.forEach(function(row) { tbody.appendChild(row); });
         }
         
         // Handle window resize for charts
