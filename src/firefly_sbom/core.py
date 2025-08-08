@@ -9,6 +9,7 @@ import asyncio
 import json
 import os
 import tempfile
+import hashlib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
@@ -485,7 +486,8 @@ class SBOMGenerator:
         # Optionally sync GitHub issues based on vulnerabilities
         try:
             if self.config.github_create_issues and org_summary.get("repositories"):
-                self._sync_github_issues(org, org_summary)
+                # Prefer using raw scan results for accurate per-repo vulnerabilities
+                self._sync_github_issues_with_results(org, scan_results)
         except Exception as e:
             logger.error(f"Failed to sync GitHub issues: {e}")
 
@@ -711,10 +713,14 @@ class SBOMGenerator:
 
         return results
 
-    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -> str:
-        vid = vuln.get("id") or vuln.get("cve") or vuln.get("ghsa") or "UNKNOWN"
+    def _issue_title_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -e str:
+        vid = vuln.get("id") or vuln.get("cve") or vuln.get("ghsa")
         comp = vuln.get("component", "unknown")
         sev = (vuln.get("severity") or "unknown").upper()
+        if not vid:
+            # Create a stable fingerprint when no formal ID is present
+            basis = f"{comp}|{vuln.get('component_version','')}|{vuln.get('title','')}|{vuln.get('published','')}|{vuln.get('description','')[:60]}"
+            vid = f"NOID-{hashlib.sha1(basis.encode('utf-8', errors='ignore')).hexdigest()[:12]}"
         return f"[SBOM][{sev}] {vid} in {comp} ({repo_name})"
 
     def _issue_body_for_vuln(self, repo_name: str, vuln: Dict[str, Any]) -> str:
@@ -747,41 +753,22 @@ class SBOMGenerator:
         lines.append("This issue was created automatically by Firefly SBOM Tool to track remediation.")
         lines.append("Duplicate prevention: title uses a deterministic key to avoid duplicates.")
         return "\n".join(lines)
-
-    def _sync_github_issues(self, org: str, org_summary: Dict[str, Any]) -> None:
-        """Create/update/close GitHub issues per vulnerability per repository.
-        - One issue per vulnerability (by ID+component) with full details in body
-        - Avoid duplicates by matching exact deterministic title
-        - Close issues that are no longer detected in the latest scan
-        """
+    def _sync_github_issues_with_results(self, org: str, scan_results: Dict[str, Dict[str, Any]]) -e None:
+        """Create/update/close GitHub issues per vulnerability per repository using raw scan results."""
         github = GitHubAPI(token=self.config.github_token)
         default_labels = self.config.github_issue_labels
 
-        # Build current set of active issue titles per repo for closing logic
-        desired_titles_by_repo: Dict[str, Set[str]] = {}
-
-        for repo in org_summary.get("repositories", []):
-            repo_name = repo.get("name")
-            if not repo_name:
+        for repo_name, sbom_data in (scan_results or {}).items():
+            if not sbom_data:
                 continue
-            desired_titles: Set[str] = set()
-
-            # Gather vulnerabilities for this repo by merging from org_summary (if available)
-            repo_vulns = []
-            # Prefer repository-level list if present in org_summary['vulnerabilities']
-            for v in (org_summary.get("vulnerabilities") or []):
-                if (v.get("repository") or repo_name) == repo_name:
-                    repo_vulns.append(v)
-            # Fallback: if empty, we only know counts; skip
-            if not repo_vulns:
-                desired_titles_by_repo[repo_name] = desired_titles
-                continue
-
+            vulns = sbom_data.get('vulnerabilities', []) or []
             owner = org
             name = repo_name
 
-            # Create or ensure issues for each vulnerability
-            for vuln in repo_vulns:
+            # Desired titles for this repo to detect stale issues
+            desired_titles: Set[str] = set()
+
+            for vuln in vulns:
                 title = self._issue_title_for_vuln(repo_name, vuln)
                 desired_titles.add(title)
                 body = self._issue_body_for_vuln(repo_name, vuln)
@@ -793,10 +780,7 @@ class SBOMGenerator:
                     except Exception as e:
                         logger.error(f"Failed to create issue for {owner}/{name}: {e}")
                 else:
-                    # Optionally we could update body if desired; skipping to avoid noise
                     logger.debug(f"Issue already exists: {owner}/{name} - {title}")
-
-            desired_titles_by_repo[repo_name] = desired_titles
 
             # Close stale issues (with our labels) that are no longer desired
             try:
@@ -809,4 +793,5 @@ class SBOMGenerator:
                             github.close_issue(owner, name, number, comment="Closing automatically: vulnerability no longer detected in latest SBOM scan.")
                             logger.info(f"Closed stale issue #{number} in {owner}/{name}")
             except Exception as e:
+                logger.error(f"Failed to close stale issues for {owner}/{name}: {e}")
                 logger.error(f"Failed to close stale issues for {owner}/{name}: {e}")

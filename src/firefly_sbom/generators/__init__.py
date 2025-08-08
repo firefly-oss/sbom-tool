@@ -2621,6 +2621,45 @@ class HTMLGenerator:
         // Add intersection observer for navigation highlighting
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
+
+        // Add simple filtering for components table
+        (function(){
+            const section = document.getElementById('components');
+            if (!section) return;
+            // Inject filter controls at top of Components section
+            const header = section.querySelector('.section-header');
+            const controls = document.createElement('div');
+            controls.style.display = 'flex';
+            controls.style.gap = '0.75rem';
+            controls.style.flexWrap = 'wrap';
+            controls.style.marginBottom = '1rem';
+            controls.innerHTML = `
+                <input id="compSearch" type="text" placeholder="Search component..." style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;">
+                <select id="scopeFilter" style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;">
+                  <option value="all">All scopes</option>
+                  <option value="direct">Direct</option>
+                  <option value="transitive">Transitive</option>
+                  <option value="dev">Dev</option>
+                </select>
+            `;
+            header && header.appendChild(controls);
+            const onFilter = () => {
+              const q = (document.getElementById('compSearch')?.value || '').toLowerCase();
+              const scope = (document.getElementById('scopeFilter')?.value || 'all');
+              section.querySelectorAll('.component-table tbody tr').forEach(tr => {
+                const tds = tr.querySelectorAll('td');
+                const name = (tds[0]?.textContent || '').toLowerCase();
+                const scopeBadge = tr.querySelector('.badge');
+                const s = scopeBadge ? scopeBadge.textContent.toLowerCase() : '';
+                let show = true;
+                if (q && !name.includes(q)) show = false;
+                if (scope !== 'all' && s !== scope) show = false;
+                tr.style.display = show ? '' : 'none';
+              });
+            };
+            controls.addEventListener('input', onFilter);
+            controls.addEventListener('change', onFilter);
+        })();
         
         const observer = new IntersectionObserver(
             function(entries) {
